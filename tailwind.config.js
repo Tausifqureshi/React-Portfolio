@@ -136,3 +136,12 @@ export default {
 // };
 
 // export default Hero;
+
+
+
+
+// className="w-44 h-56 rounded-full overflow-hidden shadow-md border-2 border-slate-400 dark:border-slate-600"
+
+
+// Bule Border 
+// className="w-44 h-56 rounded-full overflow-hidden shadow-md border-2 border-blue-500 dark:border-gray-700"
