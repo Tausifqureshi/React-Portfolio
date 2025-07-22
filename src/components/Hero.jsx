@@ -32,7 +32,7 @@ const Hero = () => {
               />
             </div>
           </div>
-
+      
           {/* Name and Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white">
