@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, MessageCircle, Heart } from 'lucide-react';
+import { Github, Linkedin, MessageCircle, Heart, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,22 +23,31 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' }
+    { href: 'home', label: 'Home' },
+    { href: 'about', label: 'About' },
+    { href: 'skills', label: 'Skills' },
+    { href: 'projects', label: 'Projects' },
+    { href: 'contact', label: 'Contact' }
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">
-              John Doe
-            </h3>
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">John Doe</h3>
             <p className="text-gray-300 mb-6 max-w-md">
               Frontend Developer passionate about creating beautiful, functional, 
               and user-friendly web applications with modern technologies.
@@ -65,12 +74,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-left text-gray-300 hover:text-white transition-colors duration-200 w-full"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -96,6 +105,14 @@ const Footer = () => {
             Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> using React & Tailwind CSS
           </p>
         </div>
+
+        {/* Scroll to top button */}
+        <button
+          onClick={scrollToTop}
+          className="absolute bottom-10 right-7 w-9 h-9 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 shadow-lg"
+        >
+          <ArrowUp size={20} />
+        </button>
       </div>
     </footer>
   );

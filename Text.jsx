@@ -154,7 +154,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center space-y-8">
 
-
+          {/* Profile Picture */}
           <div className="mb-8">
             <div className="w-40 h-40 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
               <img 

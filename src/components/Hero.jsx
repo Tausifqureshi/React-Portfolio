@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Profile Image */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <div className="w-48 h-62 overflow-hidden border-2 border-dark-white-100 rounded-lg">
               <img
                 src={Image}
@@ -31,6 +31,18 @@ const Hero = () => {
                 className=" h-full w-full object-cover"
               />
             </div>
+          </div> */}
+           <div className="mb-8">
+            <div className="w-40 h-52 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={Image}
+                alt="Tausif Qureshi - Front End Developer"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Front End Developer
+            </p>
           </div>
       
           {/* Name and Title */}
