@@ -1,9 +1,27 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Github, Linkedin, MessageCircle, Download, Mail } from "lucide-react";
 import Image from "./Image/Tausif-Image.jpg";
 
 const Hero = () => {
+
+ const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const texts = ['Frontend Developer', 'React Specialist', 'UI/UX Designer', 'JavaScript Expert'];
+
+  // Typing effect for the text
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % texts.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setCurrentText(texts[currentIndex]);
+  }, [currentIndex]);
+
+  // Function to handle CV download
   const handleDownloadCV = () => {
     window.open(
       "https://drive.google.com/file/d/your-cv-file-id/view",
@@ -11,6 +29,7 @@ const Hero = () => {
     );
   };
 
+  // Function to scroll to the contact section
   const handleContactMe = () => {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   };
@@ -23,15 +42,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Profile Image */}
-          {/* <div className="flex justify-center">
-            <div className="w-48 h-62 overflow-hidden border-2 border-dark-white-100 rounded-lg">
-              <img
-                src={Image}
-                alt="Tausif Qureshi"
-                className=" h-full w-full object-cover"
-              />
-            </div>
-          </div> */}
+        
            <div className="mb-8">
             <div className="w-40 h-52 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
               <img 
@@ -40,19 +51,23 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
-              Front End Developer
-            </p>
+          
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-8">
+            <span className="text-blue-600 dark:text-blue-400 transition-all duration-500">
+              {currentText}
+            </span>
+          </h2>
+
+           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+            Hi, I'm{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Tausif Qureshi
+            </span>
+          </h1>
           </div>
       
           {/* Name and Title */}
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white">
-              John Doe
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
-              Frontend Developer
-            </p>
             <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
               Passionate about creating beautiful, functional, and user-friendly
               web applications with modern technologies and best practices.
@@ -96,6 +111,7 @@ const Hero = () => {
               <Download className="w-5 h-5 mr-2" />
               Download CV
             </button>
+
             <button
               onClick={handleContactMe}
               className="inline-flex items-center px-8 py-3 bg-white dark:bg-gray-800 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white"
@@ -103,7 +119,13 @@ const Hero = () => {
               <Mail className="w-5 h-5 mr-2" />
               Contact Me
             </button>
+
+
           </div>
+
+
+          
+          
         </div>
       </div>
     </section>
