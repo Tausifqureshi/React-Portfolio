@@ -45,7 +45,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -60,7 +60,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
               <div className="relative h-48">
@@ -100,7 +100,7 @@ const Projects = () => {
                   <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-300">
                     {project.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-blue-600 dark:bg-blue-700 rounded-full mr-2"></span>
                         {feature}
                       </li>
                     ))}
@@ -138,3 +138,117 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Git hib code 
+//  <h1 align="center">Hey 👋, I'm Tausif Qureshi</h1>
+
+// <p align="center">
+//   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&center=true&vCenter=true&color=F97316&width=800&lines=Frontend+Web+Developer+%7C+React+Specialist;Creating+User+Interfaces+with+React;Exploring+Backend+with+Node,+Express+%26+MongoDB" alt="Typing SVG" />
+// </p>
+
+// ---
+
+// ## 🧑‍💻 About Me
+
+// <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="dev-gif" align="right" width="300" />
+
+// - 🚀 Frontend Developer | React Specialist | Learning Backend  
+// - 🔥 Building fast, scalable UI with <strong>React.js</strong>
+// - 🛠️ Strong foundation in <strong>HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Redux</strong>
+// - 🎯 Passionate about **UI/UX design, web performance & clean architecture**  
+// - 📦 Currently learning backend development using <strong>Node.js, Express.js & MongoDB</strong> 
+// - 👨‍💻 Always learning & building to <strong>improve as a developer</strong> 
+// - 📫 Reach me at: [tausifqureshi504@gmail.com](mailto:tausifqureshi504@gmail.com)  
+// - 🌐 Portfolio: [tausifporfolio-website.netlify.app](https://tausifporfolio-website.netlify.app)  
+
+// ---
+
+// ## 🚀 Tech Stack
+
+// <p align="center">
+//   <img src="https://skillicons.dev/icons?i=html,css,js,react,redux,tailwind,bootstrap,materialui,nodejs,express,mongodb" />
+// </p>
+
+// ---
+
+// ## 🧰 Tools & Platforms
+
+// <p align="center">
+//   <img src="https://skillicons.dev/icons?i=vscode,github,git,postman,netlify,vercel,heroku,codepen,bash" />
+// </p>
+
+// ---
+
+// ## 🌐 Connect with Me
+
+// <p align="center">
+//   <a href="https://linkedin.com/in/tausif-qureshi" target="_blank"><img src="https://skillicons.dev/icons?i=linkedin" height="40"/></a>&nbsp;
+//   <a href="mailto:tausifqureshi504@gmail.com"><img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" height="40"/></a>&nbsp;
+//   <a href="https://wa.me/8429097693" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" height="40"/></a>&nbsp;
+//   <a href="https://twitter.com/Tausif_qu16823" target="_blank"><img src="https://skillicons.dev/icons?i=twitter" height="40"/></a>
+// </p>
+
+// ---
+
+// ## 📈 GitHub Stats
+
+// <p align="center">
+//   <img src="https://github-readme-stats.vercel.app/api?username=Tausifqureshi&show_icons=true&theme=tokyonight&hide_border=true" width="48%" />
+//   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tausifqureshi&layout=compact&theme=tokyonight&hide_border=true" width="48%" />
+// </p>
+
+// ---
+
+// ## 🔥 GitHub Streak
+
+// <p align="center">
+//   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Tausifqureshi&theme=github-dark-blue&hide_border=true" />
+// </p>
+
+// ---
+
+// ## 🏆 GitHub Achievements
+
+// <p align="center">
+//   <img src="https://github-profile-trophy.vercel.app/?username=Tausifqureshi&theme=gruvbox&no-frame=true&row=1&column=7&margin-w=12&margin-h=12" />
+// </p>
+
+// ---
+
+// ## 🧠 Developer Wisdom
+
+// <p align="center">
+//   <i>"Clean code always looks like it was written by someone who cares." – <b>Robert C. Martin</b></i>
+// </p>
+
+// ---
+
+// <h3 align="center">⭐ Show some love by starring my repositories!</h3>
+
+// <p align="center">
+//   <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" width="100" />
+// </p> 

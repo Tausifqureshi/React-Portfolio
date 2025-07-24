@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   const handleResumeClick = () => {
-    window.open('https://drive.google.com/file/d/your-resume-file-id/view', '_blank');
+    window.open('https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view', '_blank');
   };
 
   // ✅ Smooth scroll using scrollIntoView

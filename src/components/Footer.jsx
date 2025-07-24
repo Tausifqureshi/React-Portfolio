@@ -41,8 +41,15 @@ const Footer = () => {
     }
   };
 
+  //  bg-white dark:bg-gray-900
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white relative">
+    <footer 
+    // className="bg-gray-900 dark:bg-gray-950 text-white border-t border-gray-200 dark:border-gray-700 relative"
+className="bg-gray-900 dark:bg-gray-950 text-white border-t border-white/20 dark:border-white/10
+ relative"
+
+    >
+    {/* // <footer className="bg-white dark:bg-gray-900 text-white relative"> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -113,6 +120,7 @@ const Footer = () => {
         >
           <ArrowUp size={20} />
         </button>
+        
       </div>
     </footer>
   );
