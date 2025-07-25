@@ -44,6 +44,7 @@ const Projects = () => {
     }
   ];
 
+  // bg-white
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +61,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-br from-blue-150 to-purple-100 dark:from-gray-900 dark:to-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
               <div className="relative h-48">
@@ -127,6 +128,7 @@ const Projects = () => {
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </a>
+                  
                 </div>
               </div>
             </div>
