@@ -121,60 +121,6 @@
 
 
 
- <div className="mt-8 flex justify-center space-x-5">
-
-        {/* GitHub */}
-        <a
-          href="https://github.com/Tausifqureshi"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-blue-600"
-        >
-          <Github className="w-5 h-5" />
-        </a>
-
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/tausif-qureshi/" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-blue-600"
-        >
-          <Linkedin className="w-5 h-5" />
-        </a>
-
-
-        <a
-         href="https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-green-600"
-        >
-          <MessageCircle className="w-5 h-5" />
-        </a>
-
-        {/* Email */}
-        <a
-          // href="mailto:tausifqureshi504@gmail.com?subject=Collaboration&body=Hi%20Tausif%2C%20I'd%20like%20to%20connect%20regarding%20your%20portfolio."
-           href="mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-red-600"
-          target="_blank"
-        >
-          <Mail className="w-5 h-5" />
-        </a>
-
-        {/* Phone Call */}
-        <a
-          href="tel:+918429097693"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-orange-500"
-        >
-          <PhoneCall className="w-5 h-5" />
-        </a>
-
-      
-      </div>
-
-
 
 
 

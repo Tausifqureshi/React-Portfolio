@@ -1,5 +1,12 @@
 import React from "react";
-import { Github, Linkedin, MessageCircle, Download, Mail, PhoneCall,} from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  MessageCircle,
+  Download,
+  Mail,
+  PhoneCall,
+} from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "./Image/Tausif-Image.jpg";
 
@@ -106,7 +113,6 @@ const Hero = () => {
 
       {/* SOCIAL ICONS AT BOTTOM */}
       <div className="mt-8 flex justify-center space-x-5">
-
         {/* GitHub */}
         <a
           href="https://github.com/Tausifqureshi"
@@ -120,7 +126,7 @@ const Hero = () => {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/tausif-qureshi/" 
+          href="https://www.linkedin.com/in/tausif-qureshi/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500
@@ -129,9 +135,8 @@ const Hero = () => {
           <Linkedin className="w-5 h-5" />
         </a>
 
-
         <a
-         href="https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif"
+          href="https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-500
@@ -142,7 +147,7 @@ const Hero = () => {
 
         {/* Email */}
         <a
-           href="mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,"
+          href="mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,"
           className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500
 "
           target="_blank"
@@ -157,29 +162,9 @@ const Hero = () => {
         >
           <PhoneCall className="w-5 h-5" />
         </a>
-
-      
       </div>
-
     </section>
   );
 };
 
 export default Hero;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
