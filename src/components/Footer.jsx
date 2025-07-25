@@ -1,63 +1,63 @@
-// import React from 'react';
-// import { Github, Linkedin, MessageCircle, Heart, ArrowUp } from 'lucide-react';
+// import React from "react";
+// import { Github, Linkedin, MessageCircle, Heart, ArrowUp } from "lucide-react";
 
 // const Footer = () => {
 //   const currentYear = new Date().getFullYear();
 
 //   const socialLinks = [
 //     {
-//       href: 'https://github.com/johndoe',
+//       href: "https://github.com/johndoe",
 //       icon: <Github className="w-5 h-5" />,
-//       label: 'GitHub'
+//       label: "GitHub",
 //     },
 //     {
-//       href: 'https://linkedin.com/in/johndoe',
+//       href: "https://linkedin.com/in/johndoe",
 //       icon: <Linkedin className="w-5 h-5" />,
-//       label: 'LinkedIn'
+//       label: "LinkedIn",
 //     },
 //     {
-//       href: 'https://wa.me/1234567890',
+//       href: "https://wa.me/1234567890",
 //       icon: <MessageCircle className="w-5 h-5" />,
-//       label: 'WhatsApp'
-//     }
+//       label: "WhatsApp",
+//     },
 //   ];
 
 //   const quickLinks = [
-//     { href: 'home', label: 'Home' },
-//     { href: 'about', label: 'About' },
-//     { href: 'skills', label: 'Skills' },
-//     { href: 'projects', label: 'Projects' },
-//     { href: 'contact', label: 'Contact' }
+//     { href: "home", label: "Home" },
+//     { href: "about", label: "About" },
+//     { href: "skills", label: "Skills" },
+//     { href: "projects", label: "Projects" },
+//     { href: "contact", label: "Contact" },
 //   ];
 
 //   const scrollToTop = () => {
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//     window.scrollTo({ top: 0, behavior: "smooth" });
 //   };
 
 //   const scrollToSection = (id) => {
 //     const element = document.getElementById(id);
 //     if (element) {
-//       element.scrollIntoView({ behavior: 'smooth' });
+//       element.scrollIntoView({ behavior: "smooth" });
 //     }
 //   };
 
 //   //  bg-white dark:bg-gray-900
 //   return (
-//     <footer 
-//     // className="bg-gray-900 dark:bg-gray-950 text-white border-t border-gray-200 dark:border-gray-700 relative"
-// className="bg-gray-900 dark:bg-gray-950 text-white border-t border-white/20 dark:border-white/10
+//     <footer
+//       // className="bg-gray-900 dark:bg-gray-950 text-white border-t border-gray-200 dark:border-gray-700 relative"
+//     className="bg-gray-900 dark:bg-gray-950 text-white border-t border-white/20 dark:border-white/10
 //  relative"
-
 //     >
-//     {/* // <footer className="bg-white dark:bg-gray-900 text-white relative"> */}
+//       {/* // <footer className="bg-white dark:bg-gray-900 text-white relative"> */}
 //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 //         <div className="grid md:grid-cols-4 gap-8">
 //           {/* Brand */}
 //           <div className="md:col-span-2">
 //             <h3 className="text-2xl font-bold text-blue-400 mb-4">John Doe</h3>
 //             <p className="text-gray-300 mb-6 max-w-md">
-//               Frontend Developer passionate about creating beautiful, functional, 
-//               and user-friendly web applications with modern technologies.
+//               Frontend Developer passionate about creating beautiful,
+//               functional, and user-friendly web applications with modern
+//               technologies.
 //             </p>
 //             <div className="flex space-x-4">
 //               {socialLinks.map((link, index) => (
@@ -109,7 +109,8 @@
 //             © {currentYear} John Doe. All rights reserved.
 //           </p>
 //           <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
-//             Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> using React & Tailwind CSS
+//             Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> using
+//             React & Tailwind CSS
 //           </p>
 //         </div>
 
@@ -120,13 +121,16 @@
 //         >
 //           <ArrowUp size={20} />
 //         </button>
-        
 //       </div>
 //     </footer>
 //   );
 // };
 
 // export default Footer;
+
+
+
+
 
 
 
@@ -174,7 +178,7 @@ const Footer = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-// border-t border-b border-gray-200 dark:border-gray-700 
+// border-t border-b border-gray-200 dark:border-gray-700
   return (
     <footer className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-300 dark:border-gray-700  transition-colors duration-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -183,7 +187,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4">John Doe</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-md">
-              Frontend Developer passionate about creating beautiful, functional, 
+              Frontend Developer passionate about creating beautiful, functional,
               and user-friendly web applications with modern technologies.
             </p>
             <div className="flex space-x-4">
