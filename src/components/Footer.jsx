@@ -167,16 +167,6 @@
 // export default Footer;
 
 import React, { useEffect, useState } from "react";
-// import {
-//   Github,
-//   Linkedin,
-//   MessageCircle,
-//   Mail,
-//   PhoneCall,
-//   Heart,
-//   MapPin,
-//   ArrowUp,
-// } from "lucide-react";
 import { FaGithub,FaLinkedin,FaWhatsapp,FaEnvelope,FaPhone,FaMapMarkerAlt,FaHeart,FaArrowUp} from "react-icons/fa";
 const Footer = () => {
   const currentYear = new Date().getFullYear();

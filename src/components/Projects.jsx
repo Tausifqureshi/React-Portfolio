@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink, Star } from 'lucide-react';
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
   const projects = [
@@ -43,8 +43,6 @@ const Projects = () => {
       demo: 'https://weather-demo.com'
     }
   ];
-
-  // bg-white
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,7 +114,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <FaGithub className="w-4 h-4 mr-2" />
                     Code
                   </a>
                   <a
@@ -125,7 +123,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
+                    <FaExternalLinkAlt className="w-4 h-4 mr-2" />
                     Live Demo
                   </a>
                   
