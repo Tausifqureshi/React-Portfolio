@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Menu, X, FileText } from 'lucide-react';
+// import { Menu, X, FileText } from 'lucide-react';
+import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
+
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -58,7 +60,7 @@ const Navbar = () => {
               onClick={handleResumeClick}
               className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
             >
-              <FileText className="w-4 h-4 mr-2" />
+              <FaFileAlt className="w-4 h-4 mr-2" />
               Resume
             </button>
             
@@ -72,7 +74,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -95,7 +97,7 @@ const Navbar = () => {
               onClick={handleResumeClick}
               className="w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors duration-200"
             >
-              <FileText className="w-4 h-4 mr-2" />
+              <FaFileAlt className="w-4 h-4 mr-2" />
               Resume
             </button>
           </div>

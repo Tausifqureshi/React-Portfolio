@@ -4,7 +4,9 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 // 2. Custom hook
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  return useContext(ThemeContext); 
+}
 
 // 3. Theme Provider
 const ThemeProvider = ({ children }) => {

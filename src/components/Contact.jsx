@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import {FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle,} from "react-icons/fa";
 
 import emailjs from '@emailjs/browser';

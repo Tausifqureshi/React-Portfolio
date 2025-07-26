@@ -7,11 +7,15 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Zz from '../Zz'; // Assuming Zz.jsx is in the same directory
 
 function App() { 
-  return (
+  // dark:bg-gray-950
+  return ( 
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div 
+       className="min-h-screen bg-white dark:bg-gray-950 transition-all duration-[800ms] ease-in-out"
+      >
         <Navbar />
         <Hero />
         <About />
@@ -19,6 +23,7 @@ function App() {
         <Projects />
         <Contact />
         <Footer />
+        {/* <Zz /> */}
       </div>
     </ThemeProvider>
   );

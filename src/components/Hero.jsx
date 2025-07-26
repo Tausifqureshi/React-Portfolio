@@ -1,15 +1,13 @@
 import React from "react";
-// import {
-//   Github,
-//   Linkedin,
-//   MessageCircle,
-//   Download,
-//   Mail,
-//   PhoneCall,
-// } from "lucide-react";
 
-import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaPhone,FaDownload } from "react-icons/fa";
-
+import {
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+  FaEnvelope,
+  FaPhone,
+  FaDownload,
+} from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "./Image/Tausif-Image.jpg";
 
@@ -32,15 +30,18 @@ const Hero = () => {
     >
       <div className="text-center w-full max-w-4xl">
         {/* Image */}
-        <div className="flex justify-center mb-6">
-          <div className="w-44 h-56 rounded-full overflow-hidden shadow-md border-2 border-blue-500 dark:border-gray-700">
+        <div className="flex justify-center mb-6 mt-6">
+          <div className="w-44 h-56 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 ease-in-out border border-gray-300 dark:border-gray-700">
             <img
               src={Image}
               alt="Tausif Qureshi"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover  duration-300"
+              loading="lazy"
             />
           </div>
         </div>
+      
+
 
         {/* Typewriter */}
         <h2 className="text-lg md:text-2xl font-medium text-blue-600 dark:text-blue-400 mb-2">
@@ -156,7 +157,6 @@ const Hero = () => {
         >
           <FaEnvelope className="w-5 h-5" />
         </a>
-     
 
         {/* Phone Call */}
         <a

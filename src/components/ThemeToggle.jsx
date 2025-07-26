@@ -1,5 +1,7 @@
 import React from 'react';
-import { Sun, Moon } from 'lucide-react';
+// import { Sun, Moon } from 'lucide-react';
+import { LuSunMedium, LuMoonStar } from "react-icons/lu";
+
 import { useTheme } from '../context/ThemeContext';
 
 const ThemeToggle = () => {
@@ -11,8 +13,8 @@ const ThemeToggle = () => {
       className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
       aria-label="Toggle theme"
     >
-      {/* {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />} */}
-      {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+      {/* {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />} */}
+      {darkMode ? <LuSunMedium className="w-5 h-5" /> : <LuMoonStar className="w-5 h-5" />}
     </button>
   );
 };
