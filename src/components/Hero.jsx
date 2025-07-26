@@ -1,12 +1,15 @@
 import React from "react";
-import {
-  Github,
-  Linkedin,
-  MessageCircle,
-  Download,
-  Mail,
-  PhoneCall,
-} from "lucide-react";
+// import {
+//   Github,
+//   Linkedin,
+//   MessageCircle,
+//   Download,
+//   Mail,
+//   PhoneCall,
+// } from "lucide-react";
+
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaPhone,FaDownload } from "react-icons/fa";
+
 import { Typewriter } from "react-simple-typewriter";
 import Image from "./Image/Tausif-Image.jpg";
 
@@ -97,7 +100,7 @@ const Hero = () => {
             download=""
             className="inline-flex items-center justify-center px-6 py-2 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-600 hover:text-white transition"
           >
-            <Download className="w-4 h-4 mr-2 relative top-[1px]" />
+            <FaDownload className="w-4 h-4 mr-2 relative top-[1px]" />
             Download CV
           </button>
 
@@ -105,7 +108,7 @@ const Hero = () => {
             onClick={handleContactMe}
             className="inline-flex items-center justify-center px-6 py-2 bg-blue-600 text-white rounded-md font-medium hover:shadow-md hover:scale-105 transition"
           >
-            <Mail className="w-4 h-4 mr-2 relative top-[1px]" />
+            <FaEnvelope className="w-4 h-4 mr-2 relative top-[1px]" />
             Contact Me
           </button>
         </div>
@@ -118,10 +121,9 @@ const Hero = () => {
           href="https://github.com/Tausifqureshi"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500
-"
+          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-[#000000] dark:text-white"
         >
-          <Github className="w-5 h-5" />
+          <FaGithub className="w-5 h-5" />
         </a>
 
         {/* LinkedIn */}
@@ -129,38 +131,39 @@ const Hero = () => {
           href="https://www.linkedin.com/in/tausif-qureshi/"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500
-"
+          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-[#0077B5]"
         >
-          <Linkedin className="w-5 h-5" />
+          <FaLinkedin className="w-5 h-5" />
         </a>
 
+        {/* WhatsApp */}
         <a
           href="https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-500
-"
+          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-[#25D366]"
         >
-          <MessageCircle className="w-5 h-5" />
+          <FaWhatsapp className="w-5 h-5" />
         </a>
 
-        {/* Email */}
+        {/* Email (Gmail) */}
         <a
           href="mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500
-"
           target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-[#D93025]
+"
         >
-          <Mail className="w-5 h-5" />
+          <FaEnvelope className="w-5 h-5" />
         </a>
+     
 
         {/* Phone Call */}
         <a
           href="tel:+918429097693"
-          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-500"
+          className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-[#34B7F1]"
         >
-          <PhoneCall className="w-5 h-5" />
+          <FaPhone className="w-5 h-5" />
         </a>
       </div>
     </section>

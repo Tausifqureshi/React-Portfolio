@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+// import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import {FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle,} from "react-icons/fa";
+
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -39,19 +41,19 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <FaEnvelope className="w-6 h-6" />,
       title: 'Email',
       value: 'john.doe@example.com',
       link: 'mailto:john.doe@example.com'
     },
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: <FaPhone className="w-6 h-6" />,
       title: 'Phone',
       value: '+1 (555) 123-4567',
       link: 'tel:+15551234567'
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <FaMapMarkerAlt className="w-6 h-6" />,
       title: 'Location',
       value: 'San Francisco, CA',
       link: null
@@ -72,7 +74,7 @@ const Contact = () => {
 
         {showSuccess && (
           <div className="mb-6 flex items-center justify-center bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg shadow">
-            <CheckCircle className="w-5 h-5 mr-2" />
+            <FaCheckCircle className="w-5 h-5 mr-2" />
             Congratulations! Your message was sent successfully.
           </div>
         )}
@@ -145,6 +147,7 @@ const Contact = () => {
                     autoComplete="off"
                   />
                 </div>
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Email
@@ -161,6 +164,7 @@ const Contact = () => {
                     autoComplete="off"
                   />
                 </div>
+
               </div>
 
               <div>
@@ -201,7 +205,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
               >
-                <Send className="w-5 h-5 mr-2" />
+                <FaPaperPlane className="w-5 h-5 mr-2" />
                 Send Message
               </button>
             </form>

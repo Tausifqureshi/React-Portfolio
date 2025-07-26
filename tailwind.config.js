@@ -18,6 +18,16 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
+       screens: {
+        'xxs': '240px',
+        'xs': '275px',
+        'xsm': '360px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
     },
   },
   plugins: [],
@@ -26,12 +36,6 @@ export default {
 
 
 
-
-// WhatsApp linke hrf
-       // href="https://wa.me/918429097693?text=Hi%20Tausif%2C%20I%20saw%20your%20portfolio!"
-          // target="_blank"
-          // rel="noopener noreferrer"
-          // className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition text-gray-700 dark:text-gray-300 hover:text-green-600"
 
 
 
