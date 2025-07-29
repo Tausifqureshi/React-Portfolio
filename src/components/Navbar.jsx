@@ -1,29 +1,32 @@
-import React, { useState } from 'react';
-// import { Menu, X, FileText } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X, FileText } from "lucide-react";
 import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
 
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const handleResumeClick = () => {
-    window.open('https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view', '_blank');
+    window.open(
+      "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
+      "_blank"
+    );
   };
 
   // ✅ Smooth scroll using scrollIntoView
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
@@ -38,7 +41,7 @@ const Navbar = () => {
               Portfolio
             </span>
           </div>
-    
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -63,7 +66,7 @@ const Navbar = () => {
               <FaFileAlt className="w-4 h-4 mr-2" />
               Resume
             </button>
-            
+
             <ThemeToggle />
           </div>
 
@@ -74,16 +77,21 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
             >
-              {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+              {isOpen ? (
+                <FaTimes className="w-6 h-6" />
+              ) : (
+                <FaBars className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
+
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <button
                 key={item.href}
