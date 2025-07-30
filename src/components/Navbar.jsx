@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, FileText } from "lucide-react";
 import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
 
@@ -20,6 +20,7 @@ const Navbar = () => {
       "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
       "_blank"
     );
+    setIsOpen(false); // ← mobile menu ko band karo
   };
 
   // ✅ Smooth scroll using scrollIntoView
@@ -28,8 +29,24 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
+    setIsOpen(false); // ← mobile menu band karo
   };
+
+  // jab navbar open hoga mobile dive me  to body scroll nahi hogi
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768; // tailwind md = 768px
+
+    if (isMobile) {
+      document.body.style.overflow = isOpen ? "hidden" : "auto";
+    } else {
+      document.body.style.overflow = "auto"; // just in case
+    }
+
+    // Clean up just in case component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">

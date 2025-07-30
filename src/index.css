@@ -8,13 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Actual smooth theme transition fix */
+/* Actual smooth theme transition fix  jab thme chnage hogi*/
 html,
 body,
 #root {
   background-color: white;
   transition: background-color 0.8s ease, color 0.8s ease;
 }
+
 html.dark,
 body.dark,
 #root.dark {
