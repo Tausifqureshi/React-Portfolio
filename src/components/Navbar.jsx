@@ -32,7 +32,7 @@ const Navbar = () => {
     setIsOpen(false); // ← mobile menu band karo
   };
 
-  // jab navbar open hoga mobile dive me  to body scroll nahi hogi
+  // jab navbar open hoga mobile device me to body scroll nahi hogi
   useEffect(() => {
     const isMobile = window.innerWidth < 768; // tailwind md = 768px
 
@@ -133,3 +133,14 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
