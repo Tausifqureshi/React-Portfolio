@@ -67,7 +67,7 @@
 //                 <p className="text-gray-600 dark:text-gray-300">
 //                   Writing maintainable, scalable, and efficient code following best practices and modern development standards.
 //                 </p>
-//               </div>
+//               </div>     
 
 //               {/* UI/UX Design Box */}
 //               <div className="p-6 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-purple-500 dark:hover:border-purple-400 transition-colors group">
