@@ -1,4 +1,18 @@
 
+
+
+                    // <div
+                    //   key={i}
+                    //   className="flex items-center space-x-3 text-slate-600 dark:text-slate-300 cursor-pointer hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
+                    // >
+                    //   <div className={`p-2 rounded-lg bg-slate-100 dark:bg-slate-700 ${color}`}>
+                    //     <IconComponent className="w-5 h-5" />
+                    //   </div>
+                    //   {/* Added break-all to handle long email wrapping */}
+                    //   <span className="text-base break-all">{text}</span>
+                    // </div>
+
+
 // import React from 'react';
 // import { Zap, Code, Palette } from 'lucide-react';
 
