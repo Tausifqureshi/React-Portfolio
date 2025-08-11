@@ -214,6 +214,24 @@ export default Footer;
 
 
 
+// import React, { useState } from 'react'
+
+// function Zz() {
+//   const [counter, setCounter] = useState(0)
+//   function incresHandler(){
+//     setCounter()
+//   }
+//   return (
+//     <div>
+//       <button onClick={incresHandler}>Incres Number </button>
+//     </div>
+//   )
+// }
+
+
+// export default Zz
+
+
 
 
 
