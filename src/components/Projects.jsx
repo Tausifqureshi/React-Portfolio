@@ -145,3 +145,107 @@ export default Projects;
 
 
 
+
+
+
+// import React, { useState } from "react";
+
+// export default function Projects() {
+//   const [filter, setFilter] = useState("All");
+
+//   const categories = ["All", "React", "JavaScript", "UI/UX"];
+//   const projects = [
+//     {
+//       id: 1,
+//       title: "Portfolio Website",
+//       shortDesc: "Personal portfolio with React & Tailwind",
+//       category: "React",
+//       image: "https://via.placeholder.com/400x250",
+//       link: "#",
+//     },
+//     {
+//       id: 2,
+//       title: "Weather App",
+//       shortDesc: "Weather app using JavaScript & API",
+//       category: "JavaScript",
+//       image: "https://via.placeholder.com/400x250",
+//       link: "#",
+//     },
+//     {
+//       id: 3,
+//       title: "UI Kit Design",
+//       shortDesc: "Reusable UI components",
+//       category: "UI/UX",
+//       image: "https://via.placeholder.com/400x250",
+//       link: "#",
+//     },
+//   ];
+
+//   const filteredProjects =
+//     filter === "All"
+//       ? projects
+//       : projects.filter((p) => p.category === filter);
+
+//   return (
+//     <section className="px-6 py-12 bg-gray-50 dark:bg-gray-900">
+//       <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">
+//         Projects
+//       </h2>
+
+//       {/* Filter Buttons */}
+//       <div className="flex justify-center gap-4 mb-8 flex-wrap">
+//         {categories.map((cat) => (
+//           <button
+//             key={cat}
+//             onClick={() => setFilter(cat)}
+//             className={`px-4 py-2 rounded-lg transition ${
+//               filter === cat
+//                 ? "bg-blue-600 text-white"
+//                 : "bg-gray-200 dark:bg-gray-700 dark:text-white hover:bg-blue-500 hover:text-white"
+//             }`}
+//           >
+//             {cat}
+//           </button>
+//         ))}
+//       </div>
+
+//       {/* Projects Grid */}
+//       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//         {filteredProjects.map((project) => (
+//           <div
+//             key={project.id}
+//             className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
+//           >
+//             <img
+//               src={project.image}
+//               alt={project.title}
+//               className="w-full h-40 object-cover"
+//               loading="lazy"
+//             />
+//             <div className="p-4">
+//               <h3 className="text-lg font-semibold mb-2 dark:text-white">
+//                 {project.title}
+//               </h3>
+//               <p className="text-gray-600 dark:text-gray-300 text-sm">
+//                 {project.shortDesc}
+//               </p>
+//               <a
+//                 href={project.link}
+//                 className="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+//               >
+//                 View Live
+//               </a>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
+
+
+
