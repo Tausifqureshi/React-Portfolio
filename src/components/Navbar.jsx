@@ -4,7 +4,6 @@ import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,12 +49,10 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav 
-    // className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl border-b border-gray-200 dark:border-gray-700" 
+    <nav
+      // className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl border-b border-gray-200 dark:border-gray-700"
 
-    className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700"
-
-    
+      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -74,7 +71,6 @@ const Navbar = () => {
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
                   className={`text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200`}
-
                 >
                   {item.label}
                 </button>
@@ -112,35 +108,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {/* <AnimatePresence>
-
-      {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-          <div className="flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="w-full text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
-              >
-                {item.label}
-              </button>
-            ))}
-            <button
-              onClick={handleResumeClick}
-              className="w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors duration-200"
-            >
-              <FaFileAlt className="w-4 h-4 mr-2" />
-              Resume
-            </button>
-          </div>
-        </div>
-      )}
-      </AnimatePresence> */}
-
-
-      
       {/* Mobile Navigation with Animation */}
       <AnimatePresence>
         {isOpen && (
@@ -173,7 +140,6 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
     </nav>
   );
 };
