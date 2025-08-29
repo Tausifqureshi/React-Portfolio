@@ -2,7 +2,7 @@ import React from "react";
 
 import {
   FaGithub,
-  FaLinkedin,
+  FaLinkedin, 
   FaWhatsapp,
   FaEnvelope,
   FaPhone,
