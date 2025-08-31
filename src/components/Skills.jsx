@@ -1,158 +1,99 @@
+import React from "react";
 
-// import React from 'react';
-
-// const skills = [
-//   {
-//     name: 'JavaScript',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-//   },
-//   {
-//     name: 'React.js',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-//   },
-//   {
-//     name: 'HTML5',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-//   },
-//   {
-//     name: 'CSS3',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-//   },
-//   {
-//     name: 'Tailwind CSS',
-//     logo: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg',
-//   },
-//   {
-//     name: 'Bootstrap',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-//   },
-//   {
-//     name: 'Redux',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
-//   },
-//   {
-//     name: 'Git & GitHub',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-//   },
-//   {
-//     name: 'Figma',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-//   },
-//   {
-//     name: 'VS Code',
-//     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
-//   },
-// ];
-
-// const Skills = () => {
-//   return (
-//     <section
-//       id="skills"
-//       className="py-20 bg-gray-50 dark:bg-gray-950 border-t border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
-//     >
-//       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-//         {/* Heading */}
-//         <div className="text-center mb-12">
-//           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-//             Tech Stack
-//           </h2>
-//           <p className="text-lg text-gray-600 dark:text-gray-300">
-//             Proficient in modern frontend technologies, UI frameworks, and dev tools.
-//           </p>
-//         </div>
-
-//         {/* Skill Grid */}
-//         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-//           {skills.map((skill, index) => (
-//             <div
-//               key={index}
-//               className="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 p-4 border border-gray-200 dark:border-gray-600 rounded-lg hover:shadow-md transition duration-300"
-//             >
-//               <img
-//                 src={skill.logo}
-//                 alt={skill.name}
-//                 className="w-12 h-12 object-contain mb-2"
-//                 loading="lazy"
-//               />
-//               <span className="text-sm font-medium text-gray-800 dark:text-gray-100 text-center">
-//                 {skill.name}
-//               </span>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Skills;
-
-
-
-
-
-import React from 'react';
 
 const skills = [
+  // Core Web
   {
-    name: 'JavaScript',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    name: "HTML5",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
-    name: 'TypeScript',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    name: "CSS3",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
-    name: 'React.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    name: "JavaScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+
+  // Frontend Libraries & Frameworks
+  {
+    name: "React.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
-    name: 'Next.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+    name: "React Router",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
   },
   {
-    name: 'HTML5',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    name: "Redux",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
+
+  // Styling
+  {
+    name: "Tailwind CSS",
+    logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
   },
   {
-    name: 'CSS3',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    name: "Bootstrap",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  },
+
+  // API & Integration
+  {
+    name: "REST API Integration",
+    logo: "https://www.vectorlogo.zone/logos/json/json-icon.svg",
   },
   {
-    name: 'Tailwind CSS',
-    logo: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg',
+    name: "Postman",
+    logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+  },
+
+  // Tools & Utilities
+  {
+    name: "Git",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
-    name: 'Bootstrap',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    name: "GitHub",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
   {
-    name: 'Redux',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+    name: "npm",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
   },
   {
-    name: 'Git & GitHub',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    name: "VS Code",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
   {
-    name: 'Figma',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    name: "ESLint",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg",
   },
   {
-    name: 'VS Code',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+    name: "Prettier",
+    logo: "https://prettier.io/icon.png",
   },
   {
-    name: 'ESLint',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg',
+    name: "Chrome DevTools",
+    logo: "https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg",
+  },
+
+  // Deployment & Hosting
+  {
+    name: "Netlify",
+    logo: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg",
   },
   {
-    name: 'Prettier',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg',
+    name: "Firebase",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
+
+  // Best Practices
   {
-    name: 'REST APIs',
-    logo: 'https://cdn-icons-png.flaticon.com/512/906/906324.png',
+    name: "Responsive Design",
+    logo: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
   },
 ];
 
@@ -169,7 +110,8 @@ const Skills = () => {
             My Tech Stack
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Tools & technologies I use daily to build responsive, accessible, and scalable frontend solutions.
+            Tools & technologies I use daily to build responsive, accessible,
+            and scalable frontend solutions.
           </p>
         </div>
 
@@ -198,9 +140,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-
-
-
-
- 
