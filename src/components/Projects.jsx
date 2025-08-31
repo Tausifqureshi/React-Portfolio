@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import {Storefusion, Udmy,Rodan} from "./Project-Image/index.js"
 
 const Projects = () => {
   const projects = [
@@ -8,13 +9,13 @@ const Projects = () => {
       description:
         "A full-stack e-commerce solution with modern design and seamless user experience.",
       image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        Storefusion,
       features: [
         "User authentication and authorization",
         "Product catalog with search and filtering",
         "Shopping cart and checkout process",
       ],
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       github: "https://github.com/johndoe/ecommerce-platform",
       demo: "https://ecommerce-demo.com",
     },
@@ -23,7 +24,7 @@ const Projects = () => {
       description:
         "A collaborative task management application with real-time updates and team features.",
       image:
-        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
+        Udmy,
       technologies: ["React", "Firebase", "Tailwind CSS", "Context API"],
       features: [
         "Real-time task updates",
@@ -38,7 +39,7 @@ const Projects = () => {
       description:
         "A beautiful weather application with detailed forecasts and location-based features.",
       image:
-        "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600",
+        Rodan,
       technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
       features: [
         "Current weather conditions",
@@ -66,14 +67,14 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-gradient-to-br from-blue-150 to-purple-100 dark:from-gray-900 dark:to-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative h-48">
+              <div className="relative h-48 w-full">
                 <img
                   src={project.image}
                   alt={project.title}
