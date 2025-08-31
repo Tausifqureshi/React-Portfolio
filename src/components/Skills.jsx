@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const skills = [
   // Core Web
   {
@@ -28,6 +27,10 @@ const skills = [
   {
     name: "Redux",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
+  {
+    name: "Material UI",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
   },
 
   // Styling
@@ -74,10 +77,6 @@ const skills = [
   {
     name: "Prettier",
     logo: "https://prettier.io/icon.png",
-  },
-  {
-    name: "Chrome DevTools",
-    logo: "https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg",
   },
 
   // Deployment & Hosting
