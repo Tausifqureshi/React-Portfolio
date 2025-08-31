@@ -1,58 +1,68 @@
-import React from 'react';
+import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with modern design and seamless user experience.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: "E-Commerce Platform",
+      description:
+        "A full-stack e-commerce solution with modern design and seamless user experience.",
+      image:
+        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       features: [
-        'User authentication and authorization',
-        'Product catalog with search and filtering',
-        'Shopping cart and checkout process'
+        "User authentication and authorization",
+        "Product catalog with search and filtering",
+        "Shopping cart and checkout process",
       ],
-      github: 'https://github.com/johndoe/ecommerce-platform',
-      demo: 'https://ecommerce-demo.com'
+      github: "https://github.com/johndoe/ecommerce-platform",
+      demo: "https://ecommerce-demo.com",
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates and team features.',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Firebase', 'Tailwind CSS', 'Context API'],
+      title: "Task Management App",
+      description:
+        "A collaborative task management application with real-time updates and team features.",
+      image:
+        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
+      technologies: ["React", "Firebase", "Tailwind CSS", "Context API"],
       features: [
-        'Real-time task updates',
-        'Team collaboration features',
-        'Drag and drop functionality'
+        "Real-time task updates",
+        "Team collaboration features",
+        "Drag and drop functionality",
       ],
-      github: 'https://github.com/johndoe/task-manager',
-      demo: 'https://taskmanager-demo.com'
+      github: "https://github.com/johndoe/task-manager",
+      demo: "https://taskmanager-demo.com",
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather application with detailed forecasts and location-based features.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'Geolocation'],
+      title: "Weather Dashboard",
+      description:
+        "A beautiful weather application with detailed forecasts and location-based features.",
+      image:
+        "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600",
+      technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
       features: [
-        'Current weather conditions',
-        '7-day weather forecast',
-        'Location-based weather data'
+        "Current weather conditions",
+        "7-day weather forecast",
+        "Location-based weather data",
       ],
-      github: 'https://github.com/johndoe/weather-dashboard',
-      demo: 'https://weather-demo.com'
-    }
+      github: "https://github.com/johndoe/weather-dashboard",
+      demo: "https://weather-demo.com",
+    },
   ];
-  
+
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700">
+    <section
+      id="projects"
+      className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and expertise.
+            Here are some of my recent projects that showcase my skills and
+            expertise.
           </p>
         </div>
 
@@ -68,7 +78,7 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
-                   loading="lazy"
+                  loading="lazy"
                 />
               </div>
 
@@ -80,18 +90,6 @@ const Projects = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {project.description}
                 </p>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
 
                 {/* Features */}
                 <div className="mb-6">
@@ -106,6 +104,18 @@ const Projects = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
 
                 {/* Links */}
@@ -128,7 +138,6 @@ const Projects = () => {
                     <FaExternalLinkAlt className="w-4 h-4 mr-2" />
                     Live Demo
                   </a>
-                  
                 </div>
               </div>
             </div>
@@ -140,13 +149,6 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-
-
-
-
-
 
 // import React, { useState } from "react";
 
@@ -242,10 +244,3 @@ export default Projects;
 //     </section>
 //   );
 // }
-
-
-
-
-
-
-
