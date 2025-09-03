@@ -201,7 +201,7 @@
 
 
 import React, { useState, useEffect } from "react";
-import {
+import { 
   FaGithub,
   FaLinkedin,
   FaWhatsapp,
