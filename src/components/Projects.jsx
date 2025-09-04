@@ -1,53 +1,111 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import {Storefusion, Udmy,Rodan} from "./Project-Image/index.js"
+import { Storefusion, Udmy, Rodan } from "./Project-Image/index.js";
 
 const Projects = () => {
+  // const projects = [
+  //   {
+  //     title: "E-Commerce Platform",
+  //     description:
+  //       "A full-stack e-commerce solution with modern design and seamless user experience.",
+  //     image:
+  //       Storefusion,
+  //     features: [
+  //       "User authentication and authorization",
+  //       "Product catalog with search and filtering",
+  //       "Shopping cart and checkout process",
+  //     ],
+  //     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+  //     github: "https://github.com/johndoe/ecommerce-platform",
+  //     demo: "https://ecommerce-demo.com",
+  //   },
+  //   {
+  //     title: "Task Management App",
+  //     description:
+  //       "A collaborative task management application with real-time updates and team features.",
+  //     image:
+  //       Udmy,
+  //     technologies: ["React", "Firebase", "Tailwind CSS", "Context API"],
+  //     features: [
+  //       "Real-time task updates",
+  //       "Team collaboration features",
+  //       "Drag and drop functionality",
+  //     ],
+  //     github: "https://github.com/johndoe/task-manager",
+  //     demo: "https://taskmanager-demo.com",
+  //   },
+  //   {
+  //     title: "Weather Dashboard",
+  //     description:
+  //       "A beautiful weather application with detailed forecasts and location-based features.",
+  //     image:
+  //       Rodan,
+  //     technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
+  //     features: [
+  //       "Current weather conditions",
+  //       "7-day weather forecast",
+  //       "Location-based weather data",
+  //     ],
+  //     github: "https://github.com/johndoe/weather-dashboard",
+  //     demo: "https://weather-demo.com",
+  //   },
+  // ];
+
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "StoreFusion-Digital",
       description:
-        "A full-stack e-commerce solution with modern design and seamless user experience.",
-      image:
-        Storefusion,
+        "E-commerce platform for digital product sales with seamless shopping flow and admin panel.",
+      image: Storefusion,
       features: [
-        "User authentication and authorization",
-        "Product catalog with search and filtering",
-        "Shopping cart and checkout process",
+        "Implemented shopping flow including product catalog, order cart, and purchase completion",
+        "Built admin panel for creating, updating, and deleting products",
+        "Optimized performance and ensured responsive design across devices",
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/johndoe/ecommerce-platform",
-      demo: "https://ecommerce-demo.com",
+      technologies: [
+        "React",
+        "Redux",
+        "Firebase",
+        "Tailwind CSS",
+        "Material-UI",
+      ],
+      github: "https://github.com/Tausifqureshi/StoreFusion-Digital",
+      demo: "https://storefusion-digital.netlify.app/",
     },
     {
-      title: "Task Management App",
+      title: "Udemy Clone",
       description:
-        "A collaborative task management application with real-time updates and team features.",
-      image:
-        Udmy,
-      technologies: ["React", "Firebase", "Tailwind CSS", "Context API"],
+        "Online course platform replicating key Udemy features with interactive course detail pages.",
+      image: Udmy,
       features: [
-        "Real-time task updates",
-        "Team collaboration features",
-        "Drag and drop functionality",
+        "Designed course pages with category filters, detailed view, and cart features",
+        "Constructed interactive course detail pages with dynamic content to make navigation easier",
+        "Integrated React Router for smooth page navigation",
       ],
-      github: "https://github.com/johndoe/task-manager",
-      demo: "https://taskmanager-demo.com",
+      technologies: [
+        "React",
+        "Context API",
+        "useReducer",
+        "React Router",
+        "JavaScript",
+        "CSS",
+      ],
+      github: "https://github.com/Tausifqureshi/Udemy-Clone",
+      demo: "https://65d3989f42b0a515514a520e--polite-palmier-e23c7f.netlify.app/",
     },
     {
-      title: "Weather Dashboard",
+      title: "Rodan+Fields Clone",
       description:
-        "A beautiful weather application with detailed forecasts and location-based features.",
-      image:
-        Rodan,
-      technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
+        "Skincare e-commerce website clone showcasing shopping features with cart and checkout.",
+      image: Rodan,
       features: [
-        "Current weather conditions",
-        "7-day weather forecast",
-        "Location-based weather data",
+        "Constructed product, cart, and checkout pages for smooth shopping experience",
+        "Created interactive product slider showcasing products for user-friendly browsing",
+        "Tracked user actions in LocalStorage to enhance interactivity",
       ],
-      github: "https://github.com/johndoe/weather-dashboard",
-      demo: "https://weather-demo.com",
+      technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
+      github: "https://github.com/Tausifqureshi/RodanAndFields_clone",
+      demo: "https://rodanfieldwebsite.netlify.app/home.html",
     },
   ];
 
@@ -97,11 +155,14 @@ const Projects = () => {
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Key Features:
                   </h4>
-                  <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-300">
+
+                  <ul className="list-none space-y-2 text-sm text-gray-600 dark:text-gray-300">
                     {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-600 dark:bg-blue-700 rounded-full mr-2"></span>
-                        {feature}
+                      <li key={featureIndex} className="flex items-start">
+                        {/* Blue Dot */}
+                        <span className="mt-1 w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>
+                        {/* Text */}
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -150,5 +211,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
