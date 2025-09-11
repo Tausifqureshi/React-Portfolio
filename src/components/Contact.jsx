@@ -216,3 +216,91 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //  {/* Right Content (Image + Card) */}
+          // <div className="flex justify-center md:justify-end">
+          //   <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
+          //     {/* Portrait */}
+          //     <div className="mx-auto mb-6 h-[160px] w-[160px] overflow-hidden rounded-full border-4 border-blue-400 shadow-xl ring-2 ring-blue-500/30 md:absolute md:-top-10 md:-right-8 lg:h-[190px] lg:w-[190px]">
+          //       <img
+          //         src={Image}
+          //         alt="Tausif Qureshi portrait"
+          //         className="h-full w-full object-cover object-top"
+          //       />
+          //     </div>
+
+          //     {/* Developer Card */}
+          //     <div className="relative mt-20 md:mt-0 rounded-2xl border border-emerald-400/30 bg-gray-900/95 text-gray-100 shadow-2xl ring-1 ring-emerald-400/20 p-4">
+          //       <div className="flex items-center gap-2 border-b border-white/10 px-2 py-2 text-xs text-gray-300">
+          //         <span className="h-2 w-2 rounded-full bg-red-400" />
+          //         <span className="h-2 w-2 rounded-full bg-amber-400" />
+          //         <span className="h-2 w-2 rounded-full bg-emerald-400" />
+          //         <span className="ml-2 font-medium text-gray-200">
+          //           developer.js
+          //         </span>
+          //       </div>
+          //       <pre className="px-2 py-3 text-[15px] md:text-[16px] leading-7 font-mono">
+          //         {`const `} <span className="text-emerald-400">developer</span> {` = {\n`}
+          //         {`  name: `} <span className="text-amber-300">"Tausif Qureshi"</span>
+          //         {`,\n  role: `} <span className="text-amber-300">"Frontend Developer"</span>
+          //         {`,\n  experience: `} <span className="text-amber-300">"3+ years"</span>
+          //         {`,\n  skills: [`} <span className="text-amber-300">"React"</span>,{" "}
+          //         <span className="text-amber-300">"Node.js"</span>
+          //         {`],\n  passion: `}
+          //         <span className="text-amber-300">"Building amazing"</span>
+          //         {`\n};`}
+          //       </pre>
+          //     </div>
+          //   </div>
+          // </div>

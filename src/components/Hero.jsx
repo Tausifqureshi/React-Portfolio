@@ -170,16 +170,7 @@
 
 // export default Hero;
 
-
-
-
-
-
-
-
-
-
-
+//
 // import React from "react";
 // import {
 //   FaGithub,
@@ -421,9 +412,7 @@
 
 
 
-
-
-
+// ==================== Proper code this ========================//
 
 import React from "react";
 import {
@@ -452,7 +441,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-gray-950"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-gray-950"
     >
       {/* Background accents */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -460,22 +449,22 @@ const Hero = () => {
         <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl dark:bg-purple-600/10" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pt-28 pb-16">
-        <div className="grid grid-cols-1 items-center justify-items-center gap-12 md:grid-cols-12">
-          {/* Left: Content */}
-          <div className="md:col-span-7">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
+          {/* Left Content */}
+          <div className= "lg:ml-4">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/70 px-3 py-1 text-xs font-medium text-blue-700 backdrop-blur dark:border-blue-900/40 dark:bg-white/5 dark:text-blue-300 mx-auto md:mx-0">
               <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
               Available for opportunities
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-tight text-gray-900 dark:text-white md:text-6xl text-center md:text-left">
+            <h1 className="text-4xl font-extrabold leading-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center md:text-left">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Tausif Qureshi
               </span>
             </h1>
 
-            <h2 className="mt-3 text-base font-semibold tracking-wide text-blue-700 dark:text-blue-300 md:text-lg text-center md:text-left">
+            <h2 className="mt-3 text-base font-semibold tracking-wide text-blue-700 dark:text-blue-300 md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center md:text-left">
               <Typewriter
                 words={[
                   "Hi, I'm Tausif Qureshi",
@@ -493,18 +482,17 @@ const Hero = () => {
               />
             </h2>
 
-            {/* Description */}
-            <p className="mt-4 mx-auto text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400 max-w-xl text-center md:text-left line-clamp-4">
+            <p className="mt-4 text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl leading-relaxed text-gray-700 dark:text-gray-400 max-w-xl text-center md:text-left">
               I deliver reliable, polished user interfaces with performance,
               accessibility and maintainability at the core. Focused on building
               modern, scalable front-end systems that empower businesses.
             </p>
 
             {/* CTA buttons */}
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row items-center justify-center md:items-start md:justify-start">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row items-center md:items-start">
               <button
                 onClick={handleContactMe}
-                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <FaEnvelope className="mr-2 h-4 w-4" /> Contact Me
               </button>
@@ -516,14 +504,14 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Social links */}
-            <div className="mt-7 flex items-center justify-center md:justify-start gap-4 w-full md:w-auto mx-auto md:mx-0">
+            {/* Social Links */}
+            <div className="mt-7 flex items-center justify-center md:justify-start gap-4">
               <a
                 href="https://github.com/Tausifqureshi"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="rounded-full bg-white/80 p-2 text-gray-900 shadow-sm ring-1 ring-black/5 transition hover:scale-110 dark:bg-gray-800 dark:text-white"
+                className="rounded-full bg-white/80 p-2 text-gray-900 shadow-sm transition hover:scale-110 dark:bg-gray-800 dark:text-white"
               >
                 <FaGithub className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
@@ -532,7 +520,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="rounded-full bg-white/80 p-2 text-[#0077B5] shadow-sm ring-1 ring-black/5 transition hover:scale-110 dark:bg-gray-800"
+                className="rounded-full bg-white/80 p-2 text-[#0077B5] shadow-sm transition hover:scale-110 dark:bg-gray-800"
               >
                 <FaLinkedin className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
@@ -541,7 +529,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="rounded-full bg-white/80 p-2 text-[#25D366] shadow-sm ring-1 ring-black/5 transition hover:scale-110 dark:bg-gray-800"
+                className="rounded-full bg-white/80 p-2 text-[#25D366] shadow-sm transition hover:scale-110 dark:bg-gray-800"
               >
                 <FaWhatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
@@ -550,21 +538,21 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Email"
-                className="rounded-full bg-white/80 p-2 text-[#D93025] shadow-sm ring-1 ring-black/5 transition hover:scale-110 dark:bg-gray-800"
+                className="rounded-full bg-white/80 p-2 text-[#D93025] shadow-sm transition hover:scale-110 dark:bg-gray-800"
               >
                 <FaEnvelope className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
               <a
                 href="tel:+918429097693"
                 aria-label="Phone"
-                className="rounded-full bg-white/80 p-2 text-[#34B7F1] shadow-sm ring-1 ring-black/5 transition hover:scale-110 dark:bg-gray-800"
+                className="rounded-full bg-white/80 p-2 text-[#34B7F1] shadow-sm transition hover:scale-110 dark:bg-gray-800"
               >
                 <FaPhone className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
             </div>
 
-            {/* Quick skills */}
-            <div className="mt-6 flex flex-wrap gap-2">
+            {/* Skills */}
+            <div className="mt-6 flex flex-wrap gap-2 justify-center md:justify-start">
               {[
                 {
                   label: "React.js",
@@ -602,35 +590,30 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Developer card + portrait */}
-          <div className="md:col-span-5">
-            <div
-              className="
-              relative mx-auto w-full 
-              max-w-[92vw] sm:w-[420px] 
-              md:w-[480px] lg:w-[490px] 
-              md:translate-x-0
-              xl:-translate-x-14 2xl:-translate-x-20
-            "
-            >
-              {/* Portrait image */}
-              <div
-                className="mx-auto mb-4 z-20 h-[140px] w-[140px] overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:z-50 hover:scale-[1.06] dark:bg-white/5 
-                md:absolute md:-right-6 md:-top-10 md:h-[170px] md:w-[170px] 
-                lg:-right-8 lg:-top-12 lg:h-[180px] lg:w-[180px] 
-                xl:-right-12 xl:-top-14 xl:h-[190px] xl:w-[190px]"
+{/* Right Content (Image + Card) */}
+        <div className="flex justify-center md:justify-end">
+            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg md:mb-16">
+              {/* Portrait */}
+              <div className="mx-auto mb-[.4rem] z-20 h-[160px] w-[160px] overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:z-50 hover:scale-[1.06] dark:bg-white/5 md:absolute md:-top-14 md:-right-2 lg:h-[180px] lg:w-[180px]  md:left-auto md:mx-0 md:mb-0 md:translate-x-0 md:h-[160px] md:w-[160px] lg:-right-6 lg:-top-14"
+
+              // className="mx-auto mb-4 z-20 h-[140px] w-[140px] overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:z-50 hover:scale-[1.06] dark:bg-white/5 md:absolute md:left-auto md:mx-0 md:mb-0 md:translate-x-0 md:-right-10 md:-top-12 md:h-[170px] md:w-[170px] lg:-right-12 lg:-top-14 lg:h-[190px] lg:w-[190px]"
+              
               >
                 <img
                   src={Image}
                   alt="Tausif Qureshi portrait"
-                  className="h-full w-full object-top object-cover transition-transform duration-300"
-                  loading="lazy"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
 
-              {/* Developer code card */}
-              <div className="group/card relative z-10 rounded-2xl border border-emerald-400/30 bg-gray-900/95 text-gray-100 shadow-2xl ring-1 ring-emerald-400/20 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:z-40">
-                <div className="flex items-center gap-2 border-b border-white/10 px-4 py-2 text-xs text-gray-300">
+              {/* Developer Card */}
+              <div className="group/card relative z-10 md:mt-0 rounded-2xl border border-emerald-400/30 bg-gray-900/95 text-gray-100 shadow-2xl ring-1 ring-emerald-400/20 p-4 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:z-40"
+
+
+              // group/card relative z-10 rounded-2xl border border-emerald-400/30 bg-gray-900/95 text-gray-100 shadow-2xl ring-1 ring-emerald-400/20 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:z-40"
+              
+              >
+                <div className="flex items-center gap-2 border-b border-white/10 px-2 py-2 text-xs text-gray-300">
                   <span className="h-2 w-2 rounded-full bg-red-400" />
                   <span className="h-2 w-2 rounded-full bg-amber-400" />
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
@@ -638,29 +621,21 @@ const Hero = () => {
                     developer.js
                   </span>
                 </div>
-                <pre className="px-4 py-2 text-[16px] md:text-[17px] leading-8 font-mono">
-                  {`const `}
-                  <span className="text-emerald-400">developer</span>
-                  {` = {\n`}
-                  {`  name: `}
-                  <span className="text-amber-300">"Tausif Qureshi"</span>
-                  {`,\n  role: `}
-                  <span className="text-amber-300">"Frontend Developer"</span>
-                  {`,\n  experience: `}
-                  <span className="text-amber-300">"3+ years"</span>
-                  {`,\n  skills: [`}
-                  <span className="text-amber-300">"React"</span>
-                  {`, `}
-                  <span className="text-amber-300">"Exploring Node.js"</span>
+                <pre className="px-2 py-3 text-[15px] md:text-[16px] leading-7 font-mono">
+                  {`const `} <span className="text-emerald-400">developer</span> {` = {\n`}
+                  {`  name: `} <span className="text-amber-300">"Tausif Qureshi"</span>
+                  {`,\n  role: `} <span className="text-amber-300">"Frontend Developer"</span>
+                  {`,\n  experience: `} <span className="text-amber-300">"3+ years"</span>
+                  {`,\n  skills: [`} <span className="text-amber-300">"React"</span>,{" "}
+                  <span className="text-amber-300">"Node.js"</span>
                   {`],\n  passion: `}
-                  <span className="text-amber-300">
-                    "Building amazing web apps"
-                  </span>
+                  <span className="text-amber-300">"Building amazing"</span>
                   {`\n};`}
                 </pre>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -668,7 +643,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
 
 
