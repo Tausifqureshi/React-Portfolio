@@ -441,7 +441,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-gray-950"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-gray-950 mt-[1.5rem]"
     >
       {/* Background accents */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -453,9 +453,12 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           {/* Left Content */}
           <div className= "lg:ml-4">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/70 px-3 py-1 text-xs font-medium text-blue-700 backdrop-blur dark:border-blue-900/40 dark:bg-white/5 dark:text-blue-300 mx-auto md:mx-0">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
-              Available for opportunities
+          
+            <div className="mb-5 text-center md:text-left">
+      <div className="inline-flex items-center justify-center gap-2 rounded-full border border-blue-200 bg-white/70 px-3 py-1 text-xs font-medium text-blue-700 backdrop-blur dark:border-blue-900/40 dark:bg-white/5 dark:text-blue-300">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
+        Available for opportunities
+      </div>
             </div>
 
             <h1 className="text-4xl font-extrabold leading-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center md:text-left">
@@ -489,7 +492,7 @@ const Hero = () => {
             </p>
 
             {/* CTA buttons */}
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row items-center md:items-start">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row items-center justify-center md:justify-start lg:justify-start">
               <button
                 onClick={handleContactMe}
                 className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -505,7 +508,10 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="mt-7 flex items-center justify-center md:justify-start gap-4">
+            
+            <div 
+            className="mt-8 flex flex-wrap justify-center md:justify-start gap-4 md:gap-8"
+            >
               <a
                 href="https://github.com/Tausifqureshi"
                 target="_blank"
@@ -552,7 +558,7 @@ const Hero = () => {
             </div>
 
             {/* Skills */}
-            <div className="mt-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <div className="mt-7 flex flex-wrap gap-2 justify-center md:justify-start">
               {[
                 {
                   label: "React.js",
@@ -590,7 +596,7 @@ const Hero = () => {
             </div>
           </div>
 
-{/* Right Content (Image + Card) */}
+       {/* Right Content (Image + Card) */}
         <div className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg md:mb-16">
               {/* Portrait */}

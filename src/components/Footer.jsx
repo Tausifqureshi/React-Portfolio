@@ -315,7 +315,7 @@ const Footer = () => {
               </p>
 
               {/* Social Links */}
-              <div className="flex justify-around space-x-2">
+              <div className="flex gap-5 flex-wrap">
                 {socialLinks.map(({ href, icon: Icon, color, label }, i) => (
                   <a
                     key={i}
@@ -355,12 +355,12 @@ const Footer = () => {
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Contact Info
               </h4>
-              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 ">
                 {contactInfo.map(({ icon: Icon, text, color, href }, i) => (
                   <a
                     key={i}
                     href={href}
-                    className="flex items-center gap-2 hover:underline"
+                    className="flex items-center flex-wrap gap-2 hover:underline"
                   >
                     <Icon className={`w-4 h-4 ${color}`} />
                     <span>{text}</span>

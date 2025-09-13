@@ -74,7 +74,7 @@ function About() {
             </div>
 
             {/* Tech Stack Pills */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* <div className="mt-8 flex flex-wrap gap-3">
               {["React", "JavaScript", "TypeScript", "Tailwind CSS", "Git", "Figma"].map((tech) => (
                 <span
                   key={tech}
@@ -83,7 +83,8 @@ function About() {
                   {tech}
                 </span>
               ))}
-            </div>
+            </div> */}
+
           </div>
         </div>
       </div>
