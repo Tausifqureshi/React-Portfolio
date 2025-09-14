@@ -452,7 +452,7 @@ const Hero = () => {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           {/* Left Content */}
-          <div className= "lg:ml-4">
+          <div className= "lg:ml-5">
           
             <div className="mb-5 text-center md:text-left">
       <div className="inline-flex items-center justify-center gap-2 rounded-full border border-blue-200 bg-white/70 px-3 py-1 text-xs font-medium text-blue-700 backdrop-blur dark:border-blue-900/40 dark:bg-white/5 dark:text-blue-300">
@@ -508,7 +508,6 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            
             <div 
             className="mt-8 flex flex-wrap justify-center md:justify-start gap-4 md:gap-8"
             >
