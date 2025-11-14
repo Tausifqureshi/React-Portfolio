@@ -22,6 +22,19 @@ const ThemeProvider = ({ children }) => {
 
   });
 
+
+  // UseEffcet use tu aisa karna or sub same 
+  // const [darkMode, setDarkMode] = useState(false); // initial state
+  // // ✅ useEffect for getting theme from localStorage on first render
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem('theme');
+  //   if (savedTheme) {
+  //     setDarkMode(savedTheme === 'dark');
+  //   }
+  // }, []);
+
+
+
   // Update theme & save to localStorage
   useEffect(() => {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
