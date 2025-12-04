@@ -445,8 +445,10 @@ const Hero = () => {
     >
       {/* Background accents */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl dark:bg-blue-600/10" />
         <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl dark:bg-purple-600/10" />
+
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
