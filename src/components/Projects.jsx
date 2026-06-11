@@ -1,55 +1,9 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { Storefusion, Udmy, Rodan } from "./Project-Image/index.js";
+import { Storefusion, Udmy, Rodan } from "../assets/images/Project-Image/index.js";
 
 const Projects = () => {
-  // const projects = [
-  //   {
-  //     title: "E-Commerce Platform",
-  //     description:
-  //       "A full-stack e-commerce solution with modern design and seamless user experience.",
-  //     image:
-  //       Storefusion,
-  //     features: [
-  //       "User authentication and authorization",
-  //       "Product catalog with search and filtering",
-  //       "Shopping cart and checkout process",
-  //     ],
-  //     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-  //     github: "https://github.com/johndoe/ecommerce-platform",
-  //     demo: "https://ecommerce-demo.com",
-  //   },
-  //   {
-  //     title: "Task Management App",
-  //     description:
-  //       "A collaborative task management application with real-time updates and team features.",
-  //     image:
-  //       Udmy,
-  //     technologies: ["React", "Firebase", "Tailwind CSS", "Context API"],
-  //     features: [
-  //       "Real-time task updates",
-  //       "Team collaboration features",
-  //       "Drag and drop functionality",
-  //     ],
-  //     github: "https://github.com/johndoe/task-manager",
-  //     demo: "https://taskmanager-demo.com",
-  //   },
-  //   {
-  //     title: "Weather Dashboard",
-  //     description:
-  //       "A beautiful weather application with detailed forecasts and location-based features.",
-  //     image:
-  //       Rodan,
-  //     technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
-  //     features: [
-  //       "Current weather conditions",
-  //       "7-day weather forecast",
-  //       "Location-based weather data",
-  //     ],
-  //     github: "https://github.com/johndoe/weather-dashboard",
-  //     demo: "https://weather-demo.com",
-  //   },
-  // ];
+
 
   const projects = [
     {
