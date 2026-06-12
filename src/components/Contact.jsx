@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()        
 
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -266,4 +266,4 @@ export default Contact;
 
 
 
-
+
