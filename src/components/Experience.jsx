@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBriefcase, FaCalendarAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -24,13 +25,11 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-gray-900"
+      className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            My Experience
-          </span>
+        <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-16 text-center">
+          My Experience
         </h2>
 
         {/* Timeline wrapper */}
@@ -43,14 +42,18 @@ const Experience = () => {
               const isLeft = index % 2 === 0;
 
               return (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
                   className={`flex w-full ${
                     isLeft ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
                   {/* Card */}
-                  <div className="w-full md:w-[45%] bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all">
+                  <div className="w-full md:w-[45%] bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all">
                     <div className="flex items-center gap-2 text-blue-600 dark:text-blue-300 mb-2">
                       <FaBriefcase />
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -82,7 +85,7 @@ const Experience = () => {
                       ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

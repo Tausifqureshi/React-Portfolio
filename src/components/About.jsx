@@ -1,15 +1,22 @@
 
 import React from 'react';
 import { Zap, Code, Palette } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function About() {
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-700">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <div className="relative">
           <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
           <div className="pl-8">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6 flex items-center justify-center">
+            <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-8 flex items-center justify-center">
               <Zap className="w-8 h-8 text-yellow-500 mr-3" />
               My Journey
             </h2>
@@ -73,21 +80,9 @@ function About() {
               </div>
             </div>
 
-            {/* Tech Stack Pills */}
-            {/* <div className="mt-8 flex flex-wrap gap-3">
-              {["React", "JavaScript", "TypeScript", "Tailwind CSS", "Git", "Figma"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div> */}
-
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

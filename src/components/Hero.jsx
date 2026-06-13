@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
@@ -26,15 +27,19 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-gray-950 mt-[1.5rem]"
+      className="relative min-h-screen flex items-center bg-white dark:bg-gray-950 pt-[4rem] border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
     >
-      {/* Background accents */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl dark:bg-blue-600/10" />
-        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl dark:bg-purple-600/10" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden hidden">
+        {/* Background accents removed for flat look */}
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           {/* Left Content */}
           <div className="lg:ml-5">
@@ -191,37 +196,57 @@ const Hero = () => {
 
               {/* Developer Card */}
               <div
-                className="group/card relative z-10 md:mt-0 rounded-2xl border border-emerald-400/30 bg-gray-900/95 text-gray-100 shadow-2xl ring-1 ring-emerald-400/20 p-4 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:z-40"
+                className="group/card relative z-10 md:mt-0 rounded-2xl border border-teal-200 dark:border-emerald-400/30 bg-white dark:bg-gray-900/95 shadow-[0_8px_30px_rgb(45,212,191,0.2)] dark:shadow-2xl ring-1 ring-teal-100 dark:ring-emerald-400/20 p-4 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:z-40"
               >
-                <div className="flex items-center gap-2 border-b border-white/10 px-2 py-2 text-xs text-gray-300">
-                  <span className="h-2 w-2 rounded-full bg-red-400" />
-                  <span className="h-2 w-2 rounded-full bg-amber-400" />
-                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                  <span className="ml-2 font-medium text-gray-200">
+                <div className="flex items-center gap-2 border-b border-gray-100 dark:border-white/10 px-2 py-3 text-xs">
+                  <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
+                  <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
+                  <span className="h-3 w-3 rounded-full bg-[#27c93f]" />
+                  <span className="ml-2 font-semibold text-gray-500 dark:text-gray-300">
                     developer.js
                   </span>
                 </div>
-                <pre className="px-2 py-3 text-[15px] md:text-[16px] leading-7 font-mono">
-                  {`const `} <span className="text-emerald-400">developer</span>{" "}
-                  {` = {\n`}
-                  {`  name: `}{" "}
-                  <span className="text-amber-300">"Tausif Qureshi"</span>
-                  {`,\n  role: `}{" "}
-                  <span className="text-amber-300">"Frontend Developer"</span>
-                  {`,\n  experience: `}{" "}
-                  <span className="text-amber-300">"3+ years"</span>
-                  {`,\n  skills: [`}{" "}
-                  <span className="text-amber-300">"React"</span>,{" "}
-                  <span className="text-amber-300">"Node.js"</span>
-                  {`],\n  passion: `}
-                  <span className="text-amber-300">"Building amazing"</span>
-                  {`\n};`}
+                <pre className="px-2 py-4 text-[14px] md:text-[15px] leading-8 font-mono font-medium">
+                  <span className="text-pink-500 dark:text-pink-400">const</span>{" "}
+                  <span className="text-teal-500 dark:text-emerald-400">developer</span>{" "}
+                  <span className="text-pink-500 dark:text-pink-400">=</span>{" "}
+                  <span className="text-pink-500 dark:text-pink-400">{"{"}</span>
+                  {"\n  "}
+                  <span className="text-teal-500 dark:text-emerald-400">name</span>
+                  <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
+                  <span className="text-amber-500 dark:text-amber-300">"Tausif Qureshi"</span>
+                  <span className="text-pink-500 dark:text-pink-400">,</span>
+                  {"\n  "}
+                  <span className="text-teal-500 dark:text-emerald-400">role</span>
+                  <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
+                  <span className="text-amber-500 dark:text-amber-300">"Frontend Developer"</span>
+                  <span className="text-pink-500 dark:text-pink-400">,</span>
+                  {"\n  "}
+                  <span className="text-teal-500 dark:text-emerald-400">experience</span>
+                  <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
+                  <span className="text-amber-500 dark:text-amber-300">"2+ years"</span>
+                  <span className="text-pink-500 dark:text-pink-400">,</span>
+                  {"\n  "}
+                  <span className="text-teal-500 dark:text-emerald-400">skills</span>
+                  <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
+                  <span className="text-pink-500 dark:text-pink-400">[</span>
+                  <span className="text-amber-500 dark:text-amber-300">"React"</span>
+                  <span className="text-pink-500 dark:text-pink-400">,</span>{" "}
+                  <span className="text-amber-500 dark:text-amber-300">"Node.js"</span>
+                  <span className="text-pink-500 dark:text-pink-400">]</span>
+                  <span className="text-pink-500 dark:text-pink-400">,</span>
+                  {"\n  "}
+                  <span className="text-teal-500 dark:text-emerald-400">passion</span>
+                  <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
+                  <span className="text-amber-500 dark:text-amber-300">"Building amazing web apps"</span>
+                  {"\n"}
+                  <span className="text-pink-500 dark:text-pink-400">{"};"}</span>
                 </pre>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

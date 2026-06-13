@@ -299,7 +299,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-300 dark:border-gray-700 transition-all duration-300">
+      <footer className="bg-white dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-6 py-12">
           {/* Main Content Boxes */}
           <div className="grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">

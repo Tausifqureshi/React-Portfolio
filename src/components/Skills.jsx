@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const skills = [
   // Core Web
@@ -100,9 +101,15 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-24 bg-white dark:bg-gray-950 border-t border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
+      className="py-24 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
@@ -117,9 +124,13 @@ const Skills = () => {
         {/* Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {skills.map((skill, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
               key={index}
-              className="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 p-5 border border-gray-200 dark:border-gray-600 rounded-xl shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out"
+              className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-5 border border-gray-200 dark:border-gray-600 rounded-xl shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out"
             >
               <img
                 src={skill.logo}
@@ -130,10 +141,10 @@ const Skills = () => {
               <span className="text-sm font-semibold text-gray-800 dark:text-gray-100 text-center">
                 {skill.name}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle,} from "react-icons/fa";
+import {FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import emailjs from '@emailjs/browser';
 
@@ -60,10 +61,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-950 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-950 transition-colors duration-300">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4 text-center">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -78,9 +85,15 @@ const Contact = () => {
           </div>
         )}
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 overflow-hidden">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-8"
+          >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Let's Connect
@@ -124,10 +137,16 @@ const Contact = () => {
                 I typically respond to messages within 24 hours. Looking forward to hearing from you!
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-8"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -208,62 +227,11 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
 
 export default Contact;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, FileText } from "lucide-react";
 import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
+import useScrollSpy from "../hooks/useScrollSpy";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -15,6 +16,12 @@ const Navbar = () => {
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
   ];
+
+  const activeSection = useScrollSpy(
+    navItems.map((item) => item.href.substring(1)),
+    100
+  );
+
 
   const handleResumeClick = () => {
     window.open(
@@ -66,7 +73,7 @@ const Navbar = () => {
     <nav
       // className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl border-b border-gray-200 dark:border-gray-700"
 
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700"
+      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -80,15 +87,22 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200`}
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href.substring(1);
+                return (
+                  <button
+                    key={item.href}
+                    onClick={() => scrollToSection(item.href)}
+                    className={`px-1 py-2 text-sm font-semibold transition-all duration-200 border-b-2 ${
+                      isActive
+                        ? "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400"
+                        : "border-transparent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -131,18 +145,25 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+            className="md:hidden bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-700"
           >
-            <div className="flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="w-full text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                >
-                  {item.label}
-                </button>
-              ))}
+            <div className="flex flex-col px-2 pt-2 pb-3 space-y-2 sm:px-3">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href.substring(1);
+                return (
+                  <button
+                    key={item.href}
+                    onClick={() => scrollToSection(item.href)}
+                    className={`w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400"
+                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
               <button
                 onClick={handleResumeClick}
                 className="w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors duration-200"
@@ -162,155 +183,4 @@ export default Navbar;
 
 
 
-// import React, { useState, useEffect } from "react";
-// import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
-// import ThemeToggle from "./ThemeToggle";
 
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const navItems = [
-//     { href: "#home", label: "Home" },
-//     { href: "#about", label: "About" },
-//     { href: "#skills", label: "Skills" },
-//     { href: "#projects", label: "Projects" },
-//     { href: "#contact", label: "Contact" },
-//   ];
-
-//   const handleResumeClick = () => {
-//     window.open(
-//       "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
-//       "_blank"
-//     );
-//     setIsOpen(false);
-//   };
-
-//   const scrollToSection = (href) => {
-//     const element = document.querySelector(href);
-//     if (element) {
-//       element.scrollIntoView({ behavior: "smooth" });
-//     }
-//     setIsOpen(false);
-//   };
-
-//   useEffect(() => {
-//     const isMobile = window.innerWidth < 768;
-//     if (isMobile) {
-//       document.body.style.overflow = isOpen ? "hidden" : "auto";
-//     } else {
-//       document.body.style.overflow = "auto";
-//     }
-//     return () => {
-//       document.body.style.overflow = "auto";
-//     };
-//   }, [isOpen]);
-
-//   return (
-//     <>
-//       {/* Top Navbar */}
-//       <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="flex items-center justify-between h-16">
-//             {/* Logo */}
-//             <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-//               Portfolio
-//             </span>
-
-//             {/* Desktop Nav */}
-//             <div className="hidden md:flex space-x-8">
-//               {navItems.map((item) => (
-//                 <button
-//                   key={item.href}
-//                   onClick={() => scrollToSection(item.href)}
-//                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
-//                 >
-//                   {item.label}
-//                 </button>
-//               ))}
-//             </div>
-
-//             {/* Desktop Actions */}
-//             <div className="hidden md:flex items-center space-x-4">
-//               <button
-//                 onClick={handleResumeClick}
-//                 className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition"
-//               >
-//                 <FaFileAlt className="w-4 h-4 mr-2" />
-//                 Resume
-//               </button>
-//               <ThemeToggle />
-//             </div>
-
-//             {/* Mobile Menu Button */}
-//             <div className="md:hidden flex items-center space-x-2">
-//               <ThemeToggle />
-//               <button
-//                 onClick={() => setIsOpen(true)}
-//                 className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-//               >
-//                 <FaBars className="w-6 h-6" />
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </nav>
-
-//       {/* Sidebar + Overlay */}
-//       {isOpen && (
-//         <div className="fixed inset-0 z-50 flex pointer-events-none md:hidden`">
-//           {/* Overlay */}
-//           <div
-//             className={`absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ${
-//               isOpen
-//                 ? "opacity-100 pointer-events-auto"
-//                 : "opacity-0 pointer-events-none"
-//             }`}
-//             onClick={() => setIsOpen(false)}
-//           ></div>
-
-//           {/* Sidebar */}
-//           <div
-//             className={`h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out pointer-events-auto ${
-//               isOpen ? "translate-x-0" : "-translate-x-full"
-//             }`}
-//           >
-//             {/* Header */}
-//             <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
-//               <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-//                 Menu
-//               </h2>
-//               <button
-//                 onClick={() => setIsOpen(false)}
-//                 className="text-2xl text-gray-700 dark:text-gray-300"
-//               >
-//                 <FaTimes />
-//               </button>
-//             </div>
-
-//             {/* Links */}
-//             <div className="flex flex-col px-2 pt-2 pb-3 space-y-1 overflow-y-auto">
-//               {navItems.map((item) => (
-//                 <button
-//                   key={item.href}
-//                   onClick={() => scrollToSection(item.href)}
-//                   className="w-full text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-base font-medium transition"
-//                 >
-//                   {item.label}
-//                 </button>
-//               ))}
-//               <button
-//                 onClick={handleResumeClick}
-//                 className="w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition"
-//               >
-//                 <FaFileAlt className="w-4 h-4 mr-2" />
-//                 Resume
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   );
-// };
-
-// export default Navbar;
