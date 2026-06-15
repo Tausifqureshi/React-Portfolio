@@ -74,11 +74,11 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
+      className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-4 text-center pb-2">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
@@ -94,8 +94,8 @@ const Projects = () => {
                 onClick={() => setFilter(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   filter === cat
-                    ? "bg-blue-600 text-white shadow-md transform scale-105 border-transparent"
-                    : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                    ? "bg-violet-600 dark:bg-violet-500 text-white shadow-md transform scale-105 border-transparent"
+                    : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-github-card dark:border-github-border dark:text-gray-300 dark:hover:bg-[#21262d]"
                 }`}
               >
                 {cat}
@@ -118,7 +118,7 @@ const Projects = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
-                className="bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white border border-gray-200 dark:border-github-border dark:bg-github-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 {/* Image */}
                 <div className="relative h-48 w-full overflow-hidden">

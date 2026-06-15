@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Actual smooth theme transition fix  jab thme chnage hogi*/
+/* Actual smooth theme transition fix */
 html,
 body,
 #root {
-  background-color: white;
+  background-color: #ffffff; /* pure white */
   transition: background-color 0.8s ease, color 0.8s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
 }
 
 html.dark,
 body.dark,
 #root.dark {
-  background-color: #0f172a; /* same as dark:bg-gray-950 */
-  color: white;
+  background-color: #010409; /* bg-github-header match */
+  color: #c9d1d9; /* text-github-text */
 }

@@ -61,7 +61,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section id="contact" className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300">>
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ const Contact = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-4 text-center pb-2">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-8"
+            className="bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-lg shadow-lg p-8"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -160,7 +160,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Your Name"
                     autoComplete="off"
                   />
@@ -177,7 +177,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="your@email.com"
                     autoComplete="off"
                   />
@@ -196,7 +196,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Project Discussion"
                   autoComplete="off"
                 />
@@ -213,7 +213,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Tell me about your project..."
                   autoComplete="off"
                 ></textarea>

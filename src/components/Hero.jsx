@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 // import Image from "../assets/images/Image/Tausif-Image.jpg";
-import Image from "../assets/images/Image/Qureshi.png";
+import profileImage from "../assets/images/Image/Qureshi.png";
 
 const Hero = () => {
   const handleDownloadCV = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-white dark:bg-gray-950 pt-[4rem] border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
+      className="relative min-h-screen flex items-center bg-white dark:bg-github-bg pt-[4rem] border-b border-gray-200 dark:border-github-border transition-colors duration-300"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden hidden">
         {/* Background accents removed for flat look */}
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
 
             <h1 className="text-4xl font-extrabold leading-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center md:text-left">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-[#8257e5]">
                 Tausif Qureshi
               </span>
             </h1>
@@ -188,7 +188,7 @@ const Hero = () => {
               {/* Portrait */}
               <div className="mx-auto mb-[.4rem] z-20 h-[160px] w-[160px] overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:z-50 hover:scale-[1.06] dark:bg-white/5 md:absolute md:-top-14 md:-right-2 lg:h-[180px] lg:w-[180px]  md:left-auto md:mx-0 md:mb-0 md:translate-x-0 md:h-[160px] md:w-[160px] lg:-right-6 lg:-top-14">
                 <img
-                  src={Image}
+                  src={profileImage}
                   alt="Tausif Qureshi portrait"
                   className="h-full w-full object-cover object-top"
                 />

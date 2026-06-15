@@ -101,7 +101,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-24 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
+      className="py-24 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300"
     >
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -112,7 +112,7 @@ const Skills = () => {
       >
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-4 pb-2">
             My Tech Stack
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -130,7 +130,7 @@ const Skills = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
               key={index}
-              className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-5 border border-gray-200 dark:border-gray-600 rounded-xl shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out"
+              className="flex flex-col items-center justify-center bg-white dark:bg-github-card p-5 border border-gray-200 dark:border-github-border rounded-xl shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out"
             >
               <img
                 src={skill.logo}

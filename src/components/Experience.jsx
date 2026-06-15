@@ -25,10 +25,10 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
+      className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-16 text-center pb-2">
           My Experience
         </h2>
 
@@ -53,7 +53,7 @@ const Experience = () => {
                   }`}
                 >
                   {/* Card */}
-                  <div className="w-full md:w-[45%] bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all">
+                  <div className="w-full md:w-[45%] bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all">
                     <div className="flex items-center gap-2 text-blue-600 dark:text-blue-300 mb-2">
                       <FaBriefcase />
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

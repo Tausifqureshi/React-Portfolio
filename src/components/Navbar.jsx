@@ -73,7 +73,7 @@ const Navbar = () => {
     <nav
       // className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl border-b border-gray-200 dark:border-gray-700"
 
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-700"
+      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-github-header border-b border-gray-200 dark:border-github-border"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -93,7 +93,7 @@ const Navbar = () => {
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className={`px-1 py-2 text-sm font-semibold transition-all duration-200 border-b-2 ${
+                    className={`px-1 py-2 text-base font-medium transition-all duration-200 border-b-2 ${
                       isActive
                         ? "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400"
                         : "border-transparent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
@@ -110,7 +110,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={handleResumeClick}
-              className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-github-border rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-github-card hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
             >
               <FaFileAlt className="w-4 h-4 mr-2" />
               Resume
@@ -124,7 +124,7 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-github-card transition-colors duration-200"
             >
               {isOpen ? (
                 <FaTimes className="w-6 h-6" />
@@ -145,7 +145,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-700"
+            className="md:hidden bg-white dark:bg-github-header border-t border-gray-200 dark:border-github-border"
           >
             <div className="flex flex-col px-2 pt-2 pb-3 space-y-2 sm:px-3">
               {navItems.map((item) => {
