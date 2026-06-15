@@ -11,7 +11,7 @@ function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-9"
       >
         <div className="relative">
           <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
