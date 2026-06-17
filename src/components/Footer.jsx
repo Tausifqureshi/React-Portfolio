@@ -213,10 +213,12 @@ import {
   FaUserGraduate,
   FaLaptopCode,
 } from "react-icons/fa";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   const quickLinks = [
     { href: "home", label: "Home" },
@@ -399,15 +401,51 @@ const Footer = () => {
       </footer>
 
       {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
-          aria-label="Scroll to top"
-        >
-          <FaArrowUp className="w-4 h-4" />
-        </button>
-      )}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.8 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed bottom-6 right-6 z-50"
+          >
+            <motion.button
+              onClick={scrollToTop}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="relative flex items-center justify-center w-12 h-12 group rounded-full focus:outline-none"
+              aria-label="Scroll to top"
+            >
+              {/* Circular Progress SVG */}
+              <svg width="48" height="48" viewBox="0 0 48 48" className="absolute inset-0 transform -rotate-90 pointer-events-none drop-shadow-md">
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="22"
+                  strokeWidth="3"
+                  className="stroke-gray-300 dark:stroke-gray-700"
+                  fill="none"
+                />
+                <motion.circle
+                  cx="24"
+                  cy="24"
+                  r="22"
+                  strokeWidth="3"
+                  className="stroke-blue-600 dark:stroke-blue-400 drop-shadow-lg"
+                  fill="none"
+                  style={{ pathLength: scrollYProgress }}
+                />
+              </svg>
+
+              {/* Inner Button */}
+              <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
+                <FaArrowUp className="w-4 h-4" />
+              </div>
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
