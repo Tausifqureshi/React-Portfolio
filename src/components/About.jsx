@@ -100,7 +100,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="md:col-span-1 bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-center group"
+            className="bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-center group"
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="bg-green-100 dark:bg-green-900/30 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

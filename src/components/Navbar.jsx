@@ -86,14 +86,14 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-4 lg:ml-10 flex items-baseline space-x-5 lg:space-x-8">
               {navItems.map((item) => {
                 const isActive = activeSection === item.href.substring(1);
                 return (
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className={`px-1 py-2 text-base font-medium transition-all duration-200 border-b-2 ${
+                    className={`px-1 py-2 text-sm lg:text-base font-medium transition-all duration-200 border-b-2 ${
                       isActive
                         ? "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400"
                         : "border-transparent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
@@ -107,10 +107,10 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <button
               onClick={handleResumeClick}
-              className="inline-flex items-center px-4 py-2 border border-blue-600 rounded-md text-sm font-medium text-blue-600 dark:text-blue-400 bg-transparent hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors duration-200 shadow-sm"
+              className="inline-flex items-center px-3 py-1.5 lg:px-4 lg:py-2 border border-blue-600 rounded-md text-xs lg:text-sm font-medium text-blue-600 dark:text-blue-400 bg-transparent hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors duration-200 shadow-sm"
             >
               <FaFileAlt className="w-4 h-4 mr-2" />
               Resume
@@ -120,7 +120,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center gap-4 mr-4">
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}

@@ -9,8 +9,10 @@ import {
   FaDownload,
   FaReact,
   FaNodeJs,
-  FaJsSquare
+  FaJsSquare,
+  FaDatabase
 } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
 import { Typewriter } from "react-simple-typewriter";
 // import Image from "../assets/images/Image/Tausif-Image.jpg";
 import profileImage from "../assets/images/Image/Qureshi.png";
@@ -45,7 +47,7 @@ const Hero = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           {/* Left Content */}
-          <div className="lg:ml-5">
+          <div className="order-2 md:order-1">
             <div className="mb-5 text-center md:text-left">
               <div className="inline-flex items-center justify-center gap-2 rounded-full border border-blue-200 bg-white/70 px-3 py-1 text-xs font-medium text-blue-700 backdrop-blur dark:border-blue-900/40 dark:bg-white/5 dark:text-blue-300">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
@@ -186,34 +188,54 @@ const Hero = () => {
           </div>
 
           {/* Right Content (Image + Card) */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg md:mb-16">
+          <div className="order-1 md:order-2 flex justify-center md:justify-center lg:justify-end lg:mr-4">
+            <div className="relative w-full max-w-sm md:max-w-[340px] min-[900px]:max-w-[400px] lg:max-w-md md:mb-16">
               {/* Portrait */}
               <div className="relative mx-auto mb-[.4rem] z-20 h-[160px] w-[160px] md:absolute md:-top-14 md:-right-2 lg:h-[180px] lg:w-[180px] md:left-auto md:mx-0 md:mb-0 md:translate-x-0 md:h-[160px] md:w-[160px] lg:-right-6 lg:-top-14">
-                {/* Floating Icons */}
+                {/* Orbiting Icons Container */}
                 <motion.div 
-                  animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -left-4 z-30 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-blue-500"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 z-30 rounded-full pointer-events-none"
                 >
-                  <FaReact size={24} />
-                </motion.div>
-                <motion.div 
-                  animate={{ y: [0, 15, 0], rotate: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute top-1/2 -right-6 z-30 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-yellow-500"
-                >
-                  <FaJsSquare size={24} />
-                </motion.div>
-                <motion.div 
-                  animate={{ x: [0, 10, 0], y: [0, 10, 0] }}
-                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute -bottom-4 left-4 z-30 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-green-500"
-                >
-                  <FaNodeJs size={24} />
+                  {/* React Icon */}
+                  <motion.div 
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute -top-3 -left-3 md:-top-3 md:-left-3 bg-white dark:bg-gray-800 rounded-full shadow-lg text-blue-500 w-11 h-11 flex items-center justify-center pointer-events-auto"
+                  >
+                    <FaReact size={24} />
+                  </motion.div>
+
+                  {/* JS Icon */}
+                  <motion.div 
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute -top-3 -right-3 md:-top-3 md:-right-3 bg-white dark:bg-gray-800 rounded-full shadow-lg text-yellow-500 w-11 h-11 flex items-center justify-center pointer-events-auto"
+                  >
+                    <FaJsSquare size={24} />
+                  </motion.div>
+
+                  {/* Node Icon */}
+                  <motion.div 
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute -bottom-3 -right-3 md:-bottom-3 md:-right-3 bg-white dark:bg-gray-800 rounded-full shadow-lg text-green-500 w-11 h-11 flex items-center justify-center pointer-events-auto"
+                  >
+                    <FaNodeJs size={24} />
+                  </motion.div>
+
+                  {/* Express Icon */}
+                  <motion.div 
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute -bottom-3 -left-3 md:-bottom-3 md:-left-3 bg-white dark:bg-gray-800 rounded-full shadow-lg text-gray-800 dark:text-gray-200 w-11 h-11 flex items-center justify-center pointer-events-auto"
+                  >
+                    <SiExpress size={16} />
+                  </motion.div>
                 </motion.div>
 
-                <div className="h-full w-full overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:scale-[1.06] dark:bg-white/5">
+                <div className="h-full w-full overflow-hidden rounded-full border-2 border-[#8257e5]/80 bg-white/90 shadow-xl transition-all duration-300 hover:scale-[1.06] dark:bg-white/5">
                   <img
                     src={profileImage}
                     alt="Tausif Qureshi portrait"
@@ -225,7 +247,7 @@ const Hero = () => {
               {/* Developer Card */}
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
-                className="group/card relative z-10 md:mt-0 rounded-2xl border border-teal-200 dark:border-emerald-400/30 bg-white dark:bg-gray-900/95 shadow-[0_8px_30px_rgb(45,212,191,0.2)] dark:shadow-2xl ring-1 ring-teal-100 dark:ring-emerald-400/20 p-4 transition-all duration-300 hover:z-40"
+                className="group/card relative z-10 md:mt-0 rounded-2xl border border-[#8257e5]/30 dark:border-[#8257e5]/40 bg-white dark:bg-gray-900/95 shadow-[0_8px_30px_rgba(130,87,229,0.15)] dark:shadow-2xl ring-1 ring-[#8257e5]/20 dark:ring-[#8257e5]/20 p-4 transition-all duration-300 hover:z-40"
               >
                 <div className="flex items-center gap-2 border-b border-gray-100 dark:border-white/10 px-2 py-3 text-xs">
                   <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
@@ -235,7 +257,7 @@ const Hero = () => {
                     developer.js
                   </span>
                 </div>
-                <pre className="px-2 py-4 text-[14px] md:text-[15px] leading-8 font-mono font-medium">
+                <pre className="px-2 py-4 text-[14px] md:text-[12px] min-[900px]:text-[13.5px] lg:text-[15px] leading-6 lg:leading-8 font-mono font-medium whitespace-pre-wrap break-words">
                   <span className="text-pink-500 dark:text-pink-400">const</span>{" "}
                   <span className="text-teal-500 dark:text-emerald-400">developer</span>{" "}
                   <span className="text-pink-500 dark:text-pink-400">=</span>{" "}

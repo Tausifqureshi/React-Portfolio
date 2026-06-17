@@ -35,7 +35,7 @@ const Experience = () => {
         {/* Timeline wrapper */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#8257e5] to-blue-400 opacity-30" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#8257e5] to-blue-400 opacity-30" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => {
