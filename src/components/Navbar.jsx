@@ -110,7 +110,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={handleResumeClick}
-              className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-github-border rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-github-card hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="inline-flex items-center px-4 py-2 border border-blue-600 rounded-md text-sm font-medium text-blue-600 dark:text-blue-400 bg-transparent hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors duration-200 shadow-sm"
             >
               <FaFileAlt className="w-4 h-4 mr-2" />
               Resume

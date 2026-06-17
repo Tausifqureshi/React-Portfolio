@@ -7,6 +7,9 @@ import {
   FaEnvelope,
   FaPhone,
   FaDownload,
+  FaReact,
+  FaNodeJs,
+  FaJsSquare
 } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 // import Image from "../assets/images/Image/Tausif-Image.jpg";
@@ -90,7 +93,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={handleDownloadCV}
-                className="inline-flex items-center justify-center rounded-lg border border-blue-600 bg-transparent px-6 py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-600 hover:text-white dark:text-blue-300"
+                className="inline-flex items-center justify-center rounded-lg bg-transparent border border-blue-600 px-6 py-3 text-sm font-semibold text-blue-600 dark:text-blue-400 shadow-sm transition hover:bg-blue-600 hover:text-white dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <FaDownload className="mr-2 h-4 w-4" /> Download CV
               </button>
@@ -186,17 +189,43 @@ const Hero = () => {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg md:mb-16">
               {/* Portrait */}
-              <div className="mx-auto mb-[.4rem] z-20 h-[160px] w-[160px] overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:z-50 hover:scale-[1.06] dark:bg-white/5 md:absolute md:-top-14 md:-right-2 lg:h-[180px] lg:w-[180px]  md:left-auto md:mx-0 md:mb-0 md:translate-x-0 md:h-[160px] md:w-[160px] lg:-right-6 lg:-top-14">
-                <img
-                  src={profileImage}
-                  alt="Tausif Qureshi portrait"
-                  className="h-full w-full object-cover object-top"
-                />
+              <div className="relative mx-auto mb-[.4rem] z-20 h-[160px] w-[160px] md:absolute md:-top-14 md:-right-2 lg:h-[180px] lg:w-[180px] md:left-auto md:mx-0 md:mb-0 md:translate-x-0 md:h-[160px] md:w-[160px] lg:-right-6 lg:-top-14">
+                {/* Floating Icons */}
+                <motion.div 
+                  animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-4 -left-4 z-30 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-blue-500"
+                >
+                  <FaReact size={24} />
+                </motion.div>
+                <motion.div 
+                  animate={{ y: [0, 15, 0], rotate: [0, -10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute top-1/2 -right-6 z-30 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-yellow-500"
+                >
+                  <FaJsSquare size={24} />
+                </motion.div>
+                <motion.div 
+                  animate={{ x: [0, 10, 0], y: [0, 10, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute -bottom-4 left-4 z-30 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-green-500"
+                >
+                  <FaNodeJs size={24} />
+                </motion.div>
+
+                <div className="h-full w-full overflow-hidden rounded-full border-4 border-blue-400 bg-white/90 shadow-xl ring-2 ring-blue-500/30 transition-all duration-300 hover:scale-[1.06] dark:bg-white/5">
+                  <img
+                    src={profileImage}
+                    alt="Tausif Qureshi portrait"
+                    className="h-full w-full object-cover object-top"
+                  />
+                </div>
               </div>
 
               {/* Developer Card */}
-              <div
-                className="group/card relative z-10 md:mt-0 rounded-2xl border border-teal-200 dark:border-emerald-400/30 bg-white dark:bg-gray-900/95 shadow-[0_8px_30px_rgb(45,212,191,0.2)] dark:shadow-2xl ring-1 ring-teal-100 dark:ring-emerald-400/20 p-4 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:z-40"
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="group/card relative z-10 md:mt-0 rounded-2xl border border-teal-200 dark:border-emerald-400/30 bg-white dark:bg-gray-900/95 shadow-[0_8px_30px_rgb(45,212,191,0.2)] dark:shadow-2xl ring-1 ring-teal-100 dark:ring-emerald-400/20 p-4 transition-all duration-300 hover:z-40"
               >
                 <div className="flex items-center gap-2 border-b border-gray-100 dark:border-white/10 px-2 py-3 text-xs">
                   <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
@@ -242,7 +271,7 @@ const Hero = () => {
                   {"\n"}
                   <span className="text-pink-500 dark:text-pink-400">{"};"}</span>
                 </pre>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

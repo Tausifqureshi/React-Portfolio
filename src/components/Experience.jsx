@@ -35,7 +35,7 @@ const Experience = () => {
         {/* Timeline wrapper */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-blue-400 to-purple-400 opacity-30" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#8257e5] to-blue-400 opacity-30" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => {
@@ -48,12 +48,20 @@ const Experience = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`flex w-full ${
+                  className={`flex w-full relative ${
                     isLeft ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
+                  {/* Timeline Dot */}
+                  <motion.div 
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
+                    className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-8 w-5 h-5 bg-[#8257e5] rounded-full border-4 border-white dark:border-github-bg z-10 shadow-[0_0_15px_rgba(130,87,229,0.6)]" 
+                  />
+
                   {/* Card */}
-                  <div className="w-full md:w-[45%] bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all">
+                  <div className="w-full md:w-[45%] bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl p-6 shadow-sm hover:shadow-[0_0_25px_rgba(130,87,229,0.2)] hover:border-[#8257e5]/50 hover:-translate-y-1 transition-all duration-300">
                     <div className="flex items-center gap-2 text-blue-600 dark:text-blue-300 mb-2">
                       <FaBriefcase />
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

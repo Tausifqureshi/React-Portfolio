@@ -94,7 +94,7 @@ const Projects = () => {
                 onClick={() => setFilter(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   filter === cat
-                    ? "bg-violet-600 dark:bg-violet-500 text-white shadow-md transform scale-105 border-transparent"
+                    ? "bg-blue-600 text-white shadow-md transform scale-105 border-transparent"
                     : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-github-card dark:border-github-border dark:text-gray-300 dark:hover:bg-[#21262d]"
                 }`}
               >
@@ -120,14 +120,23 @@ const Projects = () => {
                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
                 className="bg-white border border-gray-200 dark:border-github-border dark:bg-github-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
-                {/* Image */}
-                <div className="relative h-48 w-full overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                    loading="lazy"
-                  />
+                {/* Browser Window Frame */}
+                <div className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 rounded-t-lg border-b border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center px-3 py-2 space-x-1.5 bg-gray-200 dark:bg-gray-900 border-b border-gray-300 dark:border-gray-800">
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56] shadow-sm"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e] shadow-sm"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f] shadow-sm"></div>
+                  </div>
+                  {/* Image */}
+                  <div className="relative h-48 w-full overflow-hidden group/image">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 z-10" />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -173,7 +182,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+                      className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-transparent border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors duration-200 text-sm font-medium shadow-sm hover:shadow-md"
                     >
                       <FaGithub className="w-4 h-4 mr-2" />
                       Code

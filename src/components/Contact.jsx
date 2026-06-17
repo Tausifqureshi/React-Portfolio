@@ -13,6 +13,7 @@ const Contact = () => {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,16 +25,19 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()        
 
+    setIsSubmitting(true);
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       formData,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     ).then(() => {
+      setIsSubmitting(false);
       setShowSuccess(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setShowSuccess(false), 5000);
     }).catch((error) => {
+      setIsSubmitting(false);
       console.error('Error:', error);
       alert('Something went wrong, please try again.');
     });
@@ -61,7 +65,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300">>
+    <section id="contact" className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -149,10 +153,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Name
-                  </label>
+                <div className="relative">
                   <input
                     type="text"
                     id="name"
@@ -160,16 +161,16 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Your Name"
+                    className="block px-4 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-white dark:bg-github-bg rounded-lg border border-gray-300 dark:border-github-border appearance-none dark:text-white focus:outline-none focus:ring-1 focus:border-blue-600 focus:ring-blue-600 peer"
+                    placeholder=" "
                     autoComplete="off"
                   />
+                  <label htmlFor="name" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
+                    Name
+                  </label>
                 </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email
-                  </label>
+                <div className="relative">
                   <input
                     type="email"
                     id="email"
@@ -177,18 +178,18 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="your@email.com"
+                    className="block px-4 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-white dark:bg-github-bg rounded-lg border border-gray-300 dark:border-github-border appearance-none dark:text-white focus:outline-none focus:ring-1 focus:border-blue-600 focus:ring-blue-600 peer"
+                    placeholder=" "
                     autoComplete="off"
                   />
+                  <label htmlFor="email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
+                    Email
+                  </label>
                 </div>
 
               </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Subject
-                </label>
+              <div className="relative">
                 <input
                   type="text"
                   id="subject"
@@ -196,16 +197,16 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Project Discussion"
+                  className="block px-4 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-white dark:bg-github-bg rounded-lg border border-gray-300 dark:border-github-border appearance-none dark:text-white focus:outline-none focus:ring-1 focus:border-blue-600 focus:ring-blue-600 peer"
+                  placeholder=" "
                   autoComplete="off"
                 />
+                <label htmlFor="subject" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
+                  Subject
+                </label>
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message
-                </label>
+              <div className="relative">
                 <textarea
                   id="message"
                   name="message"
@@ -213,18 +214,29 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border rounded-lg bg-white dark:bg-github-bg text-gray-900 dark:text-github-text border-gray-300 dark:border-github-border focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tell me about your project..."
+                  className="block px-4 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-white dark:bg-github-bg rounded-lg border border-gray-300 dark:border-github-border appearance-none dark:text-white focus:outline-none focus:ring-1 focus:border-blue-600 focus:ring-blue-600 peer"
+                  placeholder=" "
                   autoComplete="off"
                 ></textarea>
+                <label htmlFor="message" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
+                  Message
+                </label>
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+                disabled={isSubmitting}
+                className={`w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 ${isSubmitting ? "opacity-70 cursor-not-allowed hover:transform-none" : ""}`}
               >
-                <FaPaperPlane className="w-5 h-5 mr-2" />
-                Send Message
+                {isSubmitting ? (
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                ) : (
+                  <FaPaperPlane className="w-5 h-5 mr-2" />
+                )}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </motion.div>
