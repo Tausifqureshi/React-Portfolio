@@ -7,6 +7,27 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = React.useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      setScrolled(currentScrollY > 20);
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { href: "#home", label: "Home" },
@@ -71,9 +92,13 @@ const Navbar = () => {
 
   return (
     <nav
-      // className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl border-b border-gray-200 dark:border-gray-700"
-
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-github-header border-b border-gray-200 dark:border-github-border"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${
+        scrolled
+          ? "bg-white/80 dark:bg-[#010409]/80 backdrop-blur-md border-b border-gray-200 dark:border-github-border shadow-sm py-0"
+          : "bg-transparent border-transparent py-2"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -93,13 +118,20 @@ const Navbar = () => {
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className={`px-1 py-2 text-sm lg:text-base font-medium transition-all duration-200 border-b-2 ${
+                    className={`relative px-2 py-2 text-sm lg:text-base font-medium transition-all duration-300 ${
                       isActive
-                        ? "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400"
-                        : "border-transparent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                        ? "text-blue-600 dark:text-blue-400"
+                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                     }`}
                   >
                     {item.label}
+                    {isActive && (
+                      <motion.div
+                        layoutId="navbar-indicator"
+                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-600 dark:bg-blue-400 rounded-full"
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      />
+                    )}
                   </button>
                 );
               })}
@@ -110,9 +142,9 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <button
               onClick={handleResumeClick}
-              className="inline-flex items-center px-3 py-1.5 lg:px-4 lg:py-2 border border-blue-600 rounded-md text-xs lg:text-sm font-medium text-blue-600 dark:text-blue-400 bg-transparent hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors duration-200 shadow-sm"
+              className="inline-flex items-center justify-center rounded-lg bg-transparent border border-blue-600 px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-blue-600 dark:text-blue-400 shadow-sm transition hover:bg-blue-600 hover:text-white dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <FaFileAlt className="w-4 h-4 mr-2" />
+              <FaFileAlt className="mr-2 h-4 w-4" />
               Resume
             </button>
 
