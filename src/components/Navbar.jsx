@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [isResumeLoading, setIsResumeLoading] = useState(false);
   const lastScrollY = React.useRef(0);
 
   useEffect(() => {
@@ -45,11 +46,15 @@ const Navbar = () => {
 
 
   const handleResumeClick = () => {
-    window.open(
-      "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
-      "_blank"
-    );
-    setIsOpen(false); // ← mobile menu ko band karo
+    setIsResumeLoading(true);
+    setTimeout(() => {
+      window.open(
+        "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
+        "_blank"
+      );
+      setIsResumeLoading(false);
+      setIsOpen(false);
+    }, 1200);
   };
 
   // ✅ Smooth scroll using scrollIntoView
@@ -142,10 +147,18 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <button
               onClick={handleResumeClick}
-              className="inline-flex items-center justify-center rounded-lg bg-transparent border border-blue-600 px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-blue-600 dark:text-blue-400 shadow-sm transition hover:bg-blue-600 hover:text-white dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              disabled={isResumeLoading}
+              className={`group inline-flex items-center justify-center rounded-lg bg-transparent border border-blue-600 px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-blue-600 dark:text-blue-400 shadow-sm transition hover:bg-blue-600 hover:text-white dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${isResumeLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
             >
-              <FaFileAlt className="mr-2 h-4 w-4" />
-              Resume
+              {isResumeLoading ? (
+                <svg className="animate-spin mr-2 h-4 w-4 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              ) : (
+                <FaFileAlt className="mr-2 h-4 w-4" />
+              )}
+              {isResumeLoading ? 'Opening...' : 'Resume'}
             </button>
 
             <ThemeToggle />
@@ -198,10 +211,18 @@ const Navbar = () => {
               })}
               <button
                 onClick={handleResumeClick}
-                className="w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors duration-200"
+                disabled={isResumeLoading}
+                className={`w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors duration-200 ${isResumeLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
               >
-                <FaFileAlt className="w-4 h-4 mr-2" />
-                Resume
+                {isResumeLoading ? (
+                  <svg className="animate-spin mr-2 h-4 w-4 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                ) : (
+                  <FaFileAlt className="w-4 h-4 mr-2" />
+                )}
+                {isResumeLoading ? 'Opening...' : 'Resume'}
               </button>
             </div>
           </motion.div>
