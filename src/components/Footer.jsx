@@ -441,7 +441,7 @@ const Footer = () => {
               {/* Inner Button */}
               <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
                 <FaArrowUp className="w-4 h-4" />
-              </div>
+              </div>  
             </motion.button>
           </motion.div>
         )}
