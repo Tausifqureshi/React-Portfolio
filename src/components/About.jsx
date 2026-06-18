@@ -36,13 +36,13 @@ function About() {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h3>
             <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               <p>
-                Hi! I'm <span className="font-semibold text-blue-600 dark:text-blue-400">Tausif Qureshi</span>, a passionate <span className="font-semibold text-[#8257e5]">Frontend Developer</span> who loves creating beautiful and functional web experiences.
+                Hello, I am <span className="font-semibold text-blue-600 dark:text-blue-400">Tausif Qureshi</span>, a dedicated <span className="font-semibold text-[#8257e5]">MERN Stack Developer</span> with a strong focus on engineering scalable and high-performance web applications.
               </p>
               <p>
-                With <span className="font-semibold text-blue-600 dark:text-blue-400">2+ years of experience</span>, I specialize in building responsive, accessible, and highly interactive user interfaces using modern web technologies like React.js and Tailwind CSS.
+                With <span className="font-semibold text-blue-600 dark:text-blue-400">2 years of professional experience</span>, I specialize in architecting comprehensive end-to-end solutions. My technical proficiency spans across modern frontend frameworks like React.js and robust backend environments utilizing Node.js, Express.js, and MongoDB.
               </p>
               <p>
-                I believe that great frontend development combines technical expertise with creative vision. My goal is to create pixel-perfect websites that provide exceptional user experiences across all devices and platforms.
+                I am deeply committed to writing clean, maintainable code and optimizing application architecture. My core competencies include RESTful API development, secure JWT-based authentication, and sophisticated state management using Redux Toolkit to deliver seamless user experiences.
               </p>
             </div>
           </motion.div>
@@ -56,7 +56,7 @@ function About() {
             className="bg-gradient-to-br from-[#8257e5] to-[#6c42ca] text-white rounded-3xl p-8 flex flex-col justify-center items-center shadow-lg transform transition-transform hover:-translate-y-2 duration-300"
           >
             <Briefcase className="w-14 h-14 mb-4 opacity-90" />
-            <h3 className="text-6xl font-extrabold mb-2">2+</h3>
+            <h3 className="text-6xl font-extrabold mb-2">2</h3>
             <p className="text-lg font-medium opacity-90 text-center">Years of Experience</p>
           </motion.div>
 
@@ -88,9 +88,9 @@ function About() {
             <div className="bg-purple-100 dark:bg-purple-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Palette className="w-7 h-7 text-[#8257e5] dark:text-[#9e7df0]" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Pixel Perfect UI</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Performance Optimized</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Creating intuitive and visually appealing user interfaces with a strong focus on user experience.
+              Improving application performance using techniques like Lazy Loading, Code Splitting, and React Suspense.
             </p>
           </motion.div>
 
@@ -106,10 +106,10 @@ function About() {
               <div className="bg-green-100 dark:bg-green-900/30 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <GraduationCap className="w-7 h-7 text-green-600 dark:text-green-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">Continuous<br/>Learning</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">Full-Stack<br/>Expertise</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
-              Constantly exploring new technologies like Node.js and MongoDB to evolve my full-stack capabilities.
+              Skilled in integrating frontend interfaces with Node.js and MongoDB to deliver complete end-to-end solutions.
             </p>
           </motion.div>
 

@@ -71,10 +71,9 @@ const Hero = () => {
               <Typewriter
                 words={[
                   "Hi, I'm Tausif Qureshi",
-                  "Frontend Developer",
-                  "React Specialist",
-                  "JavaScript Expert",
-                  "Exploring Node.js, Express.js & MongoDB",
+                  "MERN Stack Developer",
+                  "React.js Specialist",
+                  "Building Scalable Web Apps"
                 ]}
                 loop
                 cursor
@@ -86,9 +85,7 @@ const Hero = () => {
             </h2>
 
             <p className="mt-4 text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl leading-relaxed text-gray-700 dark:text-gray-400 max-w-xl text-center md:text-left">
-              I deliver reliable, polished user interfaces with performance,
-              accessibility and maintainability at the core. Focused on building
-              modern, scalable front-end systems that empower businesses.
+              MERN Stack Developer with 2 years of experience specializing in building scalable and production-ready web applications. Skilled in REST API development, JWT authentication, and Redux Toolkit.
             </p>
 
             {/* CTA buttons */}
@@ -172,24 +169,24 @@ const Hero = () => {
                     "bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-300",
                 },
                 {
-                  label: "JavaScript",
-                  color:
-                    "bg-yellow-50 text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-300",
-                },
-                {
-                  label: "Exploring Node.js",
-                  color:
-                    "bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-300",
-                },
-                {
-                  label: "Exploring MongoDB",
+                  label: "Redux Toolkit",
                   color:
                     "bg-purple-50 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300",
                 },
                 {
-                  label: "Exploring Express.js",
+                  label: "Node.js",
                   color:
-                    "bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-300",
+                    "bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-300",
+                },
+                {
+                  label: "Express.js",
+                  color:
+                    "bg-gray-50 text-gray-700 dark:bg-gray-500/10 dark:text-gray-300",
+                },
+                {
+                  label: "MongoDB",
+                  color:
+                    "bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-300",
                 },
               ].map((chip) => (
                 <span
@@ -285,12 +282,12 @@ const Hero = () => {
                   {"\n  "}
                   <span className="text-teal-500 dark:text-emerald-400">role</span>
                   <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
-                  <span className="text-amber-500 dark:text-amber-300">"Frontend Developer"</span>
+                  <span className="text-amber-500 dark:text-amber-300">"MERN Stack Developer"</span>
                   <span className="text-pink-500 dark:text-pink-400">,</span>
                   {"\n  "}
                   <span className="text-teal-500 dark:text-emerald-400">experience</span>
                   <span className="text-pink-500 dark:text-pink-400">:</span>{" "}
-                  <span className="text-amber-500 dark:text-amber-300">"2+ years"</span>
+                  <span className="text-amber-500 dark:text-amber-300">"2 years"</span>
                   <span className="text-pink-500 dark:text-pink-400">,</span>
                   {"\n  "}
                   <span className="text-teal-500 dark:text-emerald-400">skills</span>
@@ -299,6 +296,8 @@ const Hero = () => {
                   <span className="text-amber-500 dark:text-amber-300">"React"</span>
                   <span className="text-pink-500 dark:text-pink-400">,</span>{" "}
                   <span className="text-amber-500 dark:text-amber-300">"Node.js"</span>
+                  <span className="text-pink-500 dark:text-pink-400">,</span>{" "}
+                  <span className="text-amber-500 dark:text-amber-300">"MongoDB"</span>
                   <span className="text-pink-500 dark:text-pink-400">]</span>
                   <span className="text-pink-500 dark:text-pink-400">,</span>
                   {"\n  "}

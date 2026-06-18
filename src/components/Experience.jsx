@@ -4,21 +4,18 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: "Freelance Web Development",
-    role: "Frontend Developer",
-    duration: "2022 - Present",
-    description:
-      "Building responsive, modern web applications with React.js, Next.js & TypeScript. Focused on performance and clean architecture.",
-    skills: ["React.js", "Next.js", "TypeScript", "REST API"],
-  },
-  {
-    company: "Startup XYZ",
-    role: "Frontend Developer Intern",
-    duration: "2021 - 2022",
-    description:
-      "Developed reusable UI components and improved application performance.",
-    skills: ["React.js", "JavaScript", "TailwindCSS"],
-  },
+    company: "NxChamp",
+    role: "MERN Stack Developer",
+    duration: "Sept 2024 - Present",
+    description: [
+      "Collaborated with a team of 3+ developers to deliver Zenvora using the MERN stack and Tailwind CSS.",
+      "Built and integrated reusable UI components using React.js for a modular frontend architecture.",
+      "Implemented global state management using Redux Toolkit (RTK) and session persistence.",
+      "Integrated backend REST APIs built with Node.js, Express.js, and MongoDB, enabling JWT-based authentication.",
+      "Improved application performance using Lazy Loading and React Suspense, reducing load time by nearly 25%."
+    ],
+    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "Tailwind CSS"],
+  }
 ];
 
 const Experience = () => {
@@ -78,9 +75,11 @@ const Experience = () => {
                       {exp.duration}
                     </div>
 
-                    <p className="text-gray-700 dark:text-gray-300 mb-3">
-                      {exp.description}
-                    </p>
+                    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 space-y-1.5 text-sm">
+                      {exp.description.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
 
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill) => (

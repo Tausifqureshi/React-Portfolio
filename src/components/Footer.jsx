@@ -311,9 +311,7 @@ const Footer = () => {
                 Tausif Qureshi
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                Frontend Developer passionate about creating visually appealing,
-                performant, and user-friendly websites using modern web
-                technologies.
+                MERN Stack Developer with 2 years of experience specializing in building scalable, production-ready web applications.
               </p>
 
               {/* Social Links */}
@@ -374,11 +372,11 @@ const Footer = () => {
               <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-1">
                   <FaUserGraduate className="w-4 h-4 mr-2" />
-                  <span>Fresher - Open to Work</span>
+                  <span>2 Years Experience</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
                   <FaLaptopCode className="w-4 h-4 mr-2 text-green-500" />
-                  <span>Available for opportunities</span>
+                  <span>Open to Work</span>
                 </div>
               </div>
             </div>

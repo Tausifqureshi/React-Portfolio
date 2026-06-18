@@ -11,19 +11,22 @@ const Projects = () => {
       title: "StoreFusion-Digital",
       category: "React",
       description:
-        "E-commerce platform for digital product sales with seamless shopping flow and admin panel.",
+        "Full-Stack Digital E-Commerce Platform for Seamless Online Retail and Secure Shopping Experiences.",
       image: Storefusion,
       features: [
-        "Implemented shopping flow including product catalog, order cart, and purchase completion",
-        "Built admin panel for creating, updating, and deleting products",
-        "Optimized performance and ensured responsive design across devices",
+        "Developed scalable shopping and product management systems with secure role-based access authentication flow.",
+        "Managed modular Firestore services with optimized on-demand queries reducing database latency operations efficiently.",
+        "Built centralized Redux Toolkit state management minimizing unnecessary component-level frontend UI re-renders.",
+        "Optimized application performance using React Suspense, useMemo, and secure Razorpay payment checkout integration."
       ],
       technologies: [
-        "React",
-        "Redux",
+        "React.js",
+        "Vite",
+        "Redux Toolkit (RTK)",
         "Firebase",
         "Tailwind CSS",
         "Material-UI",
+        "Chart.js"
       ],
       github: "https://github.com/Tausifqureshi/StoreFusion-Digital",
       demo: "https://storefusion-digital.netlify.app/",
@@ -32,12 +35,13 @@ const Projects = () => {
       title: "Udemy Clone",
       category: "React",
       description:
-        "Online course platform replicating key Udemy features with interactive course detail pages.",
+        "Online learning platform inspired by Udemy with comprehensive course browsing and cart management.",
       image: Udmy,
       features: [
-        "Designed course pages with category filters, detailed view, and cart features",
-        "Constructed interactive course detail pages with dynamic content to make navigation easier",
-        "Integrated React Router for smooth page navigation",
+        "Created end-to-end course browsing system presenting 50+ programs with structured category-based filtering.",
+        "Configured dynamic routes for detailed and category-based views using React Router to enhance user navigation.",
+        "Implemented cart management using Context API and useReducer with persistent localStorage support.",
+        "Designed responsive layout with structured components and category-based sidebar navigation."
       ],
       technologies: [
         "React",
@@ -46,6 +50,7 @@ const Projects = () => {
         "React Router",
         "JavaScript",
         "CSS",
+        "LocalStorage"
       ],
       github: "https://github.com/Tausifqureshi/Udemy-Clone",
       demo: "https://65d3989f42b0a515514a520e--polite-palmier-e23c7f.netlify.app/",
