@@ -4,29 +4,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
 
-body {
-  overflow-x: hidden;
-}
-
-/* Actual smooth theme transition fix */
-html,
-body,
-#root {
-  background-color: #ffffff; /* pure white */
-  transition: background-color 0.8s ease, color 0.8s ease;
-  font-family: 'Inter', sans-serif;
-  color: #0f172a;
-}
-
-html.dark,
-body.dark,
-#root.dark {
-  background-color: #010409; /* bg-github-header match */
-  color: #c9d1d9; /* text-github-text */
-}
