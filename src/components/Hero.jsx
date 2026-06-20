@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
   FaGithub,
@@ -55,13 +55,19 @@ const Hero = () => {
           
           {/* Card 1: Main Intro */}
           <div className="order-3 lg:order-1 lg:col-span-2 flex flex-col justify-center rounded-3xl bg-white dark:bg-[#161b22] border border-gray-100 dark:border-white/5 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 z-10">
-            <div className="mb-6 md:mb-8 text-center lg:text-left">
+            <div className="mb-6 md:mb-8 text-center lg:text-left flex flex-wrap gap-3 justify-center lg:justify-start">
               <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 backdrop-blur-md shadow-[0_2px_10px_-3px_rgba(16,185,129,0.2)] transition-all hover:bg-emerald-500/20 hover:border-emerald-500/30">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
                 <span className="tracking-wide">Available for opportunities</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-700 dark:text-purple-400 backdrop-blur-md shadow-[0_2px_10px_-3px_rgba(168,85,247,0.2)] transition-all hover:bg-purple-500/20 hover:border-purple-500/30">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="tracking-wide">Optimized React Architecture</span>
               </div>
             </div>
 

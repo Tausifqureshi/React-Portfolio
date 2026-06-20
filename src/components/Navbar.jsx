@@ -101,7 +101,7 @@ const Navbar = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
         scrolled
-          ? "bg-white/80 dark:bg-[#010409]/80 backdrop-blur-md border-b border-gray-200 dark:border-github-border shadow-sm py-0"
+          ? "bg-white/70 dark:bg-[#010409]/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)] py-0"
           : "bg-transparent border-transparent py-2"
       }`}
     >
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 font-mono tracking-tight">
+            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400 font-mono tracking-tight drop-shadow-[0_0_8px_rgba(37,99,235,0.4)] dark:drop-shadow-[0_0_8px_rgba(96,165,250,0.4)] transition-all hover:drop-shadow-[0_0_12px_rgba(37,99,235,0.6)] dark:hover:drop-shadow-[0_0_12px_rgba(96,165,250,0.6)]">
               &lt;Tausif /&gt;
             </span>
           </div>
@@ -125,15 +125,15 @@ const Navbar = () => {
                     onClick={() => scrollToSection(item.href)}
                     className={`relative px-2 py-2 text-sm lg:text-base font-semibold transition-all duration-300 ${
                       isActive
-                        ? "text-cyan-600 dark:text-cyan-400"
-                        : "text-gray-700 dark:text-gray-200 hover:text-cyan-600 dark:hover:text-cyan-400"
+                        ? "text-blue-600 dark:text-blue-400"
+                        : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                     }`}
                   >
                     {item.label}
                     {isActive && (
                       <motion.div
                         layoutId="navbar-indicator"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-600 dark:bg-cyan-400 rounded-full"
+                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-600 dark:bg-blue-400 rounded-full"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
@@ -201,8 +201,8 @@ const Navbar = () => {
                     onClick={() => scrollToSection(item.href)}
                     className={`w-full text-left px-3 py-2 text-base font-semibold rounded-md transition-colors duration-200 ${
                       isActive
-                        ? "bg-cyan-50 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400"
-                        : "text-gray-700 dark:text-gray-200 hover:text-cyan-600 dark:hover:text-cyan-400"
+                        ? "bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400"
+                        : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                     }`}
                   >
                     {item.label}

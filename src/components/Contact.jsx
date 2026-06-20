@@ -47,19 +47,19 @@ const Contact = () => {
     {
       icon: <FaEnvelope className="w-6 h-6" />,
       title: 'Email',
-      value: 'john.doe@example.com',
-      link: 'mailto:john.doe@example.com'
+      value: 'tausifqureshi504@gmail.com',
+      link: 'mailto:tausifqureshi504@gmail.com'
     },
     {
       icon: <FaPhone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 84290 97693',
+      link: 'tel:+918429097693'
     },
     {
       icon: <FaMapMarkerAlt className="w-6 h-6" />,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'India',
       link: null
     }
   ];
