@@ -11,15 +11,18 @@ const skills = [
   { name: "CSS3", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   { name: "Tailwind CSS", category: "Frontend", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
   { name: "Material UI", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
-  { name: "Redux Toolkit", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+  { name: "Redux (RTK)", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
   { name: "React Router", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" },
+  { name: "Context API", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   { name: "Firebase", category: "Backend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
   { name: "Git", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
   { name: "GitHub", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
   { name: "VS Code", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+  { name: "Chrome DevTools", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" },
   { name: "Postman", category: "Tools", logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
   { name: "Vercel", category: "Tools", logo: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
   { name: "Netlify", category: "Tools", logo: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" },
+  { name: "Render", category: "Tools", logo: "https://cdn.icon-icons.com/icons2/2699/PNG/512/render_logo_icon_168406.png" },
 ];
 
 const Skills = () => {

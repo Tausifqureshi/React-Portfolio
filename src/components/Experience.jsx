@@ -8,13 +8,25 @@ const experiences = [
     role: "MERN Stack Developer",
     duration: "Sept 2024 - Present",
     description: [
-      "Collaborated with a team of 3+ developers to deliver Zenvora using the MERN stack and Tailwind CSS.",
-      "Built and integrated reusable UI components using React.js for a modular frontend architecture.",
-      "Implemented global state management using Redux Toolkit (RTK) and session persistence.",
-      "Integrated backend REST APIs built with Node.js, Express.js, and MongoDB, enabling JWT-based authentication.",
-      "Improved application performance using Lazy Loading and React Suspense, reducing load time by nearly 25%."
+      "Collaborated with a team of 3+ developers to deliver Zenvora for an e-commerce client, building a high-performance platform using the MERN stack and Tailwind CSS while ensuring complete cross-device responsiveness.",
+      "Built and integrated reusable UI components using React.js, ensuring consistent user interface implementation and a modular frontend architecture.",
+      "Implemented global state management using Redux Toolkit (RTK) and session persistence, ensuring consistent data synchronization between client-side and backend services while reducing debugging time.",
+      "Integrated and consumed backend REST APIs built using Node.js, Express.js, and MongoDB, enabling efficient data handling, secure JWT-based authentication, and custom middleware for sensitive user data.",
+      "Improved application performance using Lazy Loading, Code Splitting, and React Suspense, reducing initial page load time by nearly 25% based on Lighthouse performance reports."
     ],
     skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "Tailwind CSS"],
+  },
+  {
+    company: "Freelance & Remote",
+    role: "Front-End Developer",
+    duration: "Jan 2023 - Aug 2024",
+    description: [
+      "Architected and developed a custom inventory management dashboard using React.js, reducing manual tracking errors by 40%.",
+      "Integrated secure payment gateways (Stripe, Razorpay) and implemented complex frontend routing and state management for SaaS MVPs.",
+      "Collaborated with backend teams to consume RESTful APIs, optimizing frontend data rendering and handling JWT-based authentication flows.",
+      "Worked directly with clients to iterate on UI/UX designs, translating Figma mockups into fully responsive, accessible React components."
+    ],
+    skills: ["React.js", "Redux Toolkit", "Tailwind CSS", "Context API", "REST APIs", "JWT", "Figma"],
   }
 ];
 

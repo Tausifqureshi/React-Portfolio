@@ -36,13 +36,13 @@ function About() {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h3>
             <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               <p>
-                Hello, I am <span className="font-semibold text-blue-600 dark:text-blue-400">Tausif Qureshi</span>, a dedicated <span className="font-semibold text-[#8257e5]">MERN Stack Developer</span> with a strong focus on engineering scalable and high-performance web applications.
+                Hello, I am <span className="font-semibold text-blue-600 dark:text-blue-400">Tausif Qureshi</span>, a dedicated <span className="font-semibold text-[#8257e5]">MERN Stack Developer</span> based in Mumbai, Maharashtra.
               </p>
               <p>
-                With <span className="font-semibold text-blue-600 dark:text-blue-400">2 years of professional experience</span>, I specialize in architecting comprehensive end-to-end solutions. My technical proficiency spans across modern frontend frameworks like React.js and robust backend environments utilizing Node.js, Express.js, and MongoDB.
+                With <span className="font-semibold text-blue-600 dark:text-blue-400">2 years of professional experience</span>, I specialize in building scalable and production-ready web applications using React.js, Node.js, Express.js, and MongoDB.
               </p>
               <p>
-                I am deeply committed to writing clean, maintainable code and optimizing application architecture. My core competencies include RESTful API development, secure JWT-based authentication, and sophisticated state management using Redux Toolkit to deliver seamless user experiences.
+                My core expertise includes REST API development, JWT Authentication, complex state management with Redux Toolkit (RTK), and optimizing application performance to deliver robust end-to-end solutions.
               </p>
             </div>
           </motion.div>
@@ -106,10 +106,11 @@ function About() {
               <div className="bg-green-100 dark:bg-green-900/30 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <GraduationCap className="w-7 h-7 text-green-600 dark:text-green-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">Full-Stack<br/>Expertise</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">BCA Graduate</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
-              Skilled in integrating frontend interfaces with Node.js and MongoDB to deliver complete end-to-end solutions.
+              Bachelor of Computer Applications<br/>
+              <span className="text-sm font-medium text-gray-500 mt-2 block">Institute of Management & Engineering</span>
             </p>
           </motion.div>
 

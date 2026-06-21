@@ -95,7 +95,7 @@ const Hero = () => {
             </h2>
 
             <p className="mt-4 text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl leading-relaxed text-gray-700 dark:text-gray-400 max-w-xl font-medium text-center lg:text-left mx-auto lg:mx-0">
-              MERN Stack Developer with 2 years of experience specializing in building scalable and production-ready web applications. Skilled in REST API development, JWT authentication, and Redux Toolkit.
+              MERN Stack Developer with 2 years of experience specializing in building scalable and production-ready web applications using React.js, Node.js, Express.js, and MongoDB.
             </p>
 
             {/* CTA buttons */}
@@ -262,23 +262,30 @@ const Hero = () => {
               {"\n  "}
               <span className="text-red-600 dark:text-red-400">experience</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">:</span>{" "}
-              <span className="text-red-600 dark:text-red-400">"2 years"</span>
+              <span className="text-red-600 dark:text-red-400">"2 Years"</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">,</span>
               {"\n  "}
               <span className="text-purple-600 dark:text-purple-400">skills</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">:</span>{" "}
               <span className="text-gray-800 dark:text-[#da70d6]">[</span>
-              <span className="text-purple-600 dark:text-purple-400">"React"</span>
+              <span className="text-purple-600 dark:text-purple-400">"React.js"</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">,</span>{" "}
               <span className="text-purple-600 dark:text-purple-400">"Node.js"</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">,</span>{" "}
               <span className="text-purple-600 dark:text-purple-400">"MongoDB"</span>
+              <span className="text-gray-800 dark:text-[#d4d4d4]">,</span>{" "}
+              <span className="text-purple-600 dark:text-purple-400">"Redux (RTK)"</span>
               <span className="text-gray-800 dark:text-[#da70d6]">]</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">,</span>
               {"\n  "}
-              <span className="text-cyan-600 dark:text-cyan-400">passion</span>
+              <span className="text-cyan-600 dark:text-cyan-400">architecture</span>
               <span className="text-gray-800 dark:text-[#d4d4d4]">:</span>{" "}
-              <span className="text-cyan-600 dark:text-cyan-400">"Building amazing web apps"</span>
+              <span className="text-cyan-600 dark:text-cyan-400">"REST APIs & JWT Auth"</span>
+              <span className="text-gray-800 dark:text-[#d4d4d4]">,</span>
+              {"\n  "}
+              <span className="text-orange-600 dark:text-orange-400">performance</span>
+              <span className="text-gray-800 dark:text-[#d4d4d4]">:</span>{" "}
+              <span className="text-orange-600 dark:text-orange-400">"Lighthouse Optimization"</span>
               {"\n"}
               <span className="text-gray-800 dark:text-[#ffd700]">{"};"}</span>
             </pre>

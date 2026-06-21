@@ -32,10 +32,10 @@ const Projects = () => {
       demo: "https://storefusion-digital.netlify.app/",
     },
     {
-      title: "Udemy Clone",
+      title: "EduTech LMS Platform",
       category: "React",
       description:
-        "Online learning platform inspired by Udemy with comprehensive course browsing and cart management.",
+        "Comprehensive learning management system featuring dynamic course browsing, structured filtering, and robust cart management.",
       image: Udmy,
       features: [
         "Created end-to-end course browsing system presenting 50+ programs with structured category-based filtering.",
@@ -56,10 +56,10 @@ const Projects = () => {
       demo: "https://65d3989f42b0a515514a520e--polite-palmier-e23c7f.netlify.app/",
     },
     {
-      title: "Rodan+Fields Clone",
+      title: "Enterprise E-Commerce Portal",
       category: "HTML/CSS",
       description:
-        "Skincare e-commerce website clone showcasing shopping features with cart and checkout.",
+        "Scalable skincare e-commerce storefront featuring interactive product sliders, optimized cart state, and a seamless checkout flow.",
       image: Rodan,
       features: [
         "Constructed product, cart, and checkout pages for smooth shopping experience",
