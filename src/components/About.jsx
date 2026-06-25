@@ -31,6 +31,7 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{ y: -6, scale: 1.01 }}
             className="md:col-span-2 bg-gradient-to-br from-white to-violet-50/10 dark:from-github-card dark:to-[#0d1117] border border-gray-200 dark:border-github-border rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h3>
@@ -53,7 +54,8 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gradient-to-br from-[#8257e5] to-[#6c42ca] text-white rounded-3xl p-8 flex flex-col justify-center items-center shadow-lg transform transition-transform hover:-translate-y-2 duration-300"
+            whileHover={{ y: -6, scale: 1.03 }}
+            className="bg-gradient-to-br from-[#8257e5] to-[#6c42ca] text-white rounded-3xl p-8 flex flex-col justify-center items-center shadow-lg transition-all duration-300"
           >
             <Briefcase className="w-14 h-14 mb-4 opacity-90" />
             <h3 className="text-6xl font-extrabold mb-2">2</h3>
@@ -66,6 +68,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ y: -6, scale: 1.03 }}
             className="bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 group"
           >
             <div className="bg-violet-100 dark:bg-violet-900/20 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -83,6 +86,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ y: -6, scale: 1.03 }}
             className="bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 group"
           >
             <div className="bg-purple-100 dark:bg-purple-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -100,6 +104,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
+            whileHover={{ y: -6, scale: 1.03 }}
             className="bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-center group"
           >
             <div className="flex items-center gap-4 mb-4">
@@ -112,6 +117,47 @@ function About() {
               Bachelor of Computer Applications<br/>
               <span className="text-sm font-medium text-gray-500 mt-2 block">Institute of Management & Engineering</span>
             </p>
+          </motion.div>
+
+          {/* Live Dev Status Card (Spans all 3 cols) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            whileHover={{ y: -6, scale: 1.01 }}
+            className="md:col-span-3 bg-gradient-to-r from-gray-50 to-white dark:from-github-card dark:to-[#0d1117] border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div className="flex flex-col gap-2 max-w-xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 w-fit">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Live Dev Status: Operational
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">Current Focus & Learning</h4>
+              <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
+                Currently exploring Microservices patterns, event-driven systems using RabbitMQ/Kafka, and advanced database indexing strategies for high-throughput MERN applications.
+              </p>
+            </div>
+            
+            {/* Simulated Live Console Log */}
+            <div className="w-full md:w-80 bg-gray-950 dark:bg-black/40 rounded-2xl p-5 border border-gray-800 dark:border-white/5 font-mono text-[11px] md:text-xs text-green-400/90 shadow-inner overflow-hidden select-none">
+              <div className="flex items-center gap-1.5 mb-3 border-b border-white/5 pb-2 text-[10px] text-gray-500">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                <span className="ml-2">stdout - dev_server.log</span>
+              </div>
+              <div className="space-y-1">
+                <p className="text-gray-500">&gt; npm run dev</p>
+                <p className="text-purple-400">VITE v5.4.8 ready in 366 ms</p>
+                <p className="text-emerald-400">➜ Local: http://localhost:5174/</p>
+                <p className="text-cyan-400">[info] loader loaded: Purple unified theme</p>
+                <p className="text-yellow-400">[warn] updating index.html: SEO meta ready</p>
+              </div>
+            </div>
           </motion.div>
 
         </div>

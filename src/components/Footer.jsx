@@ -378,14 +378,23 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="pt-6 border-t border-gray-300 dark:border-github-border">
-            <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 © {currentYear} Tausif Qureshi. All rights reserved.
               </p>
+              
               <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                 <span>Made with</span>
                 <Heart className="w-4 h-4 text-red-500 fill-red-500" />
                 <span>in India</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 select-none">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                </span>
+                System Health: 100% Operational
               </div>
             </div>
           </div>

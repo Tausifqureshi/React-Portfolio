@@ -57,17 +57,23 @@ const Experience = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`flex w-full relative pl-8 md:pl-0 ${
+                  className={`flex w-full relative pl-12 md:pl-0 ${
                     isLeft ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
-                  {/* Timeline Dot */}
+                  {/* Timeline Avatar Dot */}
                   <motion.div 
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                    className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-8 w-5 h-5 bg-[#8257e5] rounded-full border-4 border-white dark:border-github-bg z-10 shadow-[0_0_15px_rgba(130,87,229,0.6)]" 
-                  />
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+                    className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-6 w-9 h-9 bg-white dark:bg-[#161b22] border-2 border-[#8257e5] dark:border-[#9e7df0] rounded-full z-10 shadow-lg flex items-center justify-center text-[#8257e5] dark:text-[#9e7df0] select-none font-bold"
+                  >
+                    {exp.company === "NxChamp" ? (
+                      <span className="text-[11px] font-extrabold font-mono">NX</span>
+                    ) : (
+                      <span className="text-[11px] font-extrabold font-mono">FL</span>
+                    )}
+                  </motion.div>
 
                   {/* Card */}
                   <div className="w-full md:w-[45%] bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl p-6 shadow-sm hover:shadow-[0_0_25px_rgba(130,87,229,0.2)] hover:border-[#8257e5]/50 hover:-translate-y-1 transition-all duration-300">

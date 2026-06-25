@@ -107,10 +107,17 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center gap-2">
             <span className="text-2xl font-bold text-[#8257e5] dark:text-[#9e7df0] font-mono tracking-tight drop-shadow-[0_0_8px_rgba(130,87,229,0.4)] dark:drop-shadow-[0_0_8px_rgba(158,125,240,0.4)] transition-all hover:drop-shadow-[0_0_12px_rgba(130,87,229,0.6)] dark:hover:drop-shadow-[0_0_12px_rgba(158,125,240,0.6)]">
               &lt;Tausif /&gt;
             </span>
+            <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-0.5 text-[10px] font-bold font-mono uppercase tracking-wider rounded-full bg-green-500/10 text-green-500 dark:bg-green-500/15 dark:text-green-400 border border-green-500/20 dark:border-green-500/30 shadow-sm">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+              </span>
+              Available
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -122,7 +129,7 @@ const Navbar = () => {
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className={`relative px-2 py-2 text-sm lg:text-base font-semibold transition-all duration-300 ${
+                    className={`relative px-4 py-1.5 text-sm lg:text-base font-semibold transition-all duration-300 rounded-full z-10 ${
                       isActive
                         ? "text-[#8257e5] dark:text-[#9e7df0]"
                         : "text-gray-700 dark:text-gray-200 hover:text-[#8257e5] dark:hover:text-[#9e7df0]"
@@ -132,8 +139,8 @@ const Navbar = () => {
                     {isActive && (
                       <motion.div
                         layoutId="navbar-indicator"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#8257e5] dark:bg-[#9e7df0] rounded-full"
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        className="absolute inset-0 bg-[#8257e5]/10 dark:bg-[#9e7df0]/15 rounded-full -z-10"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
                   </button>

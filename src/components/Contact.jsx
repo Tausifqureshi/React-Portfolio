@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-
 import emailjs from '@emailjs/browser';
+import confetti from 'canvas-confetti';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,6 +34,12 @@ const Contact = () => {
     ).then(() => {
       setIsSubmitting(false);
       setShowSuccess(true);
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#8257e5', '#9e7df0', '#a855f7', '#6366f1']
+      });
       setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setShowSuccess(false), 5000);
     }).catch((error) => {

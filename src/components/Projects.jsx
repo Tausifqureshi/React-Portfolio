@@ -31,6 +31,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Tausifqureshi/StoreFusion-Digital",
       demo: "https://storefusion-digital.netlify.app/",
+      metrics: { performance: "98", seo: "100", loadTime: "0.6s" },
     },
     {
       title: "EduTech LMS Platform",
@@ -55,6 +56,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Tausifqureshi/Udemy-Clone",
       demo: "https://65d3989f42b0a515514a520e--polite-palmier-e23c7f.netlify.app/",
+      metrics: { performance: "95", seo: "100", loadTime: "0.9s" },
     },
     {
       title: "Enterprise E-Commerce Portal",
@@ -70,6 +72,7 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
       github: "https://github.com/Tausifqureshi/RodanAndFields_clone",
       demo: "https://rodanfieldwebsite.netlify.app/home.html",
+      metrics: { performance: "92", seo: "98", loadTime: "1.1s" },
     },
   ];
 
@@ -161,6 +164,28 @@ const Projects = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
                     {project.description}
                   </p>
+
+                  {/* Performance Metrics */}
+                  <div className="flex flex-wrap items-center gap-3 mb-4 bg-gray-50 dark:bg-[#0d1117]/50 rounded-xl px-3 py-1.5 border border-gray-100 dark:border-white/5 w-fit">
+                    <div className="flex items-center gap-1">
+                      <span className="text-[9px] font-bold text-gray-400 dark:text-gray-500 uppercase">Perf:</span>
+                      <span className="text-[10px] font-extrabold text-emerald-500 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                        {project.metrics.performance}%
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-[9px] font-bold text-gray-400 dark:text-gray-500 uppercase">SEO:</span>
+                      <span className="text-[10px] font-extrabold text-[#8257e5] dark:text-[#9e7df0] bg-[#8257e5]/10 px-1.5 py-0.5 rounded">
+                        {project.metrics.seo}%
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-[9px] font-bold text-gray-400 dark:text-gray-500 uppercase">Load:</span>
+                      <span className="text-[10px] font-extrabold text-cyan-500 dark:text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded">
+                        {project.metrics.loadTime}
+                      </span>
+                    </div>
+                  </div>
 
                   {/* Features */}
                   <div className="mb-6">

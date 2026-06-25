@@ -38,8 +38,52 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center bg-white dark:bg-github-bg pt-[4rem] border-b border-gray-200 dark:border-github-border transition-colors duration-300"
     >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden hidden">
-        {/* Background accents removed for flat look */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 dark:opacity-[0.15]">
+          {/* Floating Shape 1: Circle */}
+          <motion.div
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 20, 0],
+              rotate: 360,
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-gradient-to-tr from-[#8257e5] to-pink-500 blur-3xl"
+          />
+
+          {/* Floating Shape 2: Square/Diamond */}
+          <motion.div
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -30, 0],
+              rotate: -360,
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-[20%] right-[10%] w-96 h-96 rounded-[40px] bg-gradient-to-br from-violet-600 to-indigo-500 blur-3xl"
+          />
+
+          {/* Floating Shape 3: Small Dot */}
+          <motion.div
+            animate={{
+              y: [0, -20, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-[40%] right-[30%] w-48 h-48 rounded-full bg-purple-400 blur-2xl"
+          />
+        </div>
       </div>
 
       <motion.div
@@ -95,6 +139,24 @@ const Hero = () => {
             <p className="mt-4 text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl leading-relaxed text-gray-700 dark:text-gray-400 max-w-xl font-medium text-center lg:text-left mx-auto lg:mx-0">
               MERN Stack Developer with 2 years of experience specializing in building scalable and production-ready web applications using React.js, Node.js, Express.js, and MongoDB.
             </p>
+
+            {/* Quick Developer Stats */}
+            <div className="mt-6 flex flex-wrap gap-6 justify-center lg:justify-start border-t border-gray-100 dark:border-white/5 pt-6">
+              {[
+                { number: "15+", label: "Projects Delivered" },
+                { number: "500+", label: "GitHub Commits" },
+                { number: "30+", label: "API Integrations" }
+              ].map((stat, idx) => (
+                <div key={idx} className="flex flex-col">
+                  <span className="text-2xl md:text-3xl font-extrabold text-[#8257e5] dark:text-[#9e7df0]">
+                    {stat.number}
+                  </span>
+                  <span className="text-[10px] md:text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
 
             {/* CTA buttons */}
             <div className="mt-8 flex flex-wrap gap-3 items-center justify-center lg:justify-start">
