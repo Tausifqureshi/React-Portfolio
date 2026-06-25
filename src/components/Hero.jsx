@@ -1,12 +1,10 @@
 import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Mail, Phone, Download } from "lucide-react";
 import {
   FaGithub,
   FaLinkedin,
   FaWhatsapp,
-  FaEnvelope,
-  FaPhone,
-  FaDownload,
   FaReact,
   FaNodeJs,
   FaJsSquare,
@@ -77,7 +75,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <h2 className="mt-3 text-base font-semibold tracking-wide text-blue-700 dark:text-blue-300 md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl h-8 md:h-10 text-center lg:text-left">
+            <h2 className="mt-3 text-base font-semibold tracking-wide text-[#8257e5] dark:text-[#9e7df0] md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl h-8 md:h-10 text-center lg:text-left">
               <Typewriter
                 words={[
                   "Hi, I'm Tausif Qureshi",
@@ -102,14 +100,14 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-3 items-center justify-center lg:justify-start">
               <button
                 onClick={handleContactMe}
-                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 w-auto"
+                className="inline-flex items-center justify-center rounded-lg bg-[#8257e5] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#6c42ca] hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto"
               >
-                <FaEnvelope className="mr-2 h-4 w-4" /> Contact Me
+                <Mail className="mr-2 h-4 w-4" /> Contact Me
               </button>
               <button
                 onClick={handleDownloadCV}
                 disabled={isCVLoading}
-                className={`group inline-flex items-center justify-center rounded-lg bg-transparent border border-blue-600 px-6 py-3 text-sm font-semibold text-blue-600 dark:text-blue-400 shadow-sm transition hover:bg-blue-600 hover:text-white dark:hover:text-white hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 w-auto ${isCVLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
+                className={`group inline-flex items-center justify-center rounded-lg bg-transparent border border-[#8257e5] px-6 py-3 text-sm font-semibold text-[#8257e5] dark:text-[#9e7df0] shadow-sm transition hover:bg-[#8257e5] hover:text-white dark:hover:text-white hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto ${isCVLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
               >
                 {isCVLoading ? (
                   <svg className="animate-spin mr-2 h-4 w-4 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -117,7 +115,7 @@ const Hero = () => {
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                 ) : (
-                  <FaDownload className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+                  <Download className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
                 )}
                 {isCVLoading ? 'Opening...' : 'Download CV'}
               </button>
@@ -194,8 +192,8 @@ const Hero = () => {
                   { icon: FaGithub, href: "https://github.com/Tausifqureshi", color: "text-gray-700 dark:text-gray-300", hoverColor: "hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900" },
                   { icon: FaLinkedin, href: "https://www.linkedin.com/in/tausif-qureshi/", color: "text-[#0077B5]", hoverColor: "hover:bg-[#0077B5] hover:text-white dark:hover:bg-[#0077B5] dark:hover:text-white" },
                   { icon: FaWhatsapp, href: "https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif", color: "text-[#25D366]", hoverColor: "hover:bg-[#25D366] hover:text-white dark:hover:bg-[#25D366] dark:hover:text-white" },
-                  { icon: FaEnvelope, href: "mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,", color: "text-[#D93025]", hoverColor: "hover:bg-[#D93025] hover:text-white dark:hover:bg-[#D93025] dark:hover:text-white" },
-                  { icon: FaPhone, href: "tel:+918429097693", color: "text-[#34B7F1]", hoverColor: "hover:bg-[#34B7F1] hover:text-white dark:hover:bg-[#34B7F1] dark:hover:text-white" },
+                  { icon: Mail, href: "mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,", color: "text-[#D93025]", hoverColor: "hover:bg-[#D93025] hover:text-white dark:hover:bg-[#D93025] dark:hover:text-white" },
+                  { icon: Phone, href: "tel:+918429097693", color: "text-[#34B7F1]", hoverColor: "hover:bg-[#34B7F1] hover:text-white dark:hover:bg-[#34B7F1] dark:hover:text-white" },
                 ].map((social, index) => (
                   <a
                     key={index}

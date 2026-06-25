@@ -31,15 +31,15 @@ function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-2 bg-gradient-to-br from-white to-blue-50/30 dark:from-github-card dark:to-[#0d1117] border border-gray-200 dark:border-github-border rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300"
+            className="md:col-span-2 bg-gradient-to-br from-white to-violet-50/10 dark:from-github-card dark:to-[#0d1117] border border-gray-200 dark:border-github-border rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h3>
             <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               <p>
-                Hello, I am <span className="font-semibold text-blue-600 dark:text-blue-400">Tausif Qureshi</span>, a dedicated <span className="font-semibold text-[#8257e5]">MERN Stack Developer</span> based in Mumbai, Maharashtra.
+                Hello, I am <span className="font-semibold text-[#8257e5] dark:text-[#9e7df0]">Tausif Qureshi</span>, a dedicated <span className="font-semibold text-[#8257e5]">MERN Stack Developer</span> based in Mumbai, Maharashtra.
               </p>
               <p>
-                With <span className="font-semibold text-blue-600 dark:text-blue-400">2 years of professional experience</span>, I specialize in building scalable and production-ready web applications using React.js, Node.js, Express.js, and MongoDB.
+                With <span className="font-semibold text-[#8257e5] dark:text-[#9e7df0]">2 years of professional experience</span>, I specialize in building scalable and production-ready web applications using React.js, Node.js, Express.js, and MongoDB.
               </p>
               <p>
                 My core expertise includes REST API development, JWT Authentication, complex state management with Redux Toolkit (RTK), and optimizing application performance to deliver robust end-to-end solutions.
@@ -68,8 +68,8 @@ function About() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 group"
           >
-            <div className="bg-blue-100 dark:bg-blue-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Code className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+            <div className="bg-violet-100 dark:bg-violet-900/20 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Code className="w-7 h-7 text-[#8257e5] dark:text-[#9e7df0]" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Clean Architecture</h3>
             <p className="text-gray-600 dark:text-gray-400">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, FileText } from "lucide-react";
-import { FaBars, FaTimes, FaFileAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import useScrollSpy from "../hooks/useScrollSpy";
 import { motion, AnimatePresence } from "framer-motion";
@@ -109,7 +108,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400 font-mono tracking-tight drop-shadow-[0_0_8px_rgba(37,99,235,0.4)] dark:drop-shadow-[0_0_8px_rgba(96,165,250,0.4)] transition-all hover:drop-shadow-[0_0_12px_rgba(37,99,235,0.6)] dark:hover:drop-shadow-[0_0_12px_rgba(96,165,250,0.6)]">
+            <span className="text-2xl font-bold text-[#8257e5] dark:text-[#9e7df0] font-mono tracking-tight drop-shadow-[0_0_8px_rgba(130,87,229,0.4)] dark:drop-shadow-[0_0_8px_rgba(158,125,240,0.4)] transition-all hover:drop-shadow-[0_0_12px_rgba(130,87,229,0.6)] dark:hover:drop-shadow-[0_0_12px_rgba(158,125,240,0.6)]">
               &lt;Tausif /&gt;
             </span>
           </div>
@@ -125,15 +124,15 @@ const Navbar = () => {
                     onClick={() => scrollToSection(item.href)}
                     className={`relative px-2 py-2 text-sm lg:text-base font-semibold transition-all duration-300 ${
                       isActive
-                        ? "text-blue-600 dark:text-blue-400"
-                        : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                        ? "text-[#8257e5] dark:text-[#9e7df0]"
+                        : "text-gray-700 dark:text-gray-200 hover:text-[#8257e5] dark:hover:text-[#9e7df0]"
                     }`}
                   >
                     {item.label}
                     {isActive && (
                       <motion.div
                         layoutId="navbar-indicator"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-600 dark:bg-blue-400 rounded-full"
+                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#8257e5] dark:bg-[#9e7df0] rounded-full"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
@@ -148,7 +147,7 @@ const Navbar = () => {
             <button
               onClick={handleResumeClick}
               disabled={isResumeLoading}
-              className={`group inline-flex items-center justify-center rounded-lg bg-transparent border border-blue-600 px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-blue-600 dark:text-blue-400 shadow-sm transition hover:bg-blue-600 hover:text-white dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${isResumeLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
+              className={`group inline-flex items-center justify-center rounded-lg bg-transparent border border-[#8257e5] px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-[#8257e5] dark:text-[#9e7df0] shadow-sm transition hover:bg-[#8257e5] hover:text-white dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-violet-500 ${isResumeLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
             >
               {isResumeLoading ? (
                 <svg className="animate-spin mr-2 h-4 w-4 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -156,7 +155,7 @@ const Navbar = () => {
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
               ) : (
-                <FaFileAlt className="mr-2 h-4 w-4" />
+                <FileText className="mr-2 h-4 w-4" />
               )}
               {isResumeLoading ? 'Opening...' : 'Resume'}
             </button>
@@ -169,12 +168,12 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-github-card transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-[#8257e5] dark:hover:text-[#9e7df0] hover:bg-gray-100 dark:hover:bg-github-card transition-colors duration-200"
             >
               {isOpen ? (
-                <FaTimes className="w-6 h-6" />
+                <X className="w-6 h-6" />
               ) : (
-                <FaBars className="w-6 h-6" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -201,8 +200,8 @@ const Navbar = () => {
                     onClick={() => scrollToSection(item.href)}
                     className={`w-full text-left px-3 py-2 text-base font-semibold rounded-md transition-colors duration-200 ${
                       isActive
-                        ? "bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400"
-                        : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                        ? "bg-violet-50 text-[#8257e5] dark:bg-violet-900/20 dark:text-[#9e7df0]"
+                        : "text-gray-700 dark:text-gray-200 hover:text-[#8257e5] dark:hover:text-[#9e7df0]"
                     }`}
                   >
                     {item.label}
@@ -212,15 +211,15 @@ const Navbar = () => {
               <button
                 onClick={handleResumeClick}
                 disabled={isResumeLoading}
-                className={`w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors duration-200 ${isResumeLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
+                className={`w-full text-left inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-[#8257e5] dark:hover:text-[#9e7df0] text-base font-medium transition-colors duration-200 ${isResumeLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
               >
                 {isResumeLoading ? (
-                  <svg className="animate-spin mr-2 h-4 w-4 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin mr-2 h-4 w-4 text-[#8257e5] dark:text-[#9e7df0]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                 ) : (
-                  <FaFileAlt className="w-4 h-4 mr-2" />
+                  <FileText className="w-4 h-4 mr-2" />
                 )}
                 {isResumeLoading ? 'Opening...' : 'Resume'}
               </button>

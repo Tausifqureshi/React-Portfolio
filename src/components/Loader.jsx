@@ -10,7 +10,7 @@ const Loader = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold text-cyan-400 tracking-wider mb-6"
+          className="text-4xl md:text-5xl font-bold text-[#8257e5] dark:text-[#9e7df0] font-mono tracking-tight drop-shadow-[0_0_8px_rgba(130,87,229,0.4)] mb-6"
         >
           &lt;Tausif /&gt;
         </motion.h1>
@@ -35,7 +35,7 @@ const Loader = () => {
               duration: 1.5,
               ease: "easeInOut",
             }}
-            className="w-full h-full bg-gradient-to-r from-transparent via-purple-500 to-cyan-400"
+            className="w-full h-full bg-gradient-to-r from-transparent via-[#8257e5] to-[#9e7df0]"
           ></motion.div>
         </div>
 
@@ -44,7 +44,7 @@ const Loader = () => {
           {[0, 1, 2].map((index) => (
             <motion.div
               key={index}
-              className="w-2 h-2 bg-cyan-400 rounded-full"
+              className="w-2 h-2 bg-[#8257e5] dark:bg-[#9e7df0] rounded-full"
               animate={{
                 y: ["0%", "-50%", "0%"],
               }}

@@ -55,7 +55,7 @@ const Skills = () => {
                 onClick={() => setFilter(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   filter === cat
-                    ? "bg-blue-600 text-white shadow-md transform scale-105 border-transparent"
+                    ? "bg-[#8257e5] text-white shadow-md transform scale-105 border-transparent"
                     : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-github-card dark:border-github-border dark:text-gray-300 dark:hover:bg-[#21262d]"
                 }`}
               >
@@ -73,10 +73,11 @@ const Skills = () => {
             {filteredSkills.map((skill, index) => (
               <motion.div
                 layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                exit={{ opacity: 0, scale: 0.9, y: 15 }}
+                transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 key={skill.name}
                 className="group relative flex flex-col items-center justify-center bg-white dark:bg-github-card p-6 border border-gray-200 dark:border-github-border rounded-2xl shadow-sm hover:shadow-[0_0_20px_rgba(130,87,229,0.15)] hover:border-[#8257e5]/50 transition-all duration-300"

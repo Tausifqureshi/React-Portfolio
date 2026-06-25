@@ -205,14 +205,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaWhatsapp,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaHeart,
-  FaArrowUp,
-  FaUserGraduate,
-  FaLaptopCode,
 } from "react-icons/fa";
+import { Mail, Phone, MapPin, Heart, ArrowUp, GraduationCap, Laptop } from "lucide-react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 
 const Footer = () => {
@@ -249,13 +243,13 @@ const Footer = () => {
     },
     {
       href: "mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,",
-      icon: FaEnvelope,
+      icon: Mail,
       color: "#D14836",
       label: "Email",
     },
     {
       href: "tel:+918429097693",
-      icon: FaPhone,
+      icon: Phone,
       color: "#FF6B00",
       label: "Phone",
     },
@@ -263,19 +257,19 @@ const Footer = () => {
 
   const contactInfo = [
     {
-      icon: FaEnvelope,
+      icon: Mail,
       text: "tausifqureshi504@gmail.com",
       color: "text-blue-500",
       href: "mailto:tausifqureshi504@gmail.com",
     },
     {
-      icon: FaPhone,
+      icon: Phone,
       text: "+91 84290 97693",
       color: "text-green-500",
       href: "tel:+918429097693",
     },
     {
-      icon: FaMapMarkerAlt,
+      icon: MapPin,
       text: "India",
       color: "text-purple-500",
       href: "#",
@@ -301,13 +295,13 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-white dark:bg-gray-950 text-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+      <footer className="bg-white dark:bg-[#010409] text-gray-800 dark:text-white border-t border-gray-200 dark:border-github-border transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-6 py-12">
           {/* Main Content Boxes */}
           <div className="grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* About Box */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-              <h3 className="text-lg font-semibold text-blue-600 mb-3">
+            <div className="bg-white dark:bg-[#161b22] rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6">
+              <h3 className="text-lg font-semibold text-[#8257e5] mb-3">
                 Tausif Qureshi
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
@@ -322,7 +316,7 @@ const Footer = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition"
+                    className="p-2 bg-white dark:bg-[#161b22] border dark:border-github-border rounded-full shadow hover:scale-110 transition"
                     aria-label={label}
                     style={{ color }}
                   >
@@ -333,7 +327,7 @@ const Footer = () => {
             </div>
 
             {/* Quick Links Box */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+            <div className="bg-white dark:bg-[#161b22] rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Quick Links
               </h4>
@@ -342,7 +336,7 @@ const Footer = () => {
                   <button
                     key={i}
                     onClick={() => scrollToSection(href)}
-                    className="block w-full text-left text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm py-1"
+                    className="block w-full text-left text-gray-600 dark:text-gray-400 hover:text-[#8257e5] dark:hover:text-[#9e7df0] transition-colors text-sm py-1"
                   >
                     {label}
                   </button>
@@ -351,7 +345,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Box */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 min-[500px]:col-span-2 lg:col-span-1">
+            <div className="bg-white dark:bg-[#161b22] rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6 min-[500px]:col-span-2 lg:col-span-1">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Contact Info
               </h4>
@@ -369,13 +363,13 @@ const Footer = () => {
               </div>
 
               {/* Professional Info */}
-              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-github-border">
                 <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  <FaUserGraduate className="w-4 h-4 mr-2" />
+                  <GraduationCap className="w-4 h-4 mr-2" />
                   <span>2 Years Experience</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                  <FaLaptopCode className="w-4 h-4 mr-2 text-green-500" />
+                  <Laptop className="w-4 h-4 mr-2 text-green-500" />
                   <span>Open to Work</span>
                 </div>
               </div>
@@ -383,14 +377,14 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="pt-6 border-t border-gray-300 dark:border-gray-700">
+          <div className="pt-6 border-t border-gray-300 dark:border-github-border">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 © {currentYear} Tausif Qureshi. All rights reserved.
               </p>
               <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                 <span>Made with</span>
-                <FaHeart className="w-4 h-4 text-red-500" />
+                <Heart className="w-4 h-4 text-red-500 fill-red-500" />
                 <span>in India</span>
               </div>
             </div>
@@ -430,15 +424,15 @@ const Footer = () => {
                   cy="24"
                   r="22"
                   strokeWidth="3"
-                  className="stroke-blue-600 dark:stroke-blue-400 drop-shadow-lg"
+                  className="stroke-[#8257e5] dark:stroke-[#9e7df0] drop-shadow-lg"
                   fill="none"
                   style={{ pathLength: scrollYProgress }}
                 />
               </svg>
 
               {/* Inner Button */}
-              <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-300">
-                <FaArrowUp className="w-4 h-4" />
+              <div className="w-10 h-10 bg-white dark:bg-[#161b22] border dark:border-github-border rounded-full shadow-lg flex items-center justify-center text-[#8257e5] dark:text-[#9e7df0] group-hover:bg-[#8257e5] group-hover:text-white dark:group-hover:bg-[#8257e5] dark:group-hover:text-white transition-all duration-300">
+                <ArrowUp className="w-4 h-4" />
               </div>  
             </motion.button>
           </motion.div>

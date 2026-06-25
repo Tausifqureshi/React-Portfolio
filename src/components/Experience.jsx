@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBriefcase, FaCalendarAlt } from "react-icons/fa";
+import { Briefcase, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 
 const experiences = [
@@ -44,7 +44,7 @@ const Experience = () => {
         {/* Timeline wrapper */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#8257e5] to-blue-400 opacity-30" />
+          <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#8257e5] to-violet-500 opacity-30" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => {
@@ -57,7 +57,7 @@ const Experience = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`flex w-full relative ${
+                  className={`flex w-full relative pl-8 md:pl-0 ${
                     isLeft ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
@@ -66,13 +66,13 @@ const Experience = () => {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                    className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-8 w-5 h-5 bg-[#8257e5] rounded-full border-4 border-white dark:border-github-bg z-10 shadow-[0_0_15px_rgba(130,87,229,0.6)]" 
+                    className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-8 w-5 h-5 bg-[#8257e5] rounded-full border-4 border-white dark:border-github-bg z-10 shadow-[0_0_15px_rgba(130,87,229,0.6)]" 
                   />
 
                   {/* Card */}
                   <div className="w-full md:w-[45%] bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl p-6 shadow-sm hover:shadow-[0_0_25px_rgba(130,87,229,0.2)] hover:border-[#8257e5]/50 hover:-translate-y-1 transition-all duration-300">
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-300 mb-2">
-                      <FaBriefcase />
+                    <div className="flex items-center gap-2 text-[#8257e5] dark:text-[#9e7df0] mb-2">
+                      <Briefcase className="w-5 h-5" />
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                         {exp.role}
                       </h3>
@@ -83,7 +83,7 @@ const Experience = () => {
                     </p>
 
                     <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 my-2">
-                      <FaCalendarAlt />
+                      <Calendar className="w-4 h-4" />
                       {exp.duration}
                     </div>
 
@@ -97,7 +97,7 @@ const Experience = () => {
                       {exp.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1 text-xs rounded-full bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-300"
+                          className="px-3 py-1 text-xs rounded-full bg-violet-50 text-violet-700 dark:bg-violet-500/10 dark:text-violet-300"
                         >
                           {skill}
                         </span>
