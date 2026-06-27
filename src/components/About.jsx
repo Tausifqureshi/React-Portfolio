@@ -65,7 +65,7 @@ const TerminalConsole = () => {
       setLines((prev) => {
         const nextLine = terminalLines[lineIndexRef.current];
         lineIndexRef.current = (lineIndexRef.current + 1) % terminalLines.length;
-        const newLines = [...prev, nextLine];
+        const newLines = [...prev, nextLine];   
         if (newLines.length > 5) {
           newLines.shift();
         }
