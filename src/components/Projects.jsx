@@ -139,7 +139,7 @@ const Projects = () => {
                     </div>
                     {/* URL Bar */}
                     <div className="flex items-center justify-center bg-white/80 dark:bg-[#010409] text-[10px] text-gray-400 dark:text-gray-500 rounded-md px-8 py-0.5 mx-auto font-mono max-w-[65%] overflow-hidden truncate whitespace-nowrap border dark:border-github-border/20 shadow-inner">
-                      <span className="text-[#8257e5] dark:text-[#9e7df0] opacity-80 mr-0.5 font-bold">https://</span>{project.title.toLowerCase()}.dev
+                      <span className="text-[#8257e5] dark:text-[#9e7df0] opacity-80 mr-0.5 font-bold">https://</span>{project.title.toLowerCase().replace(/\s+/g, '-')}.dev
                     </div>
                   </div>
                   {/* Image */}

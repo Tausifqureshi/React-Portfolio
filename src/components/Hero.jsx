@@ -40,49 +40,7 @@ const Hero = () => {
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 opacity-10 dark:opacity-[0.15]">
-          {/* Floating Shape 1: Circle */}
-          <motion.div
-            animate={{
-              y: [0, -40, 0],
-              x: [0, 20, 0],
-              rotate: 360,
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-gradient-to-tr from-[#8257e5] to-pink-500 blur-3xl"
-          />
-
-          {/* Floating Shape 2: Square/Diamond */}
-          <motion.div
-            animate={{
-              y: [0, 50, 0],
-              x: [0, -30, 0],
-              rotate: -360,
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute bottom-[20%] right-[10%] w-96 h-96 rounded-[40px] bg-gradient-to-br from-violet-600 to-indigo-500 blur-3xl"
-          />
-
-          {/* Floating Shape 3: Small Dot */}
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute top-[40%] right-[30%] w-48 h-48 rounded-full bg-purple-400 blur-2xl"
-          />
+          {/* Background shapes removed for a clean solid theme */}
         </div>
       </div>
 
@@ -114,7 +72,7 @@ const Hero = () => {
             </div>
 
             <h1 className="text-3xl font-extrabold leading-tight text-gray-900 dark:text-white md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight mb-2 text-center lg:text-left">
-              <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#FFB75E,#FF416C,#8A2387,#40C9FF,#FFB75E)] animate-text-gradient">
+              <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#8257e5,#a855f7,#40C9FF,#8257e5)] animate-text-gradient">
                 Tausif Qureshi
               </span>
             </h1>
@@ -231,9 +189,8 @@ const Hero = () => {
                 </motion.div>
               </motion.div>
 
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 via-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 dark:opacity-30 scale-110"></div>
-              
-              <div className="relative h-full w-full rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 shadow-2xl transition-transform duration-300 hover:scale-[1.05]">
+              {/* Clean, solid photo frame */}
+              <div className="relative h-full w-full rounded-full p-1 bg-[#8257e5] dark:bg-[#9e7df0] shadow-2xl transition-transform duration-300 hover:scale-[1.05]">
                 <div className="h-full w-full overflow-hidden rounded-full bg-white dark:bg-[#0d1117] border-[3px] border-white dark:border-[#0d1117]">
                   <img
                     src={profileImage}
@@ -262,7 +219,7 @@ const Hero = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-[#0d1117] ${social.color} border border-gray-200/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-transparent ${social.hoverColor}`}
+                    className={`group flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-transparent ${social.color} border border-gray-200/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-transparent ${social.hoverColor}`}
                   >
                     <social.icon className="h-5 w-5 transition-colors duration-300" />
                   </a>
