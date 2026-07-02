@@ -18,7 +18,7 @@ function App() {
     // Simulate initial loading time for the beautiful loader
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,7 +28,7 @@ function App() {
 
   return ( 
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-950 transition-all duration-300 ease-in-out text-gray-900 dark:text-gray-100">
+      <div className="min-h-screen bg-white dark:bg-github-bg transition-all duration-300 ease-in-out text-gray-900 dark:text-gray-100">
         <Navbar />
         <Hero />
         <Suspense fallback={<div className="py-20 text-center">Loading section...</div>}>

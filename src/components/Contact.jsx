@@ -80,7 +80,7 @@ const Contact = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-4 text-center pb-2">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] dark:text-[#9e7df0] mb-4 text-center pb-2">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -89,7 +89,7 @@ const Contact = () => {
         </div>
 
         {showSuccess && (
-          <div className="mb-6 flex items-center justify-center bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg shadow">
+          <div className="mb-6 flex items-center justify-center bg-green-100 border border-green-400 text-green-700 dark:bg-emerald-950/20 dark:border-emerald-500/30 dark:text-emerald-400 px-6 py-4 rounded-lg shadow">
             <CheckCircle className="w-5 h-5 mr-2" />
             Congratulations! Your message was sent successfully.
           </div>
@@ -114,32 +114,36 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 gap-4">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <div className="bg-[#8257e5] text-white p-3 rounded-lg">
+                <motion.div 
+                  key={index}
+                  whileHover={{ y: -3, scale: 1.01 }}
+                  className="flex items-center space-x-4 p-4 bg-white dark:bg-github-card border border-gray-100 dark:border-github-border rounded-2xl shadow-sm hover:shadow-md hover:border-[#8257e5]/30 dark:hover:border-[#9e7df0]/30 transition-all duration-300 cursor-default"
+                >
+                  <div className="bg-[#8257e5] dark:bg-[#9e7df0]/15 text-white dark:text-[#9e7df0] p-3.5 rounded-xl flex-shrink-0">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h4 className="text-base font-bold text-gray-900 dark:text-white leading-tight">
                       {info.title}
                     </h4>
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-gray-600 dark:text-gray-300 hover:text-[#8257e5] dark:hover:text-[#9e7df0] transition-colors duration-200"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-[#8257e5] dark:hover:text-[#9e7df0] transition-colors duration-200 mt-1 block font-medium"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-gray-600 dark:text-gray-300">{info.value}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 font-medium">{info.value}</p>
                     )}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            <div className="bg-gradient-to-br from-violet-50/50 to-purple-50/50 shadow-md dark:from-[#161b22] dark:to-[#010409] border dark:border-github-border p-6 rounded-lg">
+            <div className="bg-white dark:bg-github-card shadow-sm border border-gray-100 dark:border-github-border p-6 rounded-2xl">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 Quick Response
               </h4>

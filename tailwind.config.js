@@ -9,11 +9,11 @@ export default {
       },
       colors: {
         github: {
-          bg: '#010409',
-          card: '#161b22',
-          border: '#30363d',
-          header: '#010409',
-          text: '#c9d1d9'
+          bg: '#070610',
+          card: '#0f0d22',
+          border: '#221c40',
+          header: '#070610',
+          text: '#e3e1f2'
         }
       },
       animation: {

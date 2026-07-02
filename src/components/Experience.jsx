@@ -37,7 +37,7 @@ const Experience = () => {
       className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-16 text-center pb-2">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] dark:text-[#9e7df0] mb-16 text-center pb-2">
           My Experience
         </h2>
 

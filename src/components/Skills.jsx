@@ -42,7 +42,7 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-4 pb-2">My Tech Stack</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] dark:text-[#9e7df0] mb-4 pb-2">My Tech Stack</h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
             Tools & technologies I use daily to architect and build scalable, full-stack MERN web applications.
           </p>

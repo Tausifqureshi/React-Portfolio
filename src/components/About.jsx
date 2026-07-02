@@ -10,28 +10,32 @@ function About() {
       icon: Code,
       tech: "React.js, Redux Toolkit, Tailwind CSS",
       color: "text-blue-500",
-      bgColor: "bg-blue-500/10"
+      bgColor: "bg-blue-500/10",
+      hoverClass: "hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.12)]"
     },
     {
       title: "Backend Development",
       icon: Cpu,
       tech: "Node.js, Express.js, RESTful APIs",
       color: "text-green-500",
-      bgColor: "bg-green-500/10"
+      bgColor: "bg-green-500/10",
+      hoverClass: "hover:border-green-500/50 hover:shadow-[0_0_15px_rgba(34,197,94,0.12)]"
     },
     {
       title: "Database Design",
       icon: Database,
       tech: "MongoDB, Indexing, Schema Design",
       color: "text-emerald-500",
-      bgColor: "bg-emerald-500/10"
+      bgColor: "bg-emerald-500/10",
+      hoverClass: "hover:border-emerald-500/50 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)]"
     },
     {
       title: "Deployment & DevOps",
       icon: Globe,
       tech: "Vercel, Render, Git/GitHub",
       color: "text-purple-500",
-      bgColor: "bg-purple-500/10"
+      bgColor: "bg-purple-500/10",
+      hoverClass: "hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.12)]"
     }
   ];
 
@@ -47,8 +51,8 @@ function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] mb-4 pb-2 flex items-center justify-center">
-            <User className="w-8 h-8 mr-3 text-[#8257e5]" />
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#8257e5] dark:text-[#9e7df0] mb-4 pb-2 flex items-center justify-center">
+            <User className="w-8 h-8 mr-3 text-[#8257e5] dark:text-[#9e7df0]" />
             What I do
           </h2>
           <p className="text-sm md:text-base font-bold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
@@ -85,7 +89,7 @@ function About() {
                 <motion.div
                   key={index}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="flex items-center gap-4 p-4 bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 cursor-default"
+                  className={`flex items-center gap-4 p-4 bg-white dark:bg-github-card border border-gray-200 dark:border-github-border rounded-2xl shadow-sm transition-all duration-300 cursor-default ${domain.hoverClass}`}
                 >
                   <div className={`p-3 rounded-xl ${domain.bgColor} ${domain.color} flex-shrink-0`}>
                     <domain.icon className="w-6 h-6" />
