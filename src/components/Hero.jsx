@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           
           {/* Card 1: Main Intro */}
-          <div className="order-3 lg:order-1 lg:col-span-2 flex flex-col justify-center rounded-3xl bg-white dark:bg-[#161b22] border border-gray-100 dark:border-white/5 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 z-10">
+          <div className="order-3 lg:order-1 lg:col-span-2 flex flex-col justify-center rounded-3xl bg-white dark:bg-github-card border border-gray-100 dark:border-white/5 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 z-10">
             <div className="mb-6 md:mb-8 text-center lg:text-left flex flex-wrap gap-3 justify-center lg:justify-start">
               <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 backdrop-blur-md shadow-[0_2px_10px_-3px_rgba(16,185,129,0.2)] transition-all hover:bg-emerald-500/20 hover:border-emerald-500/30">
                 <span className="relative flex h-2.5 w-2.5">
@@ -143,7 +143,7 @@ const Hero = () => {
           </div>
 
           {/* Card 2: Profile Image with Orbiting Icons */}
-          <div className="order-1 lg:order-2 lg:col-span-1 flex flex-col items-center justify-center rounded-3xl bg-white dark:bg-[#161b22] border border-gray-100 dark:border-white/5 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 min-h-[340px] z-10 relative overflow-hidden">
+          <div className="order-1 lg:order-2 lg:col-span-1 flex flex-col items-center justify-center rounded-3xl bg-white dark:bg-github-card border border-gray-100 dark:border-white/5 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 min-h-[340px] z-10 relative overflow-hidden">
             
             <div className="relative z-20 h-[180px] w-[180px] lg:h-[200px] lg:w-[200px]">
               {/* Orbiting Icons Container */}
@@ -156,7 +156,7 @@ const Hero = () => {
                 <motion.div 
                   animate={{ rotate: -360 }}
                   transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute top-0 left-4 bg-white dark:bg-[#0d1117] border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-blue-500 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
+                  className="absolute top-0 left-4 bg-white dark:bg-github-header border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-blue-500 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
                 >
                   <FaReact size={24} />
                 </motion.div>
@@ -165,7 +165,7 @@ const Hero = () => {
                 <motion.div 
                   animate={{ rotate: -360 }}
                   transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute top-0 right-4 bg-white dark:bg-[#0d1117] border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-yellow-500 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
+                  className="absolute top-0 right-4 bg-white dark:bg-github-header border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-yellow-500 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
                 >
                   <FaJsSquare size={24} />
                 </motion.div>
@@ -174,7 +174,7 @@ const Hero = () => {
                 <motion.div 
                   animate={{ rotate: -360 }}
                   transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute bottom-0 right-4 bg-white dark:bg-[#0d1117] border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-green-500 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
+                  className="absolute bottom-0 right-4 bg-white dark:bg-github-header border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-green-500 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
                 >
                   <FaNodeJs size={24} />
                 </motion.div>
@@ -183,7 +183,7 @@ const Hero = () => {
                 <motion.div 
                   animate={{ rotate: -360 }}
                   transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute bottom-0 left-4 bg-white dark:bg-[#0d1117] border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-gray-800 dark:text-gray-200 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
+                  className="absolute bottom-0 left-4 bg-white dark:bg-github-header border border-gray-100 dark:border-white/10 rounded-full shadow-lg text-gray-800 dark:text-gray-200 w-11 h-11 flex items-center justify-center pointer-events-auto backdrop-blur-md"
                 >
                   <SiExpress size={16} />
                 </motion.div>
@@ -191,7 +191,7 @@ const Hero = () => {
 
               {/* Clean, solid photo frame */}
               <div className="relative h-full w-full rounded-full p-1 bg-[#8257e5] dark:bg-[#9e7df0] shadow-2xl transition-transform duration-300 hover:scale-[1.05]">
-                <div className="h-full w-full overflow-hidden rounded-full bg-white dark:bg-[#0d1117] border-[3px] border-white dark:border-[#0d1117]">
+                <div className="h-full w-full overflow-hidden rounded-full bg-white dark:bg-github-header border-[3px] border-white dark:border-[#0d1117]">
                   <img
                     src={profileImage}
                     alt="Tausif Qureshi portrait"
@@ -203,7 +203,7 @@ const Hero = () => {
           </div>
 
           {/* Card 3: Connect & Stack */}
-          <div className="order-4 lg:order-3 lg:col-span-1 flex flex-col justify-between rounded-3xl bg-white dark:bg-[#161b22] border border-gray-100 dark:border-white/5 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 z-10">
+          <div className="order-4 lg:order-3 lg:col-span-1 flex flex-col justify-between rounded-3xl bg-white dark:bg-github-card border border-gray-100 dark:border-white/5 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 z-10">
             <div>
               <h3 className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4">Connect</h3>
               <div className="flex flex-wrap gap-4">
@@ -250,9 +250,9 @@ const Hero = () => {
           </div>
 
           {/* Card 4: Developer Terminal */}
-          <div className="order-2 lg:order-4 lg:col-span-2 relative group rounded-3xl bg-white dark:bg-[#161b22] border border-gray-100 dark:border-white/5 p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 overflow-hidden z-10 flex flex-col justify-center">
+          <div className="order-2 lg:order-4 lg:col-span-2 relative group rounded-3xl bg-white dark:bg-github-card border border-gray-100 dark:border-white/5 p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_15px_40px_rgba(255,255,255,0.05)] dark:hover:border-white/10 overflow-hidden z-10 flex flex-col justify-center">
             {/* Mac Window Controls */}
-            <div className="absolute top-0 left-0 right-0 flex items-center gap-2 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-[#0d1117]/50 px-6 py-3 backdrop-blur-sm">
+            <div className="absolute top-0 left-0 right-0 flex items-center gap-2 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-github-header/50 px-6 py-3 backdrop-blur-sm">
               <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
               <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
               <span className="h-3 w-3 rounded-full bg-[#27c93f]" />

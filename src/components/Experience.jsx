@@ -66,7 +66,7 @@ const Experience = () => {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
-                    className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-6 w-9 h-9 bg-white dark:bg-[#161b22] border-2 border-[#8257e5] dark:border-[#9e7df0] rounded-full z-10 shadow-lg flex items-center justify-center text-[#8257e5] dark:text-[#9e7df0] select-none font-bold"
+                    className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-6 w-9 h-9 bg-white dark:bg-github-card border-2 border-[#8257e5] dark:border-[#9e7df0] rounded-full z-10 shadow-lg flex items-center justify-center text-[#8257e5] dark:text-[#9e7df0] select-none font-bold"
                   >
                     {exp.company === "NxChamp" ? (
                       <span className="text-[11px] font-extrabold font-mono">NX</span>

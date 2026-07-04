@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Image Compressor</title>
+</head>
+<body>
+  <h2>Local Image Compressor</h2>
+  <p>Compresses local images to highly optimized WebP format.</p>
+  
+  <div style="margin-bottom: 20px;">
+    <button onclick="compress('src/assets/images/Qureshi.png')">Compress Qureshi.png</button>
+    <button onclick="compress('src/assets/images/coding_illustration.png')">Compress coding_illustration.png</button>
+  </div>
+
+  <canvas id="canvas" style="display: none;"></canvas>
+  <h3>Output Base64:</h3>
+  <textarea id="output" style="width: 100%; height: 300px;" readonly></textarea>
+
+  <script>
+    function compress(relPath) {
+      console.log("Loading image: " + relPath);
+      const img = new Image();
+      img.onload = function() {
+        console.log("Loaded natural size: " + img.naturalWidth + "x" + img.naturalHeight);
+        const canvas = document.getElementById('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        
+        // 0.8 quality handles massive compression with no visible loss
+        const webpData = canvas.toDataURL('image/webp', 0.8);
+        document.getElementById('output').value = webpData;
+        console.log("Compression Done!");
+      };
+      img.onerror = function() {
+        console.error("Failed to load image at " + relPath);
+      };
+      img.src = relPath;
+    }
+  </script>
+</body>
+</html>

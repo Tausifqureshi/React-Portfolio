@@ -101,7 +101,7 @@ const Footer = () => {
           {/* Main Content Boxes */}
           <div className="grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* About Box */}
-            <div className="bg-white dark:bg-[#161b22] rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6">
+            <div className="bg-white dark:bg-github-card rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6">
               <h3 className="text-lg font-semibold text-[#8257e5] mb-3">
                 Tausif Qureshi
               </h3>
@@ -117,7 +117,7 @@ const Footer = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-[#161b22] border dark:border-github-border rounded-full shadow hover:scale-110 transition"
+                    className="p-2 bg-white dark:bg-github-card border dark:border-github-border rounded-full shadow hover:scale-110 transition"
                     aria-label={label}
                     style={{ color }}
                   >
@@ -128,7 +128,7 @@ const Footer = () => {
             </div>
 
             {/* Quick Links Box */}
-            <div className="bg-white dark:bg-[#161b22] rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6">
+            <div className="bg-white dark:bg-github-card rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Quick Links
               </h4>
@@ -146,7 +146,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Box */}
-            <div className="bg-white dark:bg-[#161b22] rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6 min-[500px]:col-span-2 lg:col-span-1">
+            <div className="bg-white dark:bg-github-card rounded-lg shadow-sm border border-gray-200 dark:border-github-border p-6 min-[500px]:col-span-2 lg:col-span-1">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Contact Info
               </h4>
@@ -241,7 +241,7 @@ const Footer = () => {
               </svg>
 
               {/* Inner Button */}
-              <div className="w-10 h-10 bg-white dark:bg-[#161b22] border dark:border-github-border rounded-full shadow-lg flex items-center justify-center text-[#8257e5] dark:text-[#9e7df0] group-hover:bg-[#8257e5] group-hover:text-white dark:group-hover:bg-[#8257e5] dark:group-hover:text-white transition-all duration-300">
+              <div className="w-10 h-10 bg-white dark:bg-github-card border dark:border-github-border rounded-full shadow-lg flex items-center justify-center text-[#8257e5] dark:text-[#9e7df0] group-hover:bg-[#8257e5] group-hover:text-white dark:group-hover:bg-[#8257e5] dark:group-hover:text-white transition-all duration-300">
                 <ArrowUp className="w-4 h-4" />
               </div>  
             </motion.button>
