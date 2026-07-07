@@ -40,27 +40,30 @@ function App() {
         </AnimatePresence>
         
         <Navbar />
-        <Hero />
         
-        <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading details...</div>}>
-          <About />
-        </Suspense>
-        
-        <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading stack...</div>}>
-          <Skills />
-        </Suspense>
-        
-        <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading experiences...</div>}>
-          <Experience />
-        </Suspense>
-        
-        <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading projects...</div>}>
-          <Projects />
-        </Suspense>
-        
-        <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading form...</div>}>
-          <Contact />
-        </Suspense>
+        <main>
+          <Hero />
+          
+          <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading details...</div>}>
+            <About />
+          </Suspense>
+          
+          <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading stack...</div>}>
+            <Skills />
+          </Suspense>
+          
+          <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading experiences...</div>}>
+            <Experience />
+          </Suspense>
+          
+          <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading projects...</div>}>
+            <Projects />
+          </Suspense>
+          
+          <Suspense fallback={<div className="py-20 text-center text-gray-400 font-medium">Loading form...</div>}>
+            <Contact />
+          </Suspense>
+        </main>
 
         <Footer />
       </div>

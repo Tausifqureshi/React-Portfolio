@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        mono: ['Fira Code', 'monospace'],
       },
       colors: {
         github: {

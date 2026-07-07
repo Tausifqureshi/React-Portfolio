@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, XCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
@@ -13,6 +13,7 @@ const Contact = () => {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
@@ -45,7 +46,8 @@ const Contact = () => {
     }).catch((error) => {
       setIsSubmitting(false);
       console.error('Error:', error);
-      alert('Something went wrong, please try again.');
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000);
     });
   };
 
@@ -92,6 +94,13 @@ const Contact = () => {
           <div className="mb-6 flex items-center justify-center bg-green-100 border border-green-400 text-green-700 dark:bg-emerald-950/20 dark:border-emerald-500/30 dark:text-emerald-400 px-6 py-4 rounded-lg shadow">
             <CheckCircle className="w-5 h-5 mr-2" />
             Congratulations! Your message was sent successfully.
+          </div>
+        )}
+
+        {showError && (
+          <div className="mb-6 flex items-center justify-center bg-red-100 border border-red-400 text-red-700 dark:bg-rose-950/20 dark:border-rose-500/30 dark:text-rose-400 px-6 py-4 rounded-lg shadow">
+            <XCircle className="w-5 h-5 mr-2" />
+            Oops! Something went wrong. Please try again or email directly.
           </div>
         )}
 
