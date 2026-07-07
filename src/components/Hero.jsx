@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Download } from "lucide-react";
 import {
@@ -75,10 +75,10 @@ const Hero = () => {
             <h2 className="mt-3 text-base font-semibold tracking-wide text-[#8257e5] dark:text-[#9e7df0] md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl h-8 md:h-10 text-center lg:text-left">
               <Typewriter
                 words={[
-                  "Hi, I'm Tausif Qureshi",
                   "MERN Stack Developer",
                   "React.js Specialist",
-                  "Building Scalable Web Apps"
+                  "Building Scalable Web Apps",
+                  "Full-Stack Solutions Architect"
                 ]}
                 loop
                 cursor
@@ -115,13 +115,13 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-3 items-center justify-center lg:justify-start">
               <button
                 onClick={handleContactMe}
-                className="inline-flex items-center justify-center rounded-lg bg-[#8257e5] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#6c42ca] hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#8257e5] to-[#6c42ca] hover:from-[#6c42ca] hover:to-[#582bca] px-6 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition hover:-translate-y-1 active:scale-95 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto"
               >
                 <Mail className="mr-2 h-4 w-4" /> Contact Me
               </button>
               <button
                 onClick={handleDownloadCV}
-                className="group inline-flex items-center justify-center rounded-lg bg-transparent border border-[#8257e5] px-6 py-3 text-sm font-semibold text-[#8257e5] dark:text-[#9e7df0] shadow-sm transition hover:bg-[#8257e5] hover:text-white dark:hover:text-white hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto"
+                className="group inline-flex items-center justify-center rounded-xl bg-transparent border border-[#8257e5] px-6 py-3 text-sm font-semibold text-[#8257e5] dark:text-[#9e7df0] shadow-md hover:shadow-lg transition hover:bg-[#8257e5] hover:text-white dark:hover:text-white hover:-translate-y-1 active:scale-95 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto"
               >
                 <Download className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
                 Download CV

@@ -68,7 +68,7 @@ const projects = [
     ],
     technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
     github: "https://github.com/Tausifqureshi/RodanAndFields_clone",
-    demo: "https://rodanfieldwebsite.netlify.app/home.html",
+    demo: "https://rodanfieldwebsite.netlify.app/",
     metrics: { performance: "92", seo: "98", loadTime: "1.1s" },
   },
 ];
