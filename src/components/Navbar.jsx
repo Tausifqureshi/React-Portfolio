@@ -4,6 +4,17 @@ import ThemeToggle from "./ThemeToggle";
 import useScrollSpy from "../hooks/useScrollSpy";
 import { motion, AnimatePresence } from "framer-motion";
 
+const navItems = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
+
+const sectionIds = navItems.map((item) => item.href.substring(1));
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -29,31 +40,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
-  ];
-
-  const activeSection = useScrollSpy(
-    navItems.map((item) => item.href.substring(1)),
-    100
-  );
+  const activeSection = useScrollSpy(sectionIds, 100);
 
 
   const handleResumeClick = () => {
-    setIsResumeLoading(true);
-    setTimeout(() => {
-      window.open(
-        "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
-        "_blank"
-      );
-      setIsResumeLoading(false);
-      setIsOpen(false);
-    }, 1200);
+    window.open(
+      "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
+      "_blank"
+    );
+    setIsOpen(false); // ← mobile menu band karo
   };
 
   // ✅ Smooth scroll using scrollIntoView
@@ -237,6 +232,8 @@ const Navbar = () => {
     </nav>
   );
 };
+
+Navbar.displayName = "Navbar";
 
 export default Navbar;
 

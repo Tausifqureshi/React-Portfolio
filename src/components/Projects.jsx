@@ -4,81 +4,83 @@ import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Storefusion, Udmy, Rodan } from "../assets/images/Project-Image/index.js";
 
+const projects = [
+  {
+    title: "StoreFusion-Digital",
+    category: "React",
+    description:
+      "Full-Stack Digital E-Commerce Platform for Seamless Online Retail and Secure Shopping Experiences.",
+    image: Storefusion,
+    features: [
+      "Developed scalable shopping and product management systems with secure role-based access authentication flow.",
+      "Managed modular Firestore services with optimized on-demand queries reducing database latency operations efficiently.",
+      "Built centralized Redux Toolkit state management minimizing unnecessary component-level frontend UI re-renders.",
+      "Optimized application performance using React Suspense, useMemo, and secure Razorpay payment checkout integration."
+    ],
+    technologies: [
+      "React.js",
+      "Vite",
+      "Redux Toolkit (RTK)",
+      "Firebase",
+      "Tailwind CSS",
+      "Material-UI",
+      "Chart.js"
+    ],
+    github: "https://github.com/Tausifqureshi/StoreFusion-Digital",
+    demo: "https://storefusion-digital.netlify.app/",
+    metrics: { performance: "98", seo: "100", loadTime: "0.6s" },
+  },
+  {
+    title: "EduTech LMS Platform",
+    category: "React",
+    description:
+      "Comprehensive learning management system featuring dynamic course browsing, structured filtering, and robust cart management.",
+    image: Udmy,
+    features: [
+      "Created end-to-end course browsing system presenting 50+ programs with structured category-based filtering.",
+      "Configured dynamic routes for detailed and category-based views using React Router to enhance user navigation.",
+      "Implemented cart management using Context API and useReducer with persistent localStorage support.",
+      "Designed responsive layout with structured components and category-based sidebar navigation."
+    ],
+    technologies: [
+      "React",
+      "Context API",
+      "useReducer",
+      "React Router",
+      "JavaScript",
+      "CSS",
+      "LocalStorage"
+    ],
+    github: "https://github.com/Tausifqureshi/Udemy-Clone",
+    demo: "https://65d3989f42b0a515514a520e--polite-palmier-e23c7f.netlify.app/",
+    metrics: { performance: "95", seo: "100", loadTime: "0.9s" },
+  },
+  {
+    title: "Enterprise E-Commerce Portal",
+    category: "HTML/CSS",
+    description:
+      "Scalable skincare e-commerce storefront featuring interactive product sliders, optimized cart state, and a seamless checkout flow.",
+    image: Rodan,
+    features: [
+      "Constructed product, cart, and checkout pages for smooth shopping experience",
+      "Created interactive product slider showcasing products for user-friendly browsing",
+      "Tracked user actions in LocalStorage to enhance interactivity",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
+    github: "https://github.com/Tausifqureshi/RodanAndFields_clone",
+    demo: "https://rodanfieldwebsite.netlify.app/home.html",
+    metrics: { performance: "92", seo: "98", loadTime: "1.1s" },
+  },
+];
+
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  const projects = [
-    {
-      title: "StoreFusion-Digital",
-      category: "React",
-      description:
-        "Full-Stack Digital E-Commerce Platform for Seamless Online Retail and Secure Shopping Experiences.",
-      image: Storefusion,
-      features: [
-        "Developed scalable shopping and product management systems with secure role-based access authentication flow.",
-        "Managed modular Firestore services with optimized on-demand queries reducing database latency operations efficiently.",
-        "Built centralized Redux Toolkit state management minimizing unnecessary component-level frontend UI re-renders.",
-        "Optimized application performance using React Suspense, useMemo, and secure Razorpay payment checkout integration."
-      ],
-      technologies: [
-        "React.js",
-        "Vite",
-        "Redux Toolkit (RTK)",
-        "Firebase",
-        "Tailwind CSS",
-        "Material-UI",
-        "Chart.js"
-      ],
-      github: "https://github.com/Tausifqureshi/StoreFusion-Digital",
-      demo: "https://storefusion-digital.netlify.app/",
-      metrics: { performance: "98", seo: "100", loadTime: "0.6s" },
-    },
-    {
-      title: "EduTech LMS Platform",
-      category: "React",
-      description:
-        "Comprehensive learning management system featuring dynamic course browsing, structured filtering, and robust cart management.",
-      image: Udmy,
-      features: [
-        "Created end-to-end course browsing system presenting 50+ programs with structured category-based filtering.",
-        "Configured dynamic routes for detailed and category-based views using React Router to enhance user navigation.",
-        "Implemented cart management using Context API and useReducer with persistent localStorage support.",
-        "Designed responsive layout with structured components and category-based sidebar navigation."
-      ],
-      technologies: [
-        "React",
-        "Context API",
-        "useReducer",
-        "React Router",
-        "JavaScript",
-        "CSS",
-        "LocalStorage"
-      ],
-      github: "https://github.com/Tausifqureshi/Udemy-Clone",
-      demo: "https://65d3989f42b0a515514a520e--polite-palmier-e23c7f.netlify.app/",
-      metrics: { performance: "95", seo: "100", loadTime: "0.9s" },
-    },
-    {
-      title: "Enterprise E-Commerce Portal",
-      category: "HTML/CSS",
-      description:
-        "Scalable skincare e-commerce storefront featuring interactive product sliders, optimized cart state, and a seamless checkout flow.",
-      image: Rodan,
-      features: [
-        "Constructed product, cart, and checkout pages for smooth shopping experience",
-        "Created interactive product slider showcasing products for user-friendly browsing",
-        "Tracked user actions in LocalStorage to enhance interactivity",
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
-      github: "https://github.com/Tausifqureshi/RodanAndFields_clone",
-      demo: "https://rodanfieldwebsite.netlify.app/home.html",
-      metrics: { performance: "92", seo: "98", loadTime: "1.1s" },
-    },
-  ];
-
-  const filteredProjects = projects.filter(
-    (project) => filter === "All" || project.category === filter
-  );
+  const filteredProjects = React.useMemo(() => {
+    return projects.filter(
+      (project) => filter === "All" || project.category === filter
+    );
+  }, [filter]);
 
   return (
     <section
@@ -245,5 +247,7 @@ const Projects = () => {
     </section>
   );
 };
+
+Projects.displayName = "Projects";
 
 export default Projects;

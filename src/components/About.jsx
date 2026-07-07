@@ -1,43 +1,44 @@
 import React from 'react';
 import { User, Code, Cpu, Database, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
-import codingIllustration from '../assets/images/coding_illustration.png';
+import codingIllustration from '../assets/images/coding_illustration.jpg';
+
+const domains = [
+  {
+    title: "Frontend Development",
+    icon: Code,
+    tech: "React.js, Redux Toolkit, Tailwind CSS",
+    color: "text-blue-500",
+    bgColor: "bg-blue-500/10",
+    hoverClass: "hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.12)]"
+  },
+  {
+    title: "Backend Development",
+    icon: Cpu,
+    tech: "Node.js, Express.js, RESTful APIs",
+    color: "text-green-500",
+    bgColor: "bg-green-500/10",
+    hoverClass: "hover:border-green-500/50 hover:shadow-[0_0_15px_rgba(34,197,94,0.12)]"
+  },
+  {
+    title: "Database Design",
+    icon: Database,
+    tech: "MongoDB, Indexing, Schema Design",
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
+    hoverClass: "hover:border-emerald-500/50 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)]"
+  },
+  {
+    title: "Deployment & DevOps",
+    icon: Globe,
+    tech: "Vercel, Render, Git/GitHub",
+    color: "text-purple-500",
+    bgColor: "bg-purple-500/10",
+    hoverClass: "hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.12)]"
+  }
+];
 
 function About() {
-  const domains = [
-    {
-      title: "Frontend Development",
-      icon: Code,
-      tech: "React.js, Redux Toolkit, Tailwind CSS",
-      color: "text-blue-500",
-      bgColor: "bg-blue-500/10",
-      hoverClass: "hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.12)]"
-    },
-    {
-      title: "Backend Development",
-      icon: Cpu,
-      tech: "Node.js, Express.js, RESTful APIs",
-      color: "text-green-500",
-      bgColor: "bg-green-500/10",
-      hoverClass: "hover:border-green-500/50 hover:shadow-[0_0_15px_rgba(34,197,94,0.12)]"
-    },
-    {
-      title: "Database Design",
-      icon: Database,
-      tech: "MongoDB, Indexing, Schema Design",
-      color: "text-emerald-500",
-      bgColor: "bg-emerald-500/10",
-      hoverClass: "hover:border-emerald-500/50 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)]"
-    },
-    {
-      title: "Deployment & DevOps",
-      icon: Globe,
-      tech: "Vercel, Render, Git/GitHub",
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10",
-      hoverClass: "hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.12)]"
-    }
-  ];
 
   return (
     <section id="about" className="py-24 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300">
@@ -139,5 +140,7 @@ function About() {
     </section>
   );
 }
+
+About.displayName = "About";
 
 export default About;

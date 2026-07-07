@@ -28,9 +28,11 @@ const skills = [
 const Skills = () => {
   const [filter, setFilter] = useState("All");
 
-  const filteredSkills = skills.filter(
-    (skill) => filter === "All" || skill.category === filter
-  );
+  const filteredSkills = React.useMemo(() => {
+    return skills.filter(
+      (skill) => filter === "All" || skill.category === filter
+    );
+  }, [filter]);
 
   return (
     <section id="skills" className="py-24 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300">
@@ -100,5 +102,7 @@ const Skills = () => {
     </section>
   );
 };
+
+Skills.displayName = "Skills";
 
 export default Skills;

@@ -10,72 +10,72 @@ import {
 import { Mail, Phone, MapPin, Heart, ArrowUp, GraduationCap, Laptop } from "lucide-react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 
+const quickLinks = [
+  { href: "home", label: "Home" },
+  { href: "about", label: "About" },
+  { href: "skills", label: "Skills" },
+  { href: "projects", label: "Projects" },
+  { href: "contact", label: "Contact" },
+];
+
+const socialLinks = [
+  {
+    href: "https://github.com/Tausifqureshi",
+    icon: FaGithub,
+    color: "#000000",
+    label: "GitHub",
+  },
+  {
+    href: "https://www.linkedin.com/in/tausif-qureshi/",
+    icon: FaLinkedin,
+    color: "#0077B5",
+    label: "LinkedIn",
+  },
+  {
+    href: "https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif",
+    icon: FaWhatsapp,
+    color: "#25D366",
+    label: "WhatsApp",
+  },
+  {
+    href: "mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,",
+    icon: Mail,
+    color: "#D14836",
+    label: "Email",
+  },
+  {
+    href: "tel:+918429097693",
+    icon: Phone,
+    color: "#FF6B00",
+    label: "Phone",
+  },
+];
+
+const contactInfo = [
+  {
+    icon: Mail,
+    text: "tausifqureshi504@gmail.com",
+    color: "text-blue-500",
+    href: "mailto:tausifqureshi504@gmail.com",
+  },
+  {
+    icon: Phone,
+    text: "+91 84290 97693",
+    color: "text-green-500",
+    href: "tel:+918429097693",
+  },
+  {
+    icon: MapPin,
+    text: "India",
+    color: "text-purple-500",
+    href: "#",
+  },
+];
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const { scrollYProgress } = useScroll();
-
-  const quickLinks = [
-    { href: "home", label: "Home" },
-    { href: "about", label: "About" },
-    { href: "skills", label: "Skills" },
-    { href: "projects", label: "Projects" },
-    { href: "contact", label: "Contact" },
-  ];
-
-  const socialLinks = [
-    {
-      href: "https://github.com/Tausifqureshi",
-      icon: FaGithub,
-      color: "#000000",
-      label: "GitHub",
-    },
-    {
-      href: "https://www.linkedin.com/in/tausif-qureshi/",
-      icon: FaLinkedin,
-      color: "#0077B5",
-      label: "LinkedIn",
-    },
-    {
-      href: "https://api.whatsapp.com/send?phone=918429097693&text=Hi%20Tausif",
-      icon: FaWhatsapp,
-      color: "#25D366",
-      label: "WhatsApp",
-    },
-    {
-      href: "mailto:tausifqureshi504@gmail.com?subject=Portfolio&body=Hi%20Tausif,",
-      icon: Mail,
-      color: "#D14836",
-      label: "Email",
-    },
-    {
-      href: "tel:+918429097693",
-      icon: Phone,
-      color: "#FF6B00",
-      label: "Phone",
-    },
-  ];
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      text: "tausifqureshi504@gmail.com",
-      color: "text-blue-500",
-      href: "mailto:tausifqureshi504@gmail.com",
-    },
-    {
-      icon: Phone,
-      text: "+91 84290 97693",
-      color: "text-green-500",
-      href: "tel:+918429097693",
-    },
-    {
-      icon: MapPin,
-      text: "India",
-      color: "text-purple-500",
-      href: "#",
-    },
-  ];
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -251,6 +251,8 @@ const Footer = () => {
     </>
   );
 };
+
+Footer.displayName = "Footer";
 
 export default Footer;
 

@@ -55,6 +55,8 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
+ThemeProvider.displayName = "ThemeProvider";
+
 export default ThemeProvider;
 
 

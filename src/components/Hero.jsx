@@ -13,20 +13,15 @@ import {
 import { SiExpress, SiRedux, SiMongodb } from "react-icons/si";
 import { Typewriter } from "react-simple-typewriter";
 // import Image from "../assets/images/Image/Tausif-Image.jpg";
-import profileImage from "../assets/images/Image/Qureshi.png";
+import profileImage from "../assets/images/Image/Qureshi.jpg";
 
 const Hero = () => {
-  const [isCVLoading, setIsCVLoading] = useState(false);
 
   const handleDownloadCV = () => {
-    setIsCVLoading(true);
-    setTimeout(() => {
-      window.open(
-        "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
-        "_blank"
-      );
-      setIsCVLoading(false);
-    }, 1200);
+    window.open(
+      "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
+      "_blank"
+    );
   };
 
   const handleContactMe = () => {
@@ -126,18 +121,10 @@ const Hero = () => {
               </button>
               <button
                 onClick={handleDownloadCV}
-                disabled={isCVLoading}
-                className={`group inline-flex items-center justify-center rounded-lg bg-transparent border border-[#8257e5] px-6 py-3 text-sm font-semibold text-[#8257e5] dark:text-[#9e7df0] shadow-sm transition hover:bg-[#8257e5] hover:text-white dark:hover:text-white hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto ${isCVLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
+                className="group inline-flex items-center justify-center rounded-lg bg-transparent border border-[#8257e5] px-6 py-3 text-sm font-semibold text-[#8257e5] dark:text-[#9e7df0] shadow-sm transition hover:bg-[#8257e5] hover:text-white dark:hover:text-white hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-violet-500 w-auto"
               >
-                {isCVLoading ? (
-                  <svg className="animate-spin mr-2 h-4 w-4 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                ) : (
-                  <Download className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
-                )}
-                {isCVLoading ? 'Opening...' : 'Download CV'}
+                <Download className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+                Download CV
               </button>
             </div>
           </div>
@@ -313,6 +300,8 @@ const Hero = () => {
     </section>
   );
 };
+
+Hero.displayName = "Hero";
 
 export default Hero;
    

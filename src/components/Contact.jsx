@@ -49,7 +49,7 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
+  const contactInfo = React.useMemo(() => [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
@@ -68,7 +68,7 @@ const Contact = () => {
       value: 'India',
       link: null
     }
-  ];
+  ], []);
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-github-bg border-b border-gray-200 dark:border-github-border transition-colors duration-300">
@@ -255,5 +255,7 @@ const Contact = () => {
     </section>
   );
 };
+
+Contact.displayName = "Contact";
 
 export default Contact;

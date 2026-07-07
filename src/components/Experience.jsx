@@ -93,7 +93,7 @@ const Experience = () => {
                       {exp.duration}
                     </div>
 
-                    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 space-y-1.5 text-sm">
+                    <ul className="list-disc list-outside pl-5 text-gray-700 dark:text-gray-300 mb-4 space-y-1.5 text-sm">
                       {exp.description.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}
@@ -119,5 +119,7 @@ const Experience = () => {
     </section>
   );
 };
+
+Experience.displayName = "Experience";
 
 export default Experience;
