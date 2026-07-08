@@ -1,35 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const useScrollSpy = (sectionIds, offset = 100) => {
   const [activeSection, setActiveSection] = useState(sectionIds[0]);
+  const observerRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + offset;
-
-      const currentSection = sectionIds.find((sectionId) => {
-        const section = document.getElementById(sectionId);
-
-        if (!section) return false;
-
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-
-        return (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionBottom
-        );
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
       });
-
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    // rootMargin shifts the trigger zone to align with the desired vertical offset
+    observerRef.current = new IntersectionObserver(handleIntersect, {
+      rootMargin: `-${offset}px 0px -60% 0px`,
+      threshold: 0,
+    });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observerRef.current.observe(el);
+    });
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, [sectionIds, offset]);
 
   return activeSection;

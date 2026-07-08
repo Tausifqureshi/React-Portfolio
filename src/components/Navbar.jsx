@@ -48,7 +48,7 @@ const Navbar = () => {
       "https://drive.google.com/file/d/1HEieYCbIEsRKNi4tmVXq97Y7XArg3MAU/view",
       "_blank"
     );
-    setIsOpen(false); // ← mobile menu band karo
+    setIsOpen(false); // Close mobile menu
   };
 
   // ✅ Smooth scroll using scrollIntoView
@@ -57,10 +57,10 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false); // ← mobile menu band karo
+    setIsOpen(false); // Close mobile menu
   };
 
-  // jab navbar open hoga mobile device me to body scroll nahi hogi
+  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     const isMobile = window.innerWidth < 768; // tailwind md = 768px
 
@@ -77,7 +77,7 @@ const Navbar = () => {
   }, [isOpen]);
 
 
-  // ✅ Auto-close mobile menu on desktop resize
+  // Auto-close mobile menu on desktop resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -170,6 +170,8 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-[#8257e5] dark:hover:text-[#9e7df0] hover:bg-gray-100 dark:hover:bg-github-card transition-colors duration-200"
             >
               {isOpen ? (
