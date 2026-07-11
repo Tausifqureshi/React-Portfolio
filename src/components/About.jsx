@@ -57,7 +57,7 @@ function About() {
             What I do
           </h2>
           <p className="text-sm md:text-base font-bold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-            Crazy MERN Stack Developer who wants to explore every tech stack
+            MERN Stack Developer specializing in building scalable web architectures
           </p>
         </motion.div>
 

@@ -56,31 +56,40 @@ const projects = [
     metrics: { performance: "95", seo: "100", loadTime: "0.9s" },
   },
   {
-    title: "Enterprise E-Commerce Portal",
-    category: "HTML/CSS",
+    title: "MERN Stack Task Management System",
+    category: "MERN",
     description:
-      "Scalable skincare e-commerce storefront featuring interactive product sliders, optimized cart state, and a seamless checkout flow.",
+      "High-performance collaborative Kanban workspace for agile teams, featuring full drag-and-drop mechanics, JWT-based authentication, and WebSocket updates.",
     image: Rodan,
     features: [
-      "Constructed product, cart, and checkout pages for smooth shopping experience",
-      "Created interactive product slider showcasing products for user-friendly browsing",
-      "Tracked user actions in LocalStorage to enhance interactivity",
+      "Developed secure REST APIs for workspaces, boards, lists, and task lifecycle management using Node.js and Express.",
+      "Integrated real-time task movement updates and instant communication channels utilizing persistent WebSockets (Socket.io).",
+      "Structured stateless JWT token authorization flows with custom middleware and bcrypt password hash security.",
+      "Configured MongoDB database index optimizations on user-specific boards schema, reducing lookup latency operations."
     ],
-    technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
-    github: "https://github.com/Tausifqureshi/RodanAndFields_clone",
-    demo: "https://rodanfieldwebsite.netlify.app/",
-    metrics: { performance: "92", seo: "98", loadTime: "1.1s" },
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT", "Tailwind CSS"],
+    github: "https://github.com/Tausifqureshi/MERN-Collaborative-Kanban",
+    demo: "https://mern-collaborative-kanban.netlify.app/",
+    metrics: { performance: "96", seo: "100", loadTime: "0.8s" },
   },
 ];
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredProjects = React.useMemo(() => {
-    return projects.filter(
-      (project) => filter === "All" || project.category === filter
-    );
-  }, [filter]);
+    return projects.filter((project) => {
+      const matchesCategory = filter === "All" || project.category === filter;
+      const matchesSearch =
+        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.technologies.some((tech) =>
+          tech.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+      return matchesCategory && matchesSearch;
+    });
+  }, [filter, searchQuery]);
 
   return (
     <section
@@ -98,11 +107,14 @@ const Projects = () => {
           </p>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["All", "React", "HTML/CSS"].map((cat) => (
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            {["All", "React", "MERN"].map((cat) => (
               <button
                 key={cat}
-                onClick={() => setFilter(cat)}
+                onClick={() => {
+                  setFilter(cat);
+                  setSearchQuery(""); // Clear search query when changing filter category
+                }}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   filter === cat
                     ? "bg-[#8257e5] text-white shadow-md transform scale-105 border-transparent"
@@ -112,6 +124,33 @@ const Projects = () => {
                 {cat}
               </button>
             ))}
+          </div>
+
+          {/* Real-time Search Input */}
+          <div className="max-w-md mx-auto mb-10 relative px-4 sm:px-0">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input
+              type="text"
+              placeholder="Search projects by tech (e.g. Node, Firebase, RTK)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="block w-full pl-11 pr-10 py-3 text-sm text-gray-900 bg-white dark:bg-github-card rounded-2xl border border-gray-200 dark:border-github-border appearance-none dark:text-white focus:outline-none focus:ring-2 focus:ring-[#8257e5]/30 focus:border-[#8257e5] dark:focus:border-[#9e7df0] transition-all shadow-sm"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors"
+                aria-label="Clear search"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
 

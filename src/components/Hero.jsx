@@ -12,7 +12,6 @@ import {
 } from "react-icons/fa";
 import { SiExpress, SiRedux, SiMongodb } from "react-icons/si";
 import { Typewriter } from "react-simple-typewriter";
-// import Image from "../assets/images/Image/Tausif-Image.jpg";
 import profileImage from "../assets/images/Image/Qureshi.jpg";
 
 const Hero = () => {
