@@ -4,9 +4,9 @@ import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Storefusion, Udmy, Rodan } from "../assets/images/Project-Image/index.js";
 
-const projects = [
+const projects = [    
   {
-    title: "StoreFusion-Digital",  
+    title: "StoreFusion-Digital",
     category: "React",
     description:
       "Full-Stack Digital E-Commerce Platform for Seamless Online Retail and Secure Shopping Experiences.",
