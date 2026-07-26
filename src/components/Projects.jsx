@@ -4,9 +4,9 @@ import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Storefusion, Udmy, Rodan } from "../assets/images/Project-Image/index.js";
 
-const projects = [    
+const projects = [
   {
-    title: "StoreFusion-Digital",    
+    title: "StoreFusion-Digital",
     category: "React",
     description:
       "Full-Stack Digital E-Commerce Platform for Seamless Online Retail and Secure Shopping Experiences.",
@@ -115,11 +115,10 @@ const Projects = () => {
                   setFilter(cat);
                   setSearchQuery(""); // Clear search query when changing filter category
                 }}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  filter === cat
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${filter === cat
                     ? "bg-[#8257e5] text-white shadow-md transform scale-105 border-transparent"
                     : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-github-card dark:border-github-border dark:text-gray-300 dark:hover:bg-[#21262d]"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -154,8 +153,8 @@ const Projects = () => {
           </div>
         </div>
 
-        <motion.div 
-          layout 
+        <motion.div
+          layout
           className="grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
