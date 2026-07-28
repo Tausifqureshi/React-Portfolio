@@ -136,9 +136,9 @@ const Contact = () => {
                   <div>
                     <h4 className="text-base font-bold text-gray-900 dark:text-white leading-tight">
                       {info.title} 
-                    </h4>   
+                    </h4>
                     {info.link ? (
-                      <a
+                      <a   
                         href={info.link}
                         className="text-sm text-gray-500 dark:text-gray-400 hover:text-[#8257e5] dark:hover:text-[#9e7df0] transition-colors duration-200 mt-1 block font-medium"
                       >
