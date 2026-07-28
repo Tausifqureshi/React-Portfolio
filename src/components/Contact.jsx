@@ -135,8 +135,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-gray-900 dark:text-white leading-tight">
-                      {info.title}
-                    </h4>
+                      {info.title} 
+                    </h4>   
                     {info.link ? (
                       <a
                         href={info.link}
